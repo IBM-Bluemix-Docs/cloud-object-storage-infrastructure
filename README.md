@@ -1,2 +1,3 @@
-# cloud-object-storage-infrastructure
-cloud-object-storage-infrastructure
+# Object Storage
+
+Documentation for IBM Cloud Object Storage offerings.
