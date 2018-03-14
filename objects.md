@@ -15,13 +15,9 @@ lastupdated: "2018-02-15"
 
 # Object operations
 
+## Upload an object
 
-### Operations on Objects
-{: #operations-on-objects}
-
-#### Upload an object
-
-A `PUT` given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  All objects are limited to 5TB in size. This operation does not make use of operation specific query parameters, or payload elements.
+A `PUT` given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  All objects are limited to 10TB in size (when using multiple parts, see below). This operation does not make use of operation specific query parameters, or payload elements.
 
 ###### Syntax
 
@@ -113,7 +109,7 @@ Content-Length: 0
 
 ----
 
-#### Get an object's headers
+## Get an object's headers
 
 A `HEAD` given a path to an object retrieves that object's headers. This operation does not make use of operation specific query parameters or payload elements.
 
@@ -172,7 +168,7 @@ Content-Length: 11
 
 ----
 
-#### Download an object
+## Download an object
 
 A `GET` given a path to an object downloads the object. This operation does not make use of operation specific query parameters or payload elements.
 
@@ -235,7 +231,7 @@ Content-Length: 467
 
 ----
 
-#### Delete an object
+## Delete an object
 
 A `DELETE` given a path to an object deletes an object. This operation does not make use of operation specific query parameters, headers, or payload elements.
 
@@ -268,7 +264,7 @@ X-Clv-S3-Version: 2.5
 
 ----
 
-#### Copy an object
+## Copy an object
 
 A `PUT` given a path to a new object creates a new copy of another object specified by the `x-amz-copy-source` header. Unless otherwise altered the metadata remains the same, although any ACL is reset to `private` for the  account creating the copy. This operation does not make use of operation specific query parameters or payload elements.
 
@@ -338,7 +334,7 @@ Content-Length: 240
 
 ----
 
-#### Retrieve an object's ACL
+## Retrieve an object's ACL
 
 A `GET` given a path to an object given the parameter `?acl=` retrieves the access control list for the object. This operation does not make use of operation specific headers, additional query parameters  or payload elements.
 
@@ -393,11 +389,11 @@ Content-Length: 550
 
 ----
 
-#### Create an ACL for an object
+## Create an ACL for an object
 
 A `PUT` issued to an object with the proper parameters creates an access control list (ACL) for that object.  Access control lists allow for granting different sets of permissions to different storage accounts using the account's ID, or by using a pre-made ACL.
 
-{% include important.html content="Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other CRS storage account to access the resource, as well as the general public. " %}
+Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other CRS storage account to access the resource, as well as the general public.
 
 The assigned permissions behave as follows:
 
@@ -418,7 +414,7 @@ The following canned ACLs are supported by IBM COS.  Values not listed below are
 | public-read | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
 | public-read-write | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
 
-{% include note.html content="It is not possible to grant granular `WRITE` access at the object level, only at the bucket level." %}
+It is not possible to grant granular `WRITE` access at the object level, only at the bucket level.
 
 ###### Syntax
 
@@ -529,7 +525,7 @@ Content-Length: 0
 
 ----
 
-#### Check an object's CORS configuration
+## Check an object's CORS configuration
 
 An `OPTIONS` given a path to an object along with an origin and request type checks to see if that object is accessible from that origin using that request type.  Unlike all other requests, an OPTIONS request does not require the `authorization` or `x-amx-date` headers.
 
@@ -570,7 +566,7 @@ Content-Length: 0
 
 ----
 
-#### Uploading objects in multiple parts
+## Uploading objects in multiple parts
 
 When working with larger objects, multipart upload operations are recommended to write objects into IBM COS. An upload of a single object can be performed as a set of parts and these parts can be uploaded independently in any order and in parallel. Upon upload completion, IBM COS then presents all parts as a single object. This provides many benefits: network interruptions do not cause large uploads to fail, uploads can be paused and restarted over time, and objects can be uploaded as they are being created.
 
@@ -639,7 +635,7 @@ Content-Length: 276
 
 ----
 
-#### Upload a part
+## Upload a part
 
 A `PUT` request issued to an object with query parameters `partNumber` and `uploadId` will upload one part of an object.  The parts may be uploaded serially or in parallel, but must be numbered in order.
 
@@ -687,7 +683,7 @@ Content-Length: 0
 
 ----
 
-#### Complete a multipart upload
+## Complete a multipart upload
 
 A `POST` request issued to an object with query parameter `uploadId` and the appropriate XML block in the body will complete a multipart upload.
 
@@ -756,7 +752,7 @@ Content-Length: 364
 
 ----
 
-#### Abort incomplete multipart uploads
+## Abort incomplete multipart uploads
 
 A `DELETE` request issued to an object with query parameter `uploadId` will delete all unfinished parts of a multipart upload.
 

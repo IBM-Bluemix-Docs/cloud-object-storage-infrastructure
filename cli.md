@@ -15,7 +15,7 @@ lastupdated: "2018-02-15"
 
 # Using a CLI
 
-### AWS CLI
+## AWS CLI
 The official command line interface for AWS is compatible with the IBM COS S3 API. Written in Python, it can be installed from the Python Package Index via `pip install awscli`. By default, access keys are sourced from `~/.aws/credentials`, but can also be set as environment variables.
 
 These examples have been generated using version 1.10.66 of the CLI.  To check the version installed, run `aws --version`.
@@ -99,10 +99,18 @@ $ aws --endpoint-url=https://{endpoint} s3api list-buckets
 
 Creating a new bucket:
 
-{% include custom/locations.md %}
+Valid provisioning codes for `LocationCostraint` are: <br>
+&emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
+&emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
+&emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
+&emsp;&emsp;  `eu-standard` / `eu-vault` / `eu-cold` / `eu-flex` <br>
+&emsp;&emsp;  `eu-gb-standard` / `eu-gb-vault` / `eu-gb-cold` / `eu-gb-flex` <br>
+&emsp;&emsp;  `ap-standard` / `ap-vault` / `ap-cold` / `ap-flex` <br>
+&emsp;&emsp;  `mel01-standard` / `mel01-vault` / `mel01-cold` / `mel01-flex` <br>
+&emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
 ```bash
-$ aws --endpoint-url=https://{endpoint} s3api create-bucket --bucket {bucket-name} [--region us-standard]
+$ aws --endpoint-url=https://{endpoint} s3api create-bucket --bucket {bucket-name} [--region provisioing-code]
 ```
 
 Listing objects within a bucket:

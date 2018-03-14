@@ -15,7 +15,7 @@ lastupdated: "2018-02-15"
 
 # FAQ
 
-#### API Questions
+## API Questions
 
 **Are COS bucket names case sensitive?**
 
@@ -25,7 +25,7 @@ Bucket names are required to be DNS addressable, and thus not case sensitive.
 
 1024
 
-#### Offering Questions
+## Offering Questions
 
 **Do we offer a free tier option for IBM Cloud Object Storage?**
 
@@ -48,7 +48,7 @@ The storage class (eg `us-flex`) is assigned to the `LocationConstraint` configu
 Today changing of storage class requires manually moving or copying the data from one bucket to another bucket with the desired storage class.
 
 
-#### Performance Questions
+## Performance Questions
 
 **Does data consistency in COS come with a performance impact?**
 
@@ -59,7 +59,7 @@ Consistency with any distributed system comes with a cost, but the efficiency of
 For performance optimization, objects can be uploaded and downloaded in multiple parts, in parallel.
 
 
-#### Encryption Questions
+## Encryption Questions
 
 **Does IBM COS provide encryption at rest and in motion?**
 
@@ -81,7 +81,7 @@ The algorithms are FIPS 140-2 ready but testing / certification is still pending
 
 Yes, client-key encryption will be supported in 2017.
 
-#### General questions
+## General questions
 
 **How many objects can fit in a single bucket?**
 
@@ -106,4 +106,4 @@ COS is ‘immediately consistent’ for data and ‘eventually consistent’ for
 
 **Can IBM COS partition the data automatically for me like HDFS, so I can read the partitions in parallel, e.g. with Spark?**
 
-IBM COS supports a ranged GET on the object, so an application can do a distributed striped read type operation.  Doing the striping would be on the application to manage.  
+IBM COS supports a ranged GET on the object, so an application can do a distributed striped read type operation.  Doing the striping would be on the application to manage.

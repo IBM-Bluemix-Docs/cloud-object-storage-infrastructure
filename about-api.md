@@ -22,11 +22,12 @@ IBM Cloud Object Storage provides two separate APIs for managing and using objec
 
 More information on using the SoftLayer API to create or delete credentials, check capacity usage, retrieve a UUID, and other account functions can be found at the [SoftLayer Development Network](http://sldn.softlayer.com/reference/services/SoftLayer_Network_Storage_Hub_Cleversafe_Account).
 
-The following tables describe the complete set of supported operations when using the S3 API to access IBM Cloud Object Storage.  For details on using the operations, including examples, see [the API reference page]({{ site.baseurl }}/api-reference).
+The following tables describe the complete set of supported operations when using the S3 API to access IBM Cloud Object Storage.  For details on using the operations, including examples, see [the API reference page](/docs/infrastructure/cloud-object-storage-infrastructure/api-reference.html).
 
-### Operations on the account
+## Operations on the account
 
 The only operation that is performed directly at the account level is to get a list of buckets owned by that account. Accounts are limited to 100 buckets.
+{:tip}
 
 | Account operation | Note |
 |:----|:---|
@@ -37,7 +38,7 @@ The only operation that is performed directly at the account level is to get a l
 
 These operations create, destroy, get information about, and control behavior of buckets.
 
-{% include note.html content="Note that the 'version 2' method of listing objects within a bucket is not supported, and the 'version 1' syntax is needed." %}
+Note that the 'version 2' method of listing objects within a bucket is not supported, and the 'version 1' syntax is needed.
 
 | Bucket operation | Note |
 |:----|:---|
@@ -53,7 +54,7 @@ These operations create, destroy, get information about, and control behavior of
 | `PUT` Bucket CORS | Creates a cross-origin resource sharing configuration for a bucket.|
 {:.opstable}
 
-### Operations on objects
+## Operations on objects
 
 These operations create, destroy, get information about, and control behavior of objects.
 
@@ -77,4 +78,4 @@ These operations create, destroy, get information about, and control behavior of
 | List Parts | Returns a list of parts associated with an upload ID
 {:.opstable}
 
-{% include note.html content="Some additional operations, such as tagging and versioning, are supported in private cloud implementations of IBM COS, but not in the public cloud at this time. More information custom object storage solutions can be found at [ibm.com](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/)." %}
+Some additional operations, such as tagging and versioning, are supported in private cloud implementations of IBM COS, but not in the public cloud at this time. More information custom object storage solutions can be found at [ibm.com](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/).

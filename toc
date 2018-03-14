@@ -6,14 +6,11 @@ Cloud Object Storage (Infrastructure)
     quickstart.md
     ordering.md
     storing-retrieving.md
-    using-apis.md
-    tutorial.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     endpoints.md
     manage-access.md
-    storage-classes.md
     desktop-clients.md
     {: .navgroup-end}
 
@@ -23,7 +20,6 @@ Cloud Object Storage (Infrastructure)
     common-errors.md
     buckets.md
     objects.md
-    softlayer.md
     cli.md
     python.md
     java.md

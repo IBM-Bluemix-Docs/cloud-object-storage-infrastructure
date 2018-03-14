@@ -17,7 +17,7 @@ lastupdated: "2018-02-15"
 
 The user interface portal provides a high level view of a storage account.  It is possible to create buckets and upload objects using the portal, but typically most interaction with the object store is done through the API by a client application.
 
-#### Using buckets
+## Using buckets
 1. Click the Account Name in the above accounts list to open the details page for that account.
 2. The details page shows the following info on the top header bar:
    * Name of the account currently being viewed
@@ -32,7 +32,7 @@ The user interface portal provides a high level view of a storage account.  It i
 7. Click the **Delete** button to remove the bucket from the account.
 
 
-#### Using objects
+## Using objects
 1. The objects present within a bucket can be viewed, by clicking the bucket name on the buckets list.
 2. The header is updated to include the following info:
   * Name of the account currently being viewed

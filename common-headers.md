@@ -15,9 +15,7 @@ lastupdated: "2018-02-15"
 
 # Common headers
 
-### Common Headers
-
-#### Common Request Headers
+## Common Request Headers
 The following table describes supported common request headers. COS ignores any common headers not listed below if sent in a request, although some requests may support other headers as defined in this documentation.  More information about creating the authorization header can be found in the ["Authentication"]({{ site.baseurl }}/manage-access#authentication) section
 
 | Header             | Note                               |
@@ -31,7 +29,7 @@ The following table describes supported common request headers. COS ignores any 
 | Expect             | `100-continue` waits for the headers to be accepted before sending the body.  |
 {:.opstable}
 
-#### Common Response Headers
+## Common Response Headers
 The following table describes common response headers.
 
 |  Header        | Note |
