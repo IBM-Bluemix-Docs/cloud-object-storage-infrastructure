@@ -48,6 +48,9 @@ Bluemix Infrastructure will be the primary platform for ordering cloud storage i
 
 ## Creating a new storage account
 
+Accounts are limited to 100 COS accounts.  If more storage accounts are needed, please contact customer support.
+{:tip}
+
 Existing SoftLayer customers can log in to [https://control.softlayer.com/](https://control.softlayer.com/){:new_window}, but are encouraged to create an IBMid and explore the Bluemix catalog. Both control portals are equivalent in functionality and only differ in their header design and branding.
 1. Login to [https://control.bluemix.net/](https://control.bluemix.net/){: new_window}.
 2. Navigate to the object storage page, by clicking **Storage** > **Object Storage** in the Navigation menu.
