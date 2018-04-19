@@ -16,7 +16,7 @@ lastupdated: "2018-02-15"
 # Common headers
 
 ## Common Request Headers
-The following table describes supported common request headers. COS ignores any common headers not listed below if sent in a request, although some requests may support other headers as defined in this documentation.  More information about creating the authorization header can be found in the ["Authentication"]({{ site.baseurl }}/manage-access#authentication) section
+The following table describes supported common request headers. COS ignores any common headers not listed below if sent in a request, although some requests may support other headers as defined in this documentation.  More information about creating the authorization header can be found in the ["Authentication"](/docs/infrastructure/cloud-object-storage-infrastructure/manage-access.html#authentication) section
 
 | Header             | Note                               |
 |--------------------|-------------------------------------|
