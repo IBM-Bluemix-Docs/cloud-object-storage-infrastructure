@@ -22,7 +22,7 @@ IBM Cloud Object Storage provides two separate APIs for managing and using objec
 
 More information on using the SoftLayer API to create or delete credentials, check capacity usage, retrieve a UUID, and other account functions can be found at the [SoftLayer Development Network](http://sldn.softlayer.com/reference/services/SoftLayer_Network_Storage_Hub_Cleversafe_Account).
 
-The following tables describe the complete set of supported operations when using the S3 API to access IBM Cloud Object Storage.  For details on using the operations, including examples, see the API reference pages for [buckets](/docs/infrastructure/cloud-object-storage-infrastructure/buckets.html) and [objects]((/docs/infrastructure/cloud-object-storage-infrastructure/objects.html).
+The following tables describe the complete set of supported operations when using the S3 API to access IBM Cloud Object Storage.  For details on using the operations, including examples, see the API reference pages for [buckets](/docs/infrastructure/cloud-object-storage-infrastructure/buckets.html) and [objects](/docs/infrastructure/cloud-object-storage-infrastructure/objects.html).
 
 ## Operations on the account
 
