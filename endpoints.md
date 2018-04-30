@@ -245,16 +245,16 @@ Types of endpoint:
       <th>Endpoint</th>
     </tr>
   </thead>
-    <tr>
-    <td rowspan="2">Toronto, Canada</td>
-    <td>public</td>
-    <td><code class="highlighter-rouge">s3.tor01.objectstorage.softlayer.net</code></td>
-  </tr>
-  <tr>
-    <td>private</td>
-    <td><code class="highlighter-rouge">s3.tor01.objectstorage.service.networklayer.com</code></td>
-  </tr>
-  <tr>
+<tr>
+  <td rowspan="2">Chennai, India</td>
+  <td>public</td>
+  <td><code class="highlighter-rouge">s3.che01.objectstorage.softlayer.net</code></td>
+</tr>
+<tr>
+  <td>private</td>
+  <td><code class="highlighter-rouge">s3.che01.objectstorage.service.networklayer.com</code></td>
+</tr>
+ <tr>
   <td rowspan="2">Melbourne, Australia</td>
   <td>public</td>
   <td><code class="highlighter-rouge">s3.mel01.objectstorage.softlayer.net</code></td>
@@ -263,5 +263,14 @@ Types of endpoint:
   <td>private</td>
   <td><code class="highlighter-rouge">s3.mel01.objectstorage.service.networklayer.com</code></td>
 </tr>
+  <tr>
+    <td rowspan="2">Toronto, Canada</td>
+    <td>public</td>
+    <td><code class="highlighter-rouge">s3.tor01.objectstorage.softlayer.net</code></td>
+ </tr>
+  <tr>
+    <td>private</td>
+    <td><code class="highlighter-rouge">s3.tor01.objectstorage.service.networklayer.com</code></td>
+ </tr>
 </table>
 {:.endpointtable}
