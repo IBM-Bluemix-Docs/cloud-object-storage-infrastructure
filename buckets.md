@@ -19,13 +19,13 @@ lastupdated: "2018-02-15"
 
 A `GET` issued to the endpoint root returns a list of buckets owned by the requesting account.  This operation does not make use of operation specific headers, query parameters, or payload elements.
 
-##### Syntax
+**Syntax**
 
 ```bash
 GET https://{endpoint}/
 ```
 
-##### Sample request
+**Sample Request**
 
 ```http
 GET / HTTP/1.1
@@ -35,7 +35,7 @@ X-Amz-Date: 20160822T030815Z
 Authorization: {authorization-string}
 ```
 
-##### Sample response
+**Sample Response**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -81,14 +81,14 @@ Valid provisioning codes for `LocationCostraint` are: <br>
 &emsp;&emsp;  `mel01-standard` / `mel01-vault` / `mel01-cold` / `mel01-flex` <br>
 &emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
-##### Syntax
+**Syntax**
 
 ```shell
 PUT https://{endpoint}/{bucket-name} # path style
 PUT https://{bucket-name}.{endpoint} # virtual host style
 ```
 
-#### Optional payload elements
+**Optional payload elements**
 
 If an XML block specifying a `LocationConstraint` is provided it must correspond with a valid provisioning code (e.g. `us-standard`).  If the request payload is left empty, the default provisioning code is used.
 
@@ -98,7 +98,7 @@ If an XML block specifying a `LocationConstraint` is provided it must correspond
 </CreateBucketConfiguration>
 ```
 
-##### Sample request
+**Sample Request**
 
 This is an example of creating a new bucket called 'images'.
 
@@ -110,7 +110,7 @@ X-Amz-Date: 20160821T052842Z
 Authorization:{authorization-string}
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -125,7 +125,7 @@ Content-Length: 0
 
 ----
 
-#### Create a Vault bucket
+### Create a Vault bucket
 
 To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `us-vault` in the body of a `PUT` request to a bucket endpoint.
 
@@ -140,7 +140,7 @@ Valid provisioning codes for `LocationCostraint` are: <br>
 &emsp;&emsp;  `mel01-standard` / `mel01-vault` / `mel01-cold` / `mel01-flex` <br>
 &emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
-##### Syntax
+**Syntax**
 
 ```shell
 PUT https://{endpoint}/{bucket-name} # path style
@@ -153,7 +153,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 </CreateBucketConfiguration>
 ```
 
-##### Sample request
+**Sample Request**
 
 This is an example of creating a new bucket called 'vault-images'.
 
@@ -172,7 +172,7 @@ Content-Length: 110
 </CreateBucketConfiguration>
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -186,7 +186,7 @@ Content-Length: 0
 
 ----
 
-## Create a Cold Vault bucket
+### Create a Cold Vault bucket
 
 To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `{code}-cold` in the body of a `PUT` request to a bucket endpoint.
 
@@ -202,7 +202,7 @@ Valid provisioning codes for `LocationCostraint` are: <br>
 &emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
 
-##### Syntax
+**Syntax**
 
 ```shell
 PUT https://{endpoint}/{bucket-name} # path style
@@ -215,7 +215,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 </CreateBucketConfiguration>
 ```
 
-##### Sample request
+**Sample Request**
 
 This is an example of creating a new bucket called 'cold-vault-images'.
 
@@ -234,7 +234,7 @@ Content-Length: 110
 </CreateBucketConfiguration>
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -248,7 +248,7 @@ Content-Length: 0
 
 ----
 
-#### Create a Flex bucket
+### Create a Flex bucket
 
 To create a Flex bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `{code}-flex` in the body of a `PUT` request to a bucket endpoint.
 
@@ -263,9 +263,7 @@ Valid provisioning codes for `LocationCostraint` are: <br>
 &emsp;&emsp;  `mel01-standard` / `mel01-vault` / `mel01-cold` / `mel01-flex` <br>
 &emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
-
-
-##### Syntax
+**Syntax**
 
 ```shell
 PUT https://{endpoint}/{bucket-name} # path style
@@ -278,7 +276,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 </CreateBucketConfiguration>
 ```
 
-##### Sample request
+**Sample Request**
 
 This is an example of creating a new bucket called 'flex-images'.
 
@@ -291,13 +289,14 @@ Content-Type: text/plain
 Host: s3-api.us-geo.objectstorage.softlayer.net
 Content-Length: 110
 ```
+
 ```xml
 <CreateBucketConfiguration>
   <LocationConstraint>us-flex</LocationConstraint>
 </CreateBucketConfiguration>
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -315,14 +314,14 @@ Content-Length: 0
 
 A `HEAD` issued to a bucket resource will return the headers for that bucket. This operation does not make use of operation specific headers, query parameters, or payload elements.
 
-##### Syntax
+**Syntax**
 
 ```bash
 HEAD https://{endpoint}/{bucket-name} # path style
 HEAD https://{bucket-name}.{endpoint} # virtual host style
 ```
 
-##### Sample request
+**Sample Request**
 
 This is an example of fetching the headers for the 'images' bucket.
 
@@ -334,7 +333,7 @@ X-Amz-Date: 20160821T052842Z
 Authorization:{authorization-string}
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -353,7 +352,7 @@ Content-Length: 0
 
 A `GET` request addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in COS. This operation does not make use of operation specific headers or payload elements.
 
-##### Syntax
+**Syntax**
 
 Note that the 'version 2' method of listing objects within a bucket is not supported, and the 'version 1' syntax is needed.
 {:tip}
@@ -363,7 +362,7 @@ GET https://{endpoint}/{bucket-name} # path style
 GET https://{bucket-name}.{endpoint} # virtual host style
 ```
 
-##### Optional query parameters
+**Optional query parameters**
 
 Name | Type | Description
 --- | ---- | ------------
@@ -373,7 +372,7 @@ Name | Type | Description
 `max-keys` | string | Restricts the number of objects to display in the response.  Default and maximum is 1,000.
 `marker` | string | Specifies the object from where the listing should begin, in UTF-8 binary order.
 
-##### Sample request
+**Sample Request**
 
 This request lists the objects inside the "apiary" bucket.
 
@@ -385,7 +384,7 @@ X-Amz-Date: 20160822T225156Z
 Authorization: {authorization-string}
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -398,6 +397,7 @@ x-amz-request-id: 9f39ff2e-55d1-461b-a6f1-2d0b75138861
 Content-Type: application/xml
 Content-Length: 909
 ```
+
 ```xml
 <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
   <Name>apiary</Name>
@@ -448,14 +448,14 @@ Content-Length: 909
 
 A `DELETE` issued to an empty bucket deletes the bucket. After deleting a bucket the name will be held in reserve by the system for 10 minutes, after which it will be released for re-use.  *Only empty buckets can be deleted.* This operation does not make use of operation specific headers, query parameters, or payload elements.
 
-##### Syntax
+**Syntax**
 
 ```bash
 DELETE https://{endpoint}/{bucket-name} # path style
 DELETE https://{bucket-name}.{endpoint} # virtual host style
 ```
 
-##### Sample request
+**Sample Request**
 
 ```http
 DELETE /images HTTP/1.1
@@ -468,7 +468,7 @@ The server responds with `204 No Content`.
 
 If a non-empty bucket is requested for deletion, the server responds with `409 Conflict`.
 
-##### Sample request
+**Sample Request**
 
 ```http
 DELETE /apiary HTTP/1.1
@@ -477,7 +477,7 @@ x-amz-date: 20160825T174049Z
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-##### Sample response
+**Sample Response**
 
 ```xml
 <Error>
@@ -529,14 +529,14 @@ The following canned ACLs are supported by IBM COS.  Values not listed below are
 `READ` access, including `public-read`, when granted on a bucket does not allow for the actual access of objects themselves, only the ability to list them.
 {:tip}
 
-##### Syntax
+**Syntax**
 
 ```bash
 PUT https://{endpoint}/{bucket-name}?acl= # path style
 PUT https://{bucket-name}.{endpoint}?acl= # virtual host style
 ```
 
-##### Sample request Basic pre-made ACL
+**Sample Request** Basic pre-made ACL
 
 This is an example of specifying a pre-made ACL to allow for `public-read` access to the "apiary" bucket. This allows any storage account to view the bucket's contents and ACL details.
 
@@ -548,7 +548,7 @@ x-amz-acl: public-read
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -561,7 +561,7 @@ x-amz-request-id: 73d3cd4a-ff1d-4ac9-b9bb-43529b11356a
 Content-Length: 0
 ```
 
-##### Sample request Custom ACL
+**Sample Request** Custom ACL
 
 This is an example of specifying a custom ACL to allow for another user using their username to view the ACL for the "apiary" bucket, but not to list objects stored inside the bucket. A third account is given full access to the same bucket as another element of the same ACL.  All authenticated users of the system can list objects in the bucket.
 
@@ -597,7 +597,7 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 </AccessControlPolicy>
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -615,14 +615,14 @@ x-amz-request-id: 73d3cd4a-ff1d-4ac9-b9bb-43529b11356a
 
 A `GET` issued to a bucket with the proper parameters retrieves the ACL for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
 
-##### Syntax
+**Syntax**
 
 ```bash
 GET https://{endpoint}/{bucket-name}?acl= # path style
 GET https://{bucket-name}.{endpoint}?acl= # virtual host style
 ```
 
-##### Sample request
+**Sample Request**
 
 This is an example of retrieving a bucket ACL.
 
@@ -633,7 +633,7 @@ x-amz-date: 20161011T190354Z
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -671,14 +671,14 @@ Content-Length: 550
 
 A `POST` given a path to an bucket and proper parameters will delete a specified set of objects.  This requires a `Content-MD5` header in addition to the `x-amz-content-sha256` header. This operation does not make use of operation specific query parameters, headers, or payload elements.
 
-###### Syntax
+**Syntax**
 
 ```bash
 POST https://{endpoint}/{bucket-name}/?delete= # path style
 POST https://{bucket-name}.{endpoint}/?delete= # virtual host style
 ```
 
-###### Sample request
+**Sample Request**
 
 ```http
 POST /example?delete= HTTP/1.1
@@ -702,7 +702,7 @@ Content-Type: text/plain; charset=utf-8
 </Delete>
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -733,7 +733,7 @@ Content-Length: 207
 
 A `GET` issued to a bucket with the proper parameters retrieves information about any canceled or incomplete multipart uploads for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
 
-##### Syntax
+**Syntax**
 
 ```bash
 GET https://{endpoint}/{bucket-name}?uploads= # path style
@@ -751,7 +751,7 @@ Name | Type | Description
 `key-marker` | string | Specifies from where the listing should begin.
 `upload-id-marker` | string | Ignored if `key-marker` is not specified, otherwise sets a point at which to begin listing parts above `upload-id-marker`.
 
-##### Sample request
+**Sample Request**
 
 This is an example of retrieving all current canceled and incomplete multipart uploads.
 
@@ -762,7 +762,7 @@ x-amz-date: 20161011T190354Z
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-##### Sample response (no multipart uploads in progress)
+**Sample Response** (no multipart uploads in progress)
 
 ```http
 HTTP/1.1 200 OK
@@ -822,14 +822,14 @@ Content-Length: 374
 
 A `GET` issued to a bucket with the proper parameters retrieves information about cross-origin resource sharing (CORS) configuration for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
 
-##### Syntax
+**Syntax**
 
 ```bash
 GET https://{endpoint}/{bucket-name}?cors= # path style
 GET https://{bucket-name}.{endpoint}?cors= # virtual host style
 ```
 
-##### Sample request
+**Sample Request**
 
 This is an example of listing a CORS configuration on the "apiary" bucket.
 
@@ -840,7 +840,7 @@ x-amz-date: 20161011T190354Z
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-##### Sample response No CORS configuration set
+**Sample Response** No CORS configuration set
 
 ```http
 HTTP/1.1 200 OK
@@ -864,14 +864,14 @@ Content-Length: 123
 
 A `PUT` issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket. Note that in addition to a SHA256 hash of the body, a `Content-MD5` header is required as well. This operation does not make use of operation specific headers or additional query parameters.
 
-##### Syntax
+**Syntax**
 
 ```bash
 PUT https://{endpoint}/{bucket-name}?cors= # path style
 PUT https://{bucket-name}.{endpoint}?cors= # virtual host style
 ```
 
-#### Optional payload elements
+**Optional payload elements**
 
 In the XML block defining the key CORS elements (`AllowedOrigin` and `AllowedMethod`) there are two optional elements that can be optionally specified.
 
@@ -880,7 +880,7 @@ In the XML block defining the key CORS elements (`AllowedOrigin` and `AllowedMet
 | MaxAgeSeconds | Time in seconds that the browser will cache the response to the pre-flight OPTIONS request for the specified resource. |
 | ExposeHeader | Defines specific headers that will be exposed to external applications. |
 
-##### Sample request
+**Sample Request**
 
 This is an example of adding a CORS configuration that allows requests from `www.ibm.com` to issue `GET`, `PUT`, and `POST` requests to the bucket.
 
@@ -906,7 +906,7 @@ Content-Length: 237
 </CORSConfiguration>
 ```
 
-##### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -925,14 +925,14 @@ Content-Length: 0
 
 A `DELETE` issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket.
 
-##### Syntax
+**Syntax**
 
 ```bash
 DELETE https://{endpoint}/{bucket-name}?cors= # path style
 DELETE https://{bucket-name}.{endpoint}?cors= # virtual host style
 ```
 
-##### Sample request
+**Sample Request**
 
 This is an example of deleting a CORS configuration for a bucket.
 

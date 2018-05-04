@@ -19,14 +19,14 @@ lastupdated: "2018-02-15"
 
 A `PUT` given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  All objects are limited to 10TB in size (when using multiple parts, see below). This operation does not make use of operation specific query parameters, or payload elements.
 
-###### Syntax
+**Syntax**
 
 ```bash
 PUT https://{endpoint}/{bucket-name}/{object-name} # path style
 PUT https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 ```
 
-##### Specific headers for SSE-C
+#**Specific headers for SSE-C**
 
 The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
@@ -36,7 +36,7 @@ Header | Type | Description
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
-###### Sample request
+**Sample Request**
 
 ```http
 PUT /example-bucket/queen-bee HTTP/1.1
@@ -55,7 +55,7 @@ Content-Length: 533
 
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -69,7 +69,7 @@ ETag: "3ca744fa96cb95e92081708887f63de5"
 Content-Length: 0
 ```
 
-###### Sample request using SSE-C
+**Sample Request** using SSE-C
 
 ```http
 PUT /example-bucket/queen-bee HTTP/1.1
@@ -91,7 +91,7 @@ Content-Length: 533
 
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -113,14 +113,14 @@ Content-Length: 0
 
 A `HEAD` given a path to an object retrieves that object's headers. This operation does not make use of operation specific query parameters or payload elements.
 
-###### Syntax
+**Syntax**
 
 ```bash
 HEAD https://{endpoint}/{bucket-name}/{object-name} # path style
 HEAD https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 ```
 
-#### Optional headers
+**Optional Headers**
 
 Header | Type | Description
 --- | ---- | ------------
@@ -130,7 +130,7 @@ Header | Type | Description
 `x-amz-copy-source-if-unmodified-since` | string (timestamp)| Return the metadata if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
 `x-amz-copy-source-if-modified-since` | string (timestamp)| Return the metadata if the source object has been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
 
-#### Specific headers for SSE-C
+**Specific headers for SSE-C**
 
 The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Anyrequest using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
@@ -140,7 +140,7 @@ Header | Type | Description
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
-###### Sample request
+**Sample Request**
 
 ```http
 HEAD /example-bucket/soldier-bee HTTP/1.1
@@ -150,7 +150,7 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -172,14 +172,14 @@ Content-Length: 11
 
 A `GET` given a path to an object downloads the object. This operation does not make use of operation specific query parameters or payload elements.
 
-###### Syntax
+**Syntax**
 
 ```bash
 GET https://{endpoint}/{bucket-name}/{object-name} # path style
 GET https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 ```
 
-#### Optional headers
+**Optional Headers**
 
 Header | Type | Description
 --- | ---- | ------------
@@ -189,7 +189,7 @@ Header | Type | Description
 `x-amz-copy-source-if-unmodified-since` | string (timestamp)| Return the object if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
 `x-amz-copy-source-if-modified-since` | string (timestamp)| Return the object if the source object has been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
 
-#### Specific headers for SSE-C
+**Specific headers for SSE-C**
 
 The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
@@ -199,7 +199,7 @@ Header | Type | Description
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
-###### Sample request
+**Sample Request**
 
 ```http
 GET /example-bucket/worker-bee HTTP/1.1
@@ -209,7 +209,7 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -235,14 +235,14 @@ Content-Length: 467
 
 A `DELETE` given a path to an object deletes an object. This operation does not make use of operation specific query parameters, headers, or payload elements.
 
-###### Syntax
+**Syntax**
 
 ```bash
 DELETE https://{endpoint}/{bucket-name}/{object-name} # path style
 DELETE https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 ```
 
-###### Sample request
+**Sample Request**
 
 ```http
 DELETE /example-bucket/soldier-bee HTTP/1.1
@@ -251,7 +251,7 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 204 No Content
@@ -269,14 +269,14 @@ X-Clv-S3-Version: 2.5
 A `PUT` given a path to a new object creates a new copy of another object specified by the `x-amz-copy-source` header. Unless otherwise altered the metadata remains the same, although any ACL is reset to `private` for the  account creating the copy. This operation does not make use of operation specific query parameters or payload elements.
 
 
-###### Syntax
+**Syntax**
 
 ```bash
 PUT https://{endpoint}/{bucket-name}/{object-name} # path style
 PUT https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 ```
 
-#### Optional headers
+**Optional Headers**
 
 Header | Type | Description
 --- | ---- | ------------
@@ -286,7 +286,7 @@ Header | Type | Description
 `x-amz-copy-source-if-unmodified-since` | string (timestamp)| Creates a copy if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
 `x-amz-copy-source-if-modified-since` | string (timestamp)| Creates a copy if the source object has been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
 
-#### Specific headers for SSE-C
+**Specific headers for SSE-C**
 
 The following headers are available for objects being copied into buckets that have Server Side Encryption with Customer-Provided Keys (SSE-C). Any `PUT` request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
@@ -298,7 +298,7 @@ Header | Type | Description
 `x-amz-copy-source-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-copy-source-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-copy-source-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
-###### Sample request
+**Sample Request**
 
 This basic example takes the `bee` object from the `garden` bucket, and creates a copy in the `example` bucket with the new key `wild-bee`.
 
@@ -310,7 +310,7 @@ x-amz-copy-source: /garden/bee
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -339,14 +339,14 @@ Content-Length: 240
 A `GET` given a path to an object given the parameter `?acl=` retrieves the access control list for the object. This operation does not make use of operation specific headers, additional query parameters  or payload elements.
 
 
-###### Syntax
+**Syntax**
 
 ```bash
 GET https://{endpoint}/{bucket-name}/{object-name}?acl= # path style
 GET https://{bucket-name}.{endpoint}/{object-name}?acl= # virtual host style
 ```
 
-###### Sample request
+**Sample Request**
 
 ```http
 GET /example-bucket/queen-bee?acl= HTTP/1.1
@@ -355,7 +355,7 @@ x-amz-date: 20161207T155945Z
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -393,14 +393,14 @@ Content-Length: 550
 
 A `PUT` issued to an object with the proper parameters creates an access control list (ACL) for that object.  Access control lists allow for granting different sets of permissions to different storage accounts using the account's ID, or by using a pre-made ACL.
 
-Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other CRS storage account to access the resource, as well as the general public.
+Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other storage account to access the resource, as well as the general public.
 
 The assigned permissions behave as follows:
 
 | Permission | When granted on a bucket | When granted on an object |
 |------------|--------------------------|---------------------------|
-| READ | Allows grantee to list and read all objects in bucket | Allows grantee to read object data and metadata |
-| WRITE | Allows grantee to create, overwrite and delete any object in bucket. Cannot be granted independently from READ permission. | N/A |
+| READ | Allows grantee to list all objects in bucket | Allows grantee to read object data and metadata |
+| WRITE | Allows grantee to create, overwrite and delete new objects in bucket. Cannot be granted independently from READ permission. | N/A |
 | READ_ACP | This permission does not exist for buckets; default setting is FULL_CONTROL | Allows grantee to read object ACL |
 | WRITE_ACP | Default setting is FULL_CONTROL | Allows grantee to write ACL for applicable object |
 | FULL_CONTROL | Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket | Allows grantee READ, READ_ACP and WRITE_ACP permissions on object |
@@ -416,14 +416,14 @@ The following canned ACLs are supported by IBM COS.  Values not listed below are
 
 It is not possible to grant granular `WRITE` access at the object level, only at the bucket level.
 
-###### Syntax
+**Syntax**
 
 ```bash
 PUT https://{endpoint}/{bucket-name}/{object-name}?acl= # path style
 PUT https://{bucket-name}.{endpoint}/{object-name}?acl= # virtual host style
 ```
 
-###### Sample request (canned ACL)
+**Sample Request** (canned ACL)
 
 ```http
 PUT /example-bucket/queen-bee?acl= HTTP/1.1
@@ -433,7 +433,7 @@ x-amz-acl: public-read
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -446,7 +446,7 @@ x-amz-request-id: b8dea44f-af20-466d-83ec-2a8563f1617b
 Content-Length: 0
 ```
 
-###### Sample request (canned ACL in header)
+**Sample Request** (canned ACL in header)
 
 It is also possible to assign a canned ACL directly when uploading an object by passing the `x-amz-acl` header and a canned ACL value.  This example makes the `queen-bee` object publicly and anonymously accessible.
 
@@ -458,7 +458,7 @@ x-amz-acl: public-read
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -471,7 +471,7 @@ x-amz-request-id: b8dea44f-af20-466d-83ec-2a8563f1617b
 Content-Length: 0
 ```
 
-###### Sample request (custom ACL)
+**Sample Request** (custom ACL)
 
 This is an example of specifying a custom ACL to allow for another account to view the ACL for the "queen-bee" object, but not to access object itself. Additionally, a third account is given full access to the same object as another element of the same ACL.
 
@@ -510,7 +510,7 @@ Content-Length: 564
 </AccessControlPolicy>
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -529,14 +529,14 @@ Content-Length: 0
 
 An `OPTIONS` given a path to an object along with an origin and request type checks to see if that object is accessible from that origin using that request type.  Unlike all other requests, an OPTIONS request does not require the `authorization` or `x-amx-date` headers.
 
-###### Syntax
+**Syntax**
 
 ```bash
 OPTIONS https://{endpoint}/{bucket-name}/{object-name} # path style
 OPTIONS https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 ```
 
-###### Sample request
+**Sample Request**
 
 ```http
 OPTIONS /example-bucket/queen-bee HTTP/1.1
@@ -546,7 +546,7 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -582,18 +582,18 @@ There are three phases to uploading an object in multiple parts:
 2. Individual parts are uploaded specifying their sequential part numbers and the `UploadId` for the object.
 3. When all parts are finished uploading, the upload is completed by sending a request with the `UploadId` and an XML block that lists each part number and it's respective `Etag` value.
 
-#### Initiate a multipart upload
+### Initiate a multipart upload
 
 A `POST` issued to an object with the query parameter `upload` creates a new `UploadId` value, which is then be referenced by each part of the object being uploaded.
 
-###### Syntax
+**Syntax**
 
 ```bash
 POST https://{endpoint}/{bucket-name}/{object-name}?uploads= # path style
 POST https://{bucket-name}.{endpoint}/{object-name}?uploads= # virtual host style
 ```
 
-#### Specific headers for SSE-C
+**Specific headers for SSE-C**
 
 The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided for each part of the multipart upload.*
 
@@ -603,7 +603,7 @@ Header | Type | Description
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
-###### Sample request
+**Sample Request**
 
 ```http
 POST /some-bucket/multipart-object-123?uploads= HTTP/1.1
@@ -612,7 +612,7 @@ x-amz-date: 20170303T203411Z
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -635,11 +635,11 @@ Content-Length: 276
 
 ----
 
-## Upload a part
+### Upload a part
 
 A `PUT` request issued to an object with query parameters `partNumber` and `uploadId` will upload one part of an object.  The parts may be uploaded serially or in parallel, but must be numbered in order.
 
-###### Syntax
+**Syntax**
 
 ```bash
 PUT https://{endpoint}/{bucket-name}/{object-name}?partNumber={sequential-integer}&uploadId={uploadId}= # path style
@@ -647,7 +647,7 @@ PUT https://{bucket-name}.{endpoint}/{object-name}?partNumber={sequential-intege
 ```
 
 
-#### Specific headers for SSE-C
+**Specific headers for SSE-C**
 
 The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided when the multipart operation was initiated.*
 
@@ -657,7 +657,7 @@ Header | Type | Description
 `x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
 `x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
-###### Sample request
+**Sample Request**
 
 ```http
 PUT /some-bucket/multipart-object-123?partNumber=1&uploadId=0000015a-df89-51d0-2790-dee1ac994053 HTTP/1.1
@@ -668,7 +668,7 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 Content-Length: 13374550
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -683,11 +683,11 @@ Content-Length: 0
 
 ----
 
-## Complete a multipart upload
+### Complete a multipart upload
 
 A `POST` request issued to an object with query parameter `uploadId` and the appropriate XML block in the body will complete a multipart upload.
 
-###### Syntax
+**Syntax**
 
 ```bash
 POST https://{endpoint}/{bucket-name}/{object-name}?uploadId={uploadId}= # path style
@@ -703,7 +703,7 @@ POST https://{bucket-name}.{endpoint}/{object-name}?uploadId={uploadId}= # virtu
 </CompleteMultipartUpload>
 ```
 
-###### Sample request
+**Sample Request**
 
 ```http
 POST /some-bucket/multipart-object-123?uploadId=0000015a-df89-51d0-2790-dee1ac994053 HTTP/1.1
@@ -727,7 +727,7 @@ Content-Length: 257
 </CompleteMultipartUpload>
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 200 OK
@@ -752,18 +752,18 @@ Content-Length: 364
 
 ----
 
-## Abort incomplete multipart uploads
+### Abort incomplete multipart uploads
 
 A `DELETE` request issued to an object with query parameter `uploadId` will delete all unfinished parts of a multipart upload.
 
-###### Syntax
+**Syntax**
 
 ```bash
 DELETE https://{endpoint}/{bucket-name}/{object-name}?uploadId={uploadId}= # path style
 DELETE https://{bucket-name}.{endpoint}/{object-name}?uploadId={uploadId}= # virtual host style
 ```
 
-###### Sample request
+**Sample Request**
 
 ```http
 DELETE /some-bucket/multipart-object-123?uploadId=0000015a-df89-51d0-2790-dee1ac994053 HTTP/1.1
@@ -772,7 +772,7 @@ x-amz-date: 20170318T035641Z
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```
 
-###### Sample response
+**Sample Response**
 
 ```http
 HTTP/1.1 204 No Content
