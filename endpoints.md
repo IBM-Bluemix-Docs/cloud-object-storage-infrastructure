@@ -274,3 +274,37 @@ Types of endpoint:
  </tr>
 </table>
 {:.endpointtable}
+
+## Federal Single Data Center Endpoints
+
+Access to IBM Federal Data Centers (DCs) is only available for authorized US Government accounts.
+{:tip}
+
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Type</th>
+      <th>Endpoint</th>
+    </tr>
+  </thead>
+<tr>
+  <td rowspan="2">US South Federal (Richardson, TX)</td>
+  <td>public</td>
+  <td><code class="highlighter-rouge">s3.dal08.objectstorage.usgov.softlayer.com</code></td>
+</tr>
+<tr>
+  <td>private</td>
+  <td><code class="highlighter-rouge">s3.dal08.objectstorage.usgov.service.networklayer.com</code></td>
+</tr>
+ <tr>
+  <td rowspan="2">US East Federal (Ashburn, VA)</td>
+  <td>public</td>
+  <td><code class="highlighter-rouge">s3.wdc03.objectstorage.usgov.softlayer.com</code></td>
+</tr>
+<tr>
+  <td>private</td>
+  <td><code class="highlighter-rouge">s3.wdc03.objectstorage.usgov.service.networklayer.com</code></td>
+</tr>
+</table>
+{:.endpointtable}
