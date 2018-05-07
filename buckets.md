@@ -78,6 +78,7 @@ Valid provisioning codes for `LocationCostraint` are: <br>
 &emsp;&emsp;  `eu-standard` / `eu-vault` / `eu-cold` / `eu-flex` <br>
 &emsp;&emsp;  `eu-gb-standard` / `eu-gb-vault` / `eu-gb-cold` / `eu-gb-flex` <br>
 &emsp;&emsp;  `ap-standard` / `ap-vault` / `ap-cold` / `ap-flex` <br>
+&emsp;&emsp;  `che01-standard` / `che01-vault` / `che01-cold` / `che01-flex` <br>
 &emsp;&emsp;  `mel01-standard` / `mel01-vault` / `mel01-cold` / `mel01-flex` <br>
 &emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
@@ -504,18 +505,15 @@ This operation does not make use of additional operation specific query paramete
 
 ACL grantees must be other COS storage instances, and their UUID can be found along with credentials in the web portal.
 
-
 The assigned permissions behave as follows:
 
 | Permission | When granted on a bucket | When granted on an object |
 |------------|--------------------------|---------------------------|
-| READ | Allows grantee to list and read all objects in bucket | Allows grantee to read object data and metadata |
-| WRITE | Allows grantee to create, overwrite and delete any object in bucket. Cannot be granted independently from READ permission. | N/A |
+| READ | Allows grantee to list all objects in bucket | Allows grantee to read object data and metadata |
+| WRITE | Allows grantee to create, overwrite and delete new objects in bucket. Cannot be granted independently from READ permission. | N/A |
 | READ_ACP | This permission does not exist for buckets; default setting is FULL_CONTROL | Allows grantee to read object ACL |
 | WRITE_ACP | Default setting is FULL_CONTROL | Allows grantee to write ACL for applicable object |
 | FULL_CONTROL | Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket | Allows grantee READ, READ_ACP and WRITE_ACP permissions on object |
-
-**Note:** The ``READ_ACP``, ``WRITE_ACP``, and ``FULL_CONTROL`` permissions are implied by the bucket “own” permission. When any of these permissions are assigned to a grantee in a bucket ACL, that grantee will be granted the bucket “own” permission.
 
 The following canned ACLs are supported by IBM COS.  Values not listed below are not supported.
 
@@ -524,7 +522,6 @@ The following canned ACLs are supported by IBM COS.  Values not listed below are
 | private | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
 | public-read | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
 | public-read-write | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
-| authenticated-read  | Bucket and object | Supported when set on an object only. Not supported as a bucket ACL. |
 
 `READ` access, including `public-read`, when granted on a bucket does not allow for the actual access of objects themselves, only the ability to list them.
 {:tip}
