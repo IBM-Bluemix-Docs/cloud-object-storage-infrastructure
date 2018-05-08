@@ -245,33 +245,45 @@ Types of endpoint:
       <th>Endpoint</th>
     </tr>
   </thead>
-<tr>
-  <td rowspan="2">Chennai, India</td>
-  <td>public</td>
-  <td><code class="highlighter-rouge">s3.che01.objectstorage.softlayer.net</code></td>
-</tr>
-<tr>
-  <td>private</td>
-  <td><code class="highlighter-rouge">s3.che01.objectstorage.service.networklayer.com</code></td>
-</tr>
- <tr>
-  <td rowspan="2">Melbourne, Australia</td>
-  <td>public</td>
-  <td><code class="highlighter-rouge">s3.mel01.objectstorage.softlayer.net</code></td>
-</tr>
-<tr>
-  <td>private</td>
-  <td><code class="highlighter-rouge">s3.mel01.objectstorage.service.networklayer.com</code></td>
-</tr>
+  <tr>
+    <td rowspan="2">Chennai, India</td>
+    <td>public</td>
+    <td>
+      <code class="highlighter-rouge">s3.che01.objectstorage.softlayer.net</code>
+    </td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td>
+      <code class="highlighter-rouge">s3.che01.objectstorage.service.networklayer.com</code>
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="2">Melbourne, Australia</td>
+    <td>public</td>
+    <td>
+      <code class="highlighter-rouge">s3.mel01.objectstorage.softlayer.net</code>
+    </td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td>
+      <code class="highlighter-rouge">s3.mel01.objectstorage.service.networklayer.com</code>
+    </td>
+  </tr>
   <tr>
     <td rowspan="2">Toronto, Canada</td>
     <td>public</td>
-    <td><code class="highlighter-rouge">s3.tor01.objectstorage.softlayer.net</code></td>
- </tr>
+    <td>
+      <code class="highlighter-rouge">s3.tor01.objectstorage.softlayer.net</code>
+    </td>
+  </tr>
   <tr>
     <td>private</td>
-    <td><code class="highlighter-rouge">s3.tor01.objectstorage.service.networklayer.com</code></td>
- </tr>
+    <td>
+      <code class="highlighter-rouge">s3.tor01.objectstorage.service.networklayer.com</code>
+    </td>
+  </tr>
 </table>
 {:.endpointtable}
 
@@ -288,23 +300,31 @@ Access to IBM Federal Data Centers (DCs) is only available for authorized US Gov
       <th>Endpoint</th>
     </tr>
   </thead>
-<tr>
-  <td rowspan="2">US South Federal (Richardson, TX)</td>
-  <td>public</td>
-  <td><code class="highlighter-rouge">s3.dal08.objectstorage.usgov.softlayer.com</code></td>
-</tr>
-<tr>
-  <td>private</td>
-  <td><code class="highlighter-rouge">s3.dal08.objectstorage.usgov.service.networklayer.com</code></td>
-</tr>
- <tr>
-  <td rowspan="2">US East Federal (Ashburn, VA)</td>
-  <td>public</td>
-  <td><code class="highlighter-rouge">s3.wdc03.objectstorage.usgov.softlayer.com</code></td>
-</tr>
-<tr>
-  <td>private</td>
-  <td><code class="highlighter-rouge">s3.wdc03.objectstorage.usgov.service.networklayer.com</code></td>
-</tr>
+  <tr>
+    <td rowspan="2">US South Federal</td>
+    <td>public</td>
+    <td>
+      <code class="highlighter-rouge">s3.dal08.objectstorage.usgov.softlayer.com</code>
+    </td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td>
+      <code class="highlighter-rouge">s3.dal08.objectstorage.usgov.service.networklayer.com</code>
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="2">US East Federal</td>
+    <td>public</td>
+    <td>
+      <code class="highlighter-rouge">s3.wdc03.objectstorage.usgov.softlayer.com</code>
+    </td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td>
+      <code class="highlighter-rouge">s3.wdc03.objectstorage.usgov.service.networklayer.com</code>
+    </td>
+  </tr>
 </table>
 {:.endpointtable}
