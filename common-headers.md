@@ -27,6 +27,7 @@ The following table describes supported common request headers. COS ignores any 
 | Content-Length     | **Required** for uploading objects, chunked encoding also supported.    |
 | Content-MD5        | A 128-bit MD5 hash value of the request body being sent.                  |
 | Expect             | `100-continue` waits for the headers to be accepted before sending the body.  |
+| Cache-Control | Can be used to specify caching behavior along the request/reply chain. For more information, go to http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9 |
 {:.opstable}
 
 ## Common Response Headers
