@@ -254,6 +254,19 @@ Types of endpoint:
       <th>Endpoint</th>
     </tr>
   </thead>
+    <tr>
+    <td rowspan="2">Amsterdam, Netherlands</td>
+    <td>public</td>
+    <td>
+      <code class="highlighter-rouge">s3.ams03.objectstorage.softlayer.net</code>
+    </td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td>
+      <code class="highlighter-rouge">s3.ams03.objectstorage.service.networklayer.com</code>
+    </td>
+  </tr>
   <tr>
     <td rowspan="2">Chennai, India</td>
     <td>public</td>
