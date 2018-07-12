@@ -800,7 +800,9 @@ X-Clv-S3-Version: 2.5
 
 ## Temporarily restore an archived object
 
-A `POST` request issued to an object with query parameter `restore` to request temporary restoration of an archived object.  An archived object must be restored before downloading or modifying the object.  The lifetime of the object must be specifed, after which the temporary copy of the object will be deleted.
+A `POST` request issued to an object with query parameter `restore` to request temporary restoration of an archived object.  A `Content-MD5` header is required as an integrity check for the payload.
+
+An archived object must be restored before downloading or modifying the object.  The lifetime of the object must be specifed, after which the temporary copy of the object will be deleted.
 
 There can be a delay of up to 15 hours before the restored copy is available for access. A HEAD request can check if the restored copy is available.
 
@@ -811,6 +813,26 @@ To permanently restore the object, it must be copied to a bucket that does not h
 ```bash
 POST https://{endpoint}/{bucket-name}/{object-name}?restore # path style
 POST https://{bucket-name}.{endpoint}/{object-name}?restore # virtual host style
+```
+
+**Payload Elements**
+
+The body of the request must contain an XML block with the following schema:
+
+|Element|Type|Children|Ancestor|Constraint|
+|---|---|---|---|---|
+|RestoreRequest|Container|Days, GlacierJobParameter|None|None|
+|Days|Integer|None|RestoreRequest|Specified the lifetime of the temporarily restored object. The minimum number of days that a restored copy of the object can exist is 1. After the restore period has elapsed, temporary copy of the object will be removed.|
+|GlacierJobParameter|String|Tier|RestoreRequest|None|
+|Tier|String|None|GlacierJobParameter|**Must** be set to `Bulk`.|
+
+```xml
+<RestoreRequest>
+    <Days>{integer}</Days>
+    <GlacierJobParameter>
+        <Tier>Bulk</Tier>
+    </GlacierJobParameter>
+</RestoreRequest>
 ```
 
 **Sample Request**
