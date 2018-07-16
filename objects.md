@@ -821,17 +821,17 @@ The body of the request must contain an XML block with the following schema:
 
 |Element|Type|Children|Ancestor|Constraint|
 |---|---|---|---|---|
-|RestoreRequest|Container|Days, GlacierJobParameter|None|None|
+|RestoreRequest|Container|Days, GlacierJobParameters|None|None|
 |Days|Integer|None|RestoreRequest|Specified the lifetime of the temporarily restored object. The minimum number of days that a restored copy of the object can exist is 1. After the restore period has elapsed, temporary copy of the object will be removed.|
-|GlacierJobParameter|String|Tier|RestoreRequest|None|
-|Tier|String|None|GlacierJobParameter|**Must** be set to `Bulk`.|
+|GlacierJobParameters|String|Tier|RestoreRequest|None|
+|Tier|String|None|GlacierJobParameters|**Must** be set to `Bulk`.|
 
 ```xml
 <RestoreRequest>
     <Days>{integer}</Days>
-    <GlacierJobParameter>
+    <GlacierJobParameters>
         <Tier>Bulk</Tier>
-    </GlacierJobParameter>
+    </GlacierJobParameters>
 </RestoreRequest>
 ```
 
@@ -849,9 +849,9 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 ```xml
 <RestoreRequest>
     <Days>3</Days>
-    <GlacierJobParameter>
+    <GlacierJobParameters>
         <Tier>Bulk</Tier>
-    </GlacierJobParameter>
+    </GlacierJobParameters>
 </RestoreRequest>
 ```
 
