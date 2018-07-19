@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-07-17"
+  years: 2017
+lastupdated: "2018-02-15"
 
 ---
 {:shortdesc: .shortdesc}
@@ -44,17 +44,14 @@ Note that the 'version 2' method of listing objects within a bucket is not suppo
 |:----|:---|
 | `DELETE` Bucket | Deletes an empty bucket.   |
 | `DELETE` Bucket CORS | Deletes any cross-origin resource sharing configuration set on a bucket. |
-| `DELETE` Bucket LIFECYCLE | Deletes the lifecycle settings for a bucket.  Existing transition rules will be maintained for existing objects. |
 | `GET` Bucket | Lists objects contained in a bucket.  Limited to listing 1,000 objects at once. |
 | `GET` Bucket ACL |Retrieves the access control list for a bucket.|
 | `GET` Bucket CORS |Retrieves any cross-origin resource sharing configuration set on a bucket.|
-| `GET` Bucket LIFECYCLE | Retrieves the lifecycle settings for a bucket |
 | `HEAD` Bucket | Retrieves a bucket's headers. |
 | `GET` multipart uploads | Lists multipart uploads that have not completed or been canceled. |
 | `PUT` Bucket | Buckets have naming restrictions. Accounts are limited to 100 buckets. |
 | `PUT` Bucket ACL | Creates an access control list for a bucket. |
 | `PUT` Bucket CORS | Creates a cross-origin resource sharing configuration for a bucket.|
-| `PUT` Bucket LIFECYCLE | Creates the lifecycle settings for a bucket.  Applies to only new objects added to the bucket. |
 {:.opstable}
 
 ## Operations on objects
@@ -70,7 +67,6 @@ These operations create, destroy, get information about, and control behavior of
 | `HEAD` Object | Retrieves an object's headers.
 | `OPTIONS` Object | Checks CORS configuration to see if a specific request can be sent.
 | `POST` Object | Adds an object to a bucket using HTML forms.
-| `POST` Object RESTORE | Temporarily restores an archived object. |
 | `PUT` Object | Adds an object to a bucket.
 | `PUT` Object ACL | Creates an access control list for an object.
 | `PUT` Object (Copy) | Creates a copy of an object. |
