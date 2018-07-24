@@ -41,4 +41,4 @@ In order to read objects stored in the Archive tier, the objects must first be r
 
 ## Deleting an archived object
 
-There is no deletion penalty for objects deleted from the four active storage tiers (Standard, Vault, Cold Vault or Flex) at any point in time. The Archive tier, on the other hand, requires a minimum of 180 days of storage. An early deletion will incur a prorated penalty for the unused portion of 180 days.
+There is no deletion penalty for objects deleted from the four active storage tiers (Standard, Vault, Cold Vault or Flex) or from the archive tier. 
