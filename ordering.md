@@ -58,7 +58,7 @@ Existing SoftLayer customers can log in to [https://control.softlayer.com/](http
 4. Select **IBM Cloud Object Storage** in the **Storage Type** menu.
 5. Click **Continue** and complete the order after accepting the Master Service Agreement. The new object storage account will be provisioned momentarily and will show up in the objects list when it is done.
 
-Cloud Object Storage archiving is included with your storage account.  Archive works with existing storage-class tiers, enabling you to reduce storage costs even further by storing data offline with our lowest-priced storage. You will not be charged for archiving unless you use it.
+Cloud Object Storage archiving is included with your storage account. Archive works with existing storage-class tiers, enabling you to reduce storage costs even further by storing data offline with our lowest-priced storage. You will not be charged for archiving unless you use it.
 {:tip}
 
 
