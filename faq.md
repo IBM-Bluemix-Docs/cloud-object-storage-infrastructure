@@ -67,7 +67,7 @@ Yes.  Data at rest is encrypted with automatic provider side Advanced Encryption
 
 **What is the typical encryption overhead if a customer wants to encrypt their data?**
 
-Server side encryption is always on for customer data.  Compared to the hashing required in S3 authentication and the erasure coding, encryption is not a big part of the processing cost of COS.
+Server side encryption is always on for customer data. Compared to the hashing required in S3 authentication and the erasure coding, encryption is not a big part of the processing cost of COS.
 
 **Does IBM COS encrypt all data?**
 
@@ -75,11 +75,11 @@ Yes, IBM COS encrypts all data.
 
 **Does IBM COS have FIPS 140-2 compliance for the encryption algorithms?**
 
-The algorithms are FIPS 140-2 ready but testing / certification is still pending.
+Yes, IBM COS Federal offering is approved for FedRAMP Moderate Security controls which require a validated FIPS configuration. IBM COS Federal is certified at FIPS 140-2 level 1. For more information on COS Federal Offering, please contact us via our Federal site.
 
-**Will client-key encryption be supported?**
+**Is client-key encryption supported?**
 
-Yes, client-key encryption will be supported in 2017.
+Yes, client-key encryption is supported. For more information, see [Manage encrytion](docs/services/cloud-object-storage/basics/encryption.html#manage-encryption).
 
 ## General questions
 
