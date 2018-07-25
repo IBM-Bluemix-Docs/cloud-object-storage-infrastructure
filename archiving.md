@@ -23,7 +23,7 @@ You can archive objects using web console, REST API, and 3rd party tools that ar
 
 ## Add and manage Archive policy on a bucket
 
-A new Archive policy can be added to a new bucket at the time you are creating the bucket or on an existing bucket at any time in any storage tier class (Standard, Vault, Cold Vault,and Flex). An existing Archive policy associated with a bucket can be modified/disabled at any time. Keep in mind, the newly added archive policy or modified policy applies to the new objects uploaded, does not affect the existing objects.
+A new archive policy can be added to a new bucket at the time you are creating the bucket or on an existing bucket at any time in any storage tier class (Standard, Vault, Cold Vault and Flex). An existing archive policy on a bucket can be updated at any time. Keep in mind, the newly added archive policy or modified policy applies to the new objects uploaded, does not affect the existing objects.
 
 
 To immediately archive new objects uploaded on a bucket, enter 0 days on the archive policy.
