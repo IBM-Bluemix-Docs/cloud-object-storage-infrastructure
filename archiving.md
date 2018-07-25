@@ -15,10 +15,10 @@ lastupdated: "2018-07-24"
 
 # Archiving Data
 
-Cloud Object Storage Archive is our [lowest cost option](
+{{site.data.keyword.cos_full}} Archive is our [lowest cost option](
 https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage) option for data that is rarely accessed. Archive works with our existing storage class tiers. You can leverage our on-line cold vault option or transition data from any of the storage tiers to long term offline archive.
 
-You can archive objects using web console, REST API, and 3rd party tools that are integrated with Cloud Object Storage. 
+You can archive objects using web console, REST API, and 3rd party tools that are integrated with IBM Cloud Object Storage. 
 
 
 ## Add and manage Archive policy on a bucket
