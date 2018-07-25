@@ -16,7 +16,7 @@ lastupdated: "2018-07-24"
 # Archiving data
 
 {{site.data.keyword.cos_full}} Archive is our [lowest cost](
-https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage) option for data that is rarely accessed. You can store the data by transitioning from any of the storage tiers (Standard, Vault, Cold Vault, Flex) to long-term offline archive or use online cold vault option. 
+https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage) option for data that is rarely accessed. You can store the data by transitioning from any of the storage tiers (Standard, Vault, Cold Vault and Flex) to long-term offline archive or use online cold vault option. 
 
 You can archive objects using web console, REST API, and 3rd party tools that are integrated with IBM Cloud Object Storage. 
 
@@ -29,12 +29,12 @@ To immediately archive new objects uploaded on a bucket, enter 0 days on the arc
 
 ## Restore an archived object
 
-In order to access an archived object, you must restore it to the original storage tier. The restoration process can take up to 15 hours. Once the object is restored, a copy of the archived object is available for you to access. When restoring an object, you can specify the number of days you want the object to be available. At the end of the specified period, the restored copy is deleted.
+In order to access an archived object, you must restore it to the original storage tier.  When restoring an object, you can specify the number of days you want the object to be available. At the end of the specified period, the restored copy is deleted. Once the object is restored, a copy of the archived object is available for you to access. The restoration process can take up to 15 hours.
 
 An archived object can be in sub-states below:
 
-* Archived: The object in the archived state has been moved from its online storage tier (Standard, Vault, Cold Vault, Flex) to offline Archive tier based on the Archive policy on the bucket.
+* Archived: An object in the archived state has been moved from its online storage tier (Standard, Vault, Cold Vault and Flex) to offline archive tier based on the archive policy on the bucket.
 
-* Restoring: The object in restoring state is in the process of generating a copy from the archived state to the online storage tier.
+* Restoring: An object in restoring state is in the process of generating a copy from the archived state to its original online storage tier.
 
-* Restored: The object in the restored state is when a copy of the archived object is restored to the online storage tier for a specified amount of time. At the end of this specified period, the copy of the object is deleted, while maintaining the archived object.
+* Restored: An object in the restored state is a copy of the archived object that has been restored to its original online storage tier for a specified amount of time. At the end of the period, the copy of the object will be deleted, while maintaining the archived object.
