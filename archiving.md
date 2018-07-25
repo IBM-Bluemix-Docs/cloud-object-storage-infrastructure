@@ -13,7 +13,7 @@ lastupdated: "2018-07-24"
 {:tip: .tip}
 
 
-# Archiving Data
+# Archiving data
 
 {{site.data.keyword.cos_full}} Archive is our [lowest cost option](
 https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage) option for data that is rarely accessed. Archive works with our existing storage class tiers. You can leverage our on-line cold vault option or transition data from any of the storage tiers to long term offline archive.
