@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-07-24"
 
 ---
 {:shortdesc: .shortdesc}
@@ -23,7 +23,7 @@ You can archive objects using web console, REST API, and 3rd party tools that ar
 
 ## Add and manage Archive policy on a bucket
 
-A new archive policy can be added to a new bucket at the time you are creating the bucket or on an existing bucket at any time in any storage tier class (Standard, Vault, Cold Vault and Flex). An existing archive policy on a bucket can be updated at any time. Keep in mind, the newly added archive policy or modified policy applies to the new objects uploaded, does not affect the existing objects.
+A new archive policy can be added to a new bucket when you are creating it or on an existing bucket at any time for any storage tier class (Standard, Vault, Cold Vault and Flex). An existing archive policy on a bucket can be updated at any time. Keep in mind, the newly added archive policy or modified policy applies to the new objects uploaded, does not affect the existing objects.
 
 
 To immediately archive new objects uploaded on a bucket, enter 0 days on the archive policy.
@@ -34,9 +34,9 @@ You can enable/disable the archive policy on a bucket at any time. This affects 
 
 ## Restore an archived object
 
-In order to access archived object, you must restore the object to the original storage tier. The restoration process can take up to 15 hours. Once the object is restored, a copy of the archived object is available for you to access. When restoring an object, you can specify number of days you want the object to be available. At the end of specified period, the restored copy is deleted.
+In order to access an archived object, you must restore it to the original storage tier. The restoration process can take up to 15 hours. Once the object is restored, a copy of the archived object is available for you to access. When restoring an object, you can specify number of days you want the object to be available. At the end of specified period, the restored copy is deleted.
 
-An archived object has the following sub-states:
+An archived object can be in sub-states below:
 
 * Archived: The object in archived state has been moved from its online storage tier (Standard, Vault, Cold Vault, Flex) to offline Archive tier based on the Archive policy on the bucket.
 
