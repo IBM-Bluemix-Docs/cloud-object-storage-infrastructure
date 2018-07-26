@@ -319,7 +319,7 @@ Access to IBM Federal Data Centers (DCs) is only available for authorized US Gov
   <tr>
     <td>private</td>
     <td>
-      <code class="highlighter-rouge">s3.dal08.objectstorage.usgov.service.networklayer.com</code>
+      <code class="highlighter-rouge">s3.dal08.objectstorage.service.usgov.softlayer.com</code>
     </td>
   </tr>
   <tr>
@@ -332,7 +332,7 @@ Access to IBM Federal Data Centers (DCs) is only available for authorized US Gov
   <tr>
     <td>private</td>
     <td>
-      <code class="highlighter-rouge">s3.wdc03.objectstorage.usgov.service.networklayer.com</code>
+      <code class="highlighter-rouge">s3.wdc03.objectstorage.service.usgov.softlayer.com</code>
     </td>
   </tr>
 </table>
