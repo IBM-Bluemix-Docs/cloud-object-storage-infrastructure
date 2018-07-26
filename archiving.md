@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-24"
+lastupdated: "2018-07-26"
 
 ---
 {:shortdesc: .shortdesc}
@@ -13,28 +13,33 @@ lastupdated: "2018-07-24"
 {:tip: .tip}
 
 
-# Archiving data
+# Archive data
 
 {{site.data.keyword.cos_full}} Archive is our [lowest cost](
-https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage) option for data that is rarely accessed. You can store the data by transitioning from any of the storage tiers (Standard, Vault, Cold Vault and Flex) to long-term offline archive or use online cold vault option. 
+https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage) option for data that is rarely accessed. You can store data by transitioning from any of the storage tiers (Standard, Vault, Cold Vault and Flex) to long-term offline archive or use the online Cold Vault option. 
 
-You can archive objects using web console, REST API, and 3rd party tools that are integrated with IBM Cloud Object Storage. 
+You can archive objects using the web console, REST API, and 3rd party tools that are integrated with IBM Cloud Object Storage. 
 
-## Add and manage archive policy on a bucket
+## Add or manage an archive policy on a bucket
 
-A new archive policy can be added on a new bucket or on an existing bucket at any time. An existing archive policy can be modified or disabled at any time. Keep in mind, the newly added archive or modified policy applies to the new objects uploaded, does not affect existing objects.
+When creating or modifying an archive policy for a bucket, consider the following:
 
-To immediately archive new objects uploaded on a bucket, enter 0 days on the archive policy.
+* An archive policy can be added to a new or existing bucket at any time. 
+* An existing archive policy can be modified or disabled. 
+* A newly added or modified archive policy applies to new objects uploaded and does not affect existing objects.
+
+To immediately archive new objects uploaded to a bucket, enter 0 days on the archive policy.
 {:tip}
 
 ## Restore an archived object
 
-In order to access an archived object, you must restore it to the original storage tier.  When restoring an object, you can specify the number of days you want the object to be available. At the end of the specified period, the restored copy will be deleted. The restoration process can take up to 15 hours.
+In order to access an archived object, you must restore it to the original storage tier. When restoring an object, you can specify the number of days you want the object to be available. At the end of the specified period, the restored copy is deleted. 
 
-An archived object can be in sub-states below:
+The restoration process can take up to 15 hours.
+{:tip}
 
-* Archived: An object in the archived state has been moved from its online storage tier (Standard, Vault, Cold Vault and Flex) to offline archive tier based on the archive policy on the bucket.
+The archived object sub-states are:
 
-* Restoring: An object in restoring state is in the process of generating a copy from the archived state to its original online storage tier.
-
-* Restored: An object in the restored state is a copy of the archived object that has been restored to its original online storage tier for a specified amount of time. At the end of the period, the copy of the object will be deleted, while maintaining the archived object.
+* Archived: An object in the archived state has been moved from its online storage tier (Standard, Vault, Cold Vault and Flex) to the offline archive tier based on the archive policy on the bucket.
+* Restoring: An object in the restoring state is in the process of generating a copy from the archived state to its original online storage tier.
+* Restored: An object in the restored state is a copy of the archived object that was restored to its original online storage tier for a specified amount of time. At the end of the period, the copy of the object is deleted, while maintaining the archived object.
