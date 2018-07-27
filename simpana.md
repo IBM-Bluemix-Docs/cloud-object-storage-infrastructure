@@ -25,7 +25,7 @@ For more information about IBM COS Infrastructure Archive, see [How to: Archive 
 
 2. Ensure that the Service Host points to the endpoint. Simpana provisions buckets at this step or it can consume provisioned buckets. 
 
-3.	Create a policy on the bucket. You can use the AWS CLI, SDKs or the portal to create the policy. An example of a policy follows:
+3.	Create a policy on the bucket. You can use the AWS CLI, SDKs or the web console to create the policy. An example of a policy follows:
 
 ```shell
 {
