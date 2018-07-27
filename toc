@@ -25,6 +25,7 @@ Cloud Object Storage (Infrastructure)
     python.md
     java.md
     node.md
+    simpana.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
