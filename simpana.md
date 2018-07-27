@@ -17,7 +17,7 @@ lastupdated: "2018-07-27"
 
 CommVault Simpana integrates with the Archive tier of COS. For more information about Simpana, see: [CommVault Simpana documentation](https://documentation.commvault.com/commvault/)
 
-For more information about IBM COS Infrastructure Archive, see [How to: Archive Data](archiving.md#archive-data).
+For more information about IBM COS Infrastructure Archive, see [How to: Archive Data](archiving.html#archive-data).
 
 ## Integration steps
 
