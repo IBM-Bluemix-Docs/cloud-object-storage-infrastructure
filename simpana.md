@@ -15,7 +15,7 @@ lastupdated: "2018-07-27"
 
 # Using CommVault Simpana with the Archive tier
 
-CommVault Simpana integrates with the Archive tier of COS. For more information about Simpana, see: [CommVault Simpana documentation](https://documentation.commvault.com/commvault/)
+CommVault Simpana integrates with the Archive tier of {{site.data.keyword.cos_full_notm}}. For more information about Simpana, see: [CommVault Simpana documentation](https://documentation.commvault.com/commvault/)
 
 For more information about IBM COS Infrastructure Archive, see [How to: Archive Data](archiving.html#archive-data).
 
@@ -61,16 +61,16 @@ aws s3api put-bucket-lifecycle-configuration --bucket <bucket name> --lifecycle-
 
 ## Performing Backups
 
-You can initiate your backup to the bucket with the policy. and perform backups to IBM COS. More information on Simpana backups is available [here](https://documentation.commvault.com/commvault/v11/article?p=11677.htm). Backup contents transition to the Archive tier based on the policy configured on the bucket.
+You can initiate your backup to the bucket with the policy. and perform backups to {{site.data.keyword.cos_full_notm}}. More information on Simpana backups is available [here](https://documentation.commvault.com/commvault/v11/article?p=11677.htm). Backup contents transition to the Archive tier based on the policy configured on the bucket.
 
 ## Performing Restores
 
-You can restore backup contents from IBM COS. More information on Simpana restore can be found [here](https://documentation.commvault.com/commvault/v11/article?p=12867.htm).
+You can restore backup contents from {{site.data.keyword.cos_full_notm}}. More information on Simpana restore can be found [here](https://documentation.commvault.com/commvault/v11/article?p=12867.htm).
 
 ### Configure Simpana to automatically restore objects from the Archive tier
 
-1. Create a task that triggers COS restore when you restore a backup from COS. See the [CommVault Simpana documentation](http://documentation.commvault.com/commvault/v11/article?p=features/cloud_storage/t_restoring_data_amazon_and_oracle.htm) to configure.
+1. Create a task that triggers {{site.data.keyword.cos_full_notm}} restore when you restore a backup from COS. See the [CommVault Simpana documentation](http://documentation.commvault.com/commvault/v11/article?p=features/cloud_storage/t_restoring_data_amazon_and_oracle.htm) to configure.
 
-2. Restore backed up contents from the Archive tier to its original tier through a cloud storage recall task. This task is executed once Simpana  receives the return code from COS. More information on Archive recall can be found [here](http://documentation.commvault.com/commvault/v11/article?p=9218.htm).
+2. Restore backed up contents from the Archive tier to its original tier through a cloud storage recall task. This task is executed once Simpana receives the return code from {{site.data.keyword.cos_full_notm}}. More information on Archive recall can be found [here](http://documentation.commvault.com/commvault/v11/article?p=9218.htm).
 
 3. Once the restoration (from the Archive tier to its original tier) is complete, Simpana reads the contents and writes to its original or configured location.
