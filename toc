@@ -12,6 +12,7 @@ Cloud Object Storage (Infrastructure)
     endpoints.md
     manage-access.md
     desktop-clients.md
+    archiving.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -24,6 +25,7 @@ Cloud Object Storage (Infrastructure)
     python.md
     java.md
     node.md
+    simpana.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

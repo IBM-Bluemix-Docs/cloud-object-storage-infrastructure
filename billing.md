@@ -46,3 +46,7 @@ There is no charge for deleting buckets or objects from the system.
 ## What is the difference between the Standard, Vault, and Flex billing tiers?
 
 Vault billing is a way to control costs for infrequently accessed data, such as compliance or backup data. These objects incur lower storage costs but higher costs for operational requests. Unlike the Standard billing tier, additional costs are incurred on a per-GB basis for objects retrieved from the system.  Flex billing is intended for use when data access patterns are difficult to predict, and pricing is optimized based on frequency of access.
+
+## Archiving Data
+
+Archive is our lowest cost option for data that is rarely accessed. For more info, see the [pricing page](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage).
