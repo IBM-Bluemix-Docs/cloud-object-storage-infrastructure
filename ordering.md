@@ -15,7 +15,7 @@ lastupdated: "2018-02-15"
 
 # Ordering COS (infrastructure)
 
-Until recently, IBM offered Platform-as-a-Service and Infrastructure-as-a-Service in two distinct environments: [Bluemix][1]{: new_window} and [SoftLayer][2]{: new_window}.  Bluemix provides a robust application development platform with direct access to cutting edge IBM technologies and DevOps services. SoftLayer provides access to infrastructure services, such as bare metal or virtual servers, data storage, and networking.
+Until recently, IBM offered Platform-as-a-Service and Infrastructure-as-a-Service in two distinct environments: [Bluemix][1]{: new_window} and [SoftLayer][2]{: new_window}. Bluemix provides a robust application development platform with direct access to cutting edge IBM technologies and DevOps services. SoftLayer provides access to infrastructure services, such as bare metal or virtual servers, data storage, and networking.
 
 Now these lines are dissolving as we integrate the SoftLayer infrastructure offerings into the [Bluemix catalog of services][3]{: new_window}. Existing SoftLayer customers are encouraged to take advantage of [using an IBMid for single-sign-on authentication][4]{: new_window}, and it is possible to [link existing SoftLayer and Bluemix accounts][5]{: new_window}. As of October 2016, SoftLayer is transitioning to the new name Bluemix Infrastructure, and computing, storage, networking services are provided through both the Bluemix catalog and (for a time) the SoftLayer website.
 
@@ -48,7 +48,7 @@ Bluemix Infrastructure will be the primary platform for ordering cloud storage i
 
 ## Creating a new storage account
 
-Accounts are limited to 100 COS accounts.  If more storage accounts are needed, please contact customer support.
+Accounts are limited to 100 COS accounts. If more storage accounts are needed, please contact customer support.
 {:tip}
 
 Existing SoftLayer customers can log in to [https://control.softlayer.com/](https://control.softlayer.com/){:new_window}, but are encouraged to create an IBMid and explore the Bluemix catalog. Both control portals are equivalent in functionality and only differ in their header design and branding.
@@ -58,6 +58,8 @@ Existing SoftLayer customers can log in to [https://control.softlayer.com/](http
 4. Select **IBM Cloud Object Storage** in the **Storage Type** menu.
 5. Click **Continue** and complete the order after accepting the Master Service Agreement. The new object storage account will be provisioned momentarily and will show up in the objects list when it is done.
 
+You can archive rarely accessed data. Archive works with existing storage-class tiers, enabling you to reduce storage costs even further by storing data offline with our lowest-priced storage. See [Archiving data](archiving.html#archiving-data) for more information.
+{:tip}
 
 
 
