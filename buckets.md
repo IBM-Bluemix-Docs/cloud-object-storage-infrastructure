@@ -71,15 +71,19 @@ Authorization: {authorization-string}
 
 A `PUT` issued to the endpoint root followed by a string will create a bucket using that string for a name.  Bucket names must be unique, and storage instances are limited to 100 buckets.  Bucket names are required to be DNS-compliant; names must be between 3 and 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number.  Bucket names resembling IP addresses are not allowed, although dot characters (`.`) are permitted. This operation does not make use of operation specific headers or query parameters.
 
-Valid provisioning codes for `LocationCostraint` are: <br>
+Valid provisioning codes for `LocationConstraint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
 &emsp;&emsp;  `eu-standard` / `eu-vault` / `eu-cold` / `eu-flex` <br>
 &emsp;&emsp;  `eu-gb-standard` / `eu-gb-vault` / `eu-gb-cold` / `eu-gb-flex` <br>
 &emsp;&emsp;  `ap-standard` / `ap-vault` / `ap-cold` / `ap-flex` <br>
+&emsp;&emsp;  `ap-tok-standard` / `ap-tok-vault` / `ap-tok-cold` / `ap-tok-flex` <br>
+&emsp;&emsp;  `ams03-standard` / `ams03-vault` / `ams03-cold` / `ams03-flex` <br>
 &emsp;&emsp;  `che01-standard` / `che01-vault` / `che01-cold` / `che01-flex` <br>
 &emsp;&emsp;  `mel01-standard` / `mel01-vault` / `mel01-cold` / `mel01-flex` <br>
+&emsp;&emsp;  `osl01-standard` / `osl01-vault` / `osl01-cold` / `osl01-flex` <br>
+&emsp;&emsp;  `sao01-standard` / `sao01-vault` / `sao01-cold` / `sao01-flex` <br>
 &emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
 **Syntax**
