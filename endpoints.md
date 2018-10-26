@@ -269,6 +269,8 @@ Types of endpoint:
 </table>
 {:.endpointtable}
 
+
+
 ## Single Data Center Endpoints
 
 <table>
@@ -279,6 +281,20 @@ Types of endpoint:
       <th>Endpoint</th>
     </tr>
   </thead>
+  <tr>
+    <td rowspan="2">Amsterdam, Netherlands</td>
+    <td>public</td>
+    <td>
+      <code class="highlighter-rouge">s3.ams03.objectstorage.softlayer.net</code>
+    </td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td>
+      <code class="highlighter-rouge">s3.ams03.objectstorage.service.networklayer.com</code>
+    </td>
+  </tr>
+  
   <tr>
     <td rowspan="2">Chennai, India</td>
     <td>public</td>
@@ -305,6 +321,19 @@ Types of endpoint:
       <code class="highlighter-rouge">s3.mel01.objectstorage.service.networklayer.com</code>
     </td>
   </tr>
+    <tr>
+    <td rowspan="2">Oslo, Norway</td>
+    <td>public</td>
+    <td>
+      <code class="highlighter-rouge">s3.osl01.objectstorage.softlayer.net</code>
+    </td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td>
+      <code class="highlighter-rouge">s3.osl01.objectstorage.service.networklayer.com</code>
+    </td>
+  </tr>
   <tr>
     <td rowspan="2">São Paulo, Brazil</td>
     <td>public</td>
@@ -316,6 +345,19 @@ Types of endpoint:
     <td>private</td>
     <td>
       <code class="highlighter-rouge">s3.sao01.objectstorage.service.networklayer.com</code>
+    </td>
+  </tr>
+   <tr>
+    <td rowspan="2">Seoul, South Korea</td>
+    <td>public</td>
+    <td>
+      <code class="highlighter-rouge">s3.seo01.objectstorage.softlayer.net</code>
+    </td>
+  </tr>
+  <tr>
+    <td>private</td>
+    <td>
+      <code class="highlighter-rouge">s3.seo01.objectstorage.service.networklayer.com</code>
     </td>
   </tr>
   <tr>
