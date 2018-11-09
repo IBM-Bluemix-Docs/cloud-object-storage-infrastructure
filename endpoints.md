@@ -322,7 +322,7 @@ Types of endpoint:
     </td>
   </tr>
    <tr>
-    <td rowspan="2">Montréal, Québec</td>
+    <td rowspan="2">Montréal, Canada</td>
     <td>public</td>
     <td>
       <code class="highlighter-rouge">s3.mon01.objectstorage.softlayer.net</code>
