@@ -13,7 +13,7 @@ lastupdated: "2018-02-15"
 {:tip: .tip}
 
 
-# Ordering COS (infrastructure)
+# Ordering COS (Classic)
 
 Until recently, IBM offered Platform-as-a-Service and Infrastructure-as-a-Service in two distinct environments: [Bluemix][1]{: new_window} and [SoftLayer][2]{: new_window}. Bluemix provides a robust application development platform with direct access to cutting edge IBM technologies and DevOps services. SoftLayer provides access to infrastructure services, such as bare metal or virtual servers, data storage, and networking.
 
