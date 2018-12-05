@@ -16,7 +16,7 @@ lastupdated: "2018-12-03"
 
 # About the COS API
 
-{{site.data.keyword.cos_full}} provides two separate APIs for managing and using object storage.
+{{site.data.keyword.cos_full}} provides two separate APIs for managing and using {{site.data.keyword.objectstorageshort}}.
 
 * Account and credential administration uses the SL API
 * Interacting with buckets and objects uses an implementation of the S3 API
@@ -84,4 +84,4 @@ These operations create, destroy, get information about, and control behavior of
 | List Parts | Returns a list of parts associated with an upload ID
 {:.opstable}
 
-Some additional operations, such as tagging and versioning, are supported in private cloud implementations of {{site.data.keyword.cos_notm}}, but not in the public cloud. For more information about custom object storage solutions, see [{{site.data.keyword.objectstorageshort}} at ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/).
+Some additional operations, such as tagging and versioning, are supported in private cloud implementations of {{site.data.keyword.cos_notm}}, but not in the public cloud. For more information about custom {{site.data.keyword.objectstorageshort}} solutions, see [{{site.data.keyword.objectstorageshort}} at ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/).

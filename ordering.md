@@ -36,7 +36,7 @@ Before ordering a new account, it is necessary to create a customer account firs
 8. Follow the **Upgrade** link.
 9. Fill out the Contact and Billing information forms, check the box to acknowledge Cloud Service terms, and follow the **Submit Order** link.
 10. Follow the **Done** link, and wait for an email confirming your account upgrade.
-7. Next up is ordering a new object storage account!
+7. Next up is ordering a new {{site.data.keyword.objectstorageshort}} account!
 
 
 ## Creating a new storage account
@@ -46,10 +46,10 @@ Accounts are limited to 100 {{site.data.keyword.cos_full}} accounts. If more sto
 
 Existing SoftLayer customers can log in to [https://control.softlayer.com/](https://control.softlayer.com/){:new_window}, but are encouraged to create an IBMid and explore the {{site.data.keyword.Bluemix}} catalog. Both control portals are equivalent in functionality and only differ in their header design and branding.
 1. Log in to [https://control.bluemix.net/](https://control.bluemix.net/){: new_window}.
-2. Navigate to the object storage page, by clicking **Storage** > **Object Storage** in the Navigation menu.
-3. Click the **order object storage** link on the top right to open the order menu.
+2. Navigate to the {{site.data.keyword.objectstorageshort}} page, by clicking **Storage** > **Object Storage** in the Navigation menu.
+3. Click the **order {{site.data.keyword.objectstorageshort}}** link on the top right to open the order menu.
 4. Select **{{site.data.keyword.cos_full_notm}}** in the **Storage Type** menu.
-5. Click **Continue** and complete the order after accepting the Master Service Agreement. The new object storage account is provisioned momentarily and show ups in the objects list when it is done.
+5. Click **Continue** and complete the order after accepting the Master Service Agreement. The new {{site.data.keyword.objectstorageshort}} account is provisioned momentarily and show ups in the objects list when it is done.
 
 You can archive rarely accessed data. Archive works with existing storage-class tiers, enabling you to reduce storage costs even further by storing data offline with our lowest-priced storage. For more information, see [Archiving data](archiving.html).
 {:tip}

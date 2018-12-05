@@ -15,7 +15,7 @@ lastupdated: "2018-12-05"
 
 # Using a desktop client
 
-GUI tools exists for accessing S3 API compatible object storage and for basic tasks, such as configuring routine backup or shared hosting for large files.
+GUI tools exists for accessing S3 API compatible {{site.data.keyword.cos_short}} and for basic tasks, such as configuring routine backup or shared hosting for large files.
 
 ## Cyberduck
 
@@ -44,7 +44,7 @@ To use Cyberduck to create a connection to {{site.data.keyword.cos_notm}} and sy
 
 ## Cloudberry
 
-Cloudberry is a flexible backup utility that allows users to back up some or all of a local filesystem to an S3 API compatible object storage system. It can be configured to be run either manually or scheduled based on need, and can backup different directories to different buckets if needed.  Cloudberry can be downloaded from [cloudberrylab.com](http://www.cloudberrylab.com/).
+Cloudberry is a flexible backup utility that allows users to back up some or all of a local filesystem to an S3 API compatible {{site.data.keyword.cos_short}} system. It can be configured to be run either manually or scheduled based on need, and can backup different directories to different buckets if needed.  Cloudberry can be downloaded from [cloudberrylab.com](http://www.cloudberrylab.com/).
 
 When configuring Cloudberry, select 'S3 Compatible' from the list of options, not 'Amazon S3' or 'SoftLayer'.
 {:tip}

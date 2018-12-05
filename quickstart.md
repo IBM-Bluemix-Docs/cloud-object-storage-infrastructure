@@ -17,8 +17,8 @@ lastupdated: "2018-03-15"
 
 
 
-1.  Create an IBM Cloud account from the [catalog](https://console.ng.bluemix.net/catalog/infrastructure/cloud_object_storage-infrastructure/){: new_window} by clicking on the **Create a Free Account** button, then head over to the catalog and follow the link for **Cloud Object Storage**. Follow the **Upgrade** link.
-2.  [Order a storage instance](/docs/infrastructure/cloud-object-storage-infrastructure/ordering.html) from the Infrastructure portal by clicking **Storage** > **Object Storage** in the Navigation menu and selecting "IBM COS - S3 API" from the order form.
+1.  Create an IBM Cloud account from the [catalog](https://console.ng.bluemix.net/catalog/infrastructure/cloud_object_storage-infrastructure/){: new_window} by clicking on the **Create a Free Account** button, then head over to the catalog and follow the link for **Cloud {{site.data.keyword.cos_short}}**. Follow the **Upgrade** link.
+2.  [Order a storage instance](/docs/infrastructure/cloud-object-storage-infrastructure/ordering.html) from the Infrastructure portal by clicking **Storage** > **{{site.data.keyword.cos_short}}** in the Navigation menu and selecting "IBM COS - S3 API" from the order form.
 3.  [Create a bucket](/docs/infrastructure/cloud-object-storage-infrastructure/storing-retrieving.html) by clicking the **Add** button.
 4.  [Upload an object](/docs/infrastructure/cloud-object-storage-infrastructure/storing-retrieving.html) by clicking the **+** button at the right of the first row and selecting a file from your computer.
 

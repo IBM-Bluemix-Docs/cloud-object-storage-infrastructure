@@ -27,7 +27,7 @@ Bucket names are required to be DNS addressable, and thus not case sensitive.
 
 ## Offering Questions
 
-**Do we offer a free tier option for IBM Cloud Object Storage?**
+**Do we offer a free tier option for {{site.data.keyword.cos_full_notm}}?**
 
 Yes, use promo code `COSFREE` to obtain 25 GB of storage and a bunch of operations per month.
 
