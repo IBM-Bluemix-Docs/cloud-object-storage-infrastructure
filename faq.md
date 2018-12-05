@@ -89,7 +89,7 @@ There is no practical limit to the number of objects in a single bucket.
 
 **Can I nest buckets inside one another?**
 
-No, buckets can not be nested.  If a greater level of organization is required within a bucket, the use of prefixes is supported: `{endpoint}/{bucket-name}/{object-prefix}/{object-name}`.  Note that the object's key remains the combination `{object-prefix}/{object-name}`.
+No, buckets can't be nested.  If a greater level of organization is required within a bucket, the use of prefixes is supported: `{endpoint}/{bucket-name}/{object-prefix}/{object-name}`.  Note that the object's key remains the combination `{object-prefix}/{object-name}`.
 
 **What is the difference between 'Class A' and 'Class B' requests?**
 

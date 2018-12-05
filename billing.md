@@ -49,4 +49,4 @@ Vault billing is a way to control costs for infrequently accessed data, such as 
 
 ## Archiving Data
 
-Archive is our lowest cost option for data that is rarely accessed. For more info, see the [pricing page](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage).
+Archive is our lowest cost option for data that is rarely accessed. For more information, see the [pricing page](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage).

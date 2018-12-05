@@ -410,9 +410,9 @@ The following canned ACLs are supported by IBM COS.  Values not listed below are
 
 | Canned ACL | Applies to | Notes |
 |------------|------------|-----------|
-| private | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
-| public-read | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
-| public-read-write | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
+| private | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
+| public-read | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
+| public-read-write | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
 
 It is not possible to grant granular `WRITE` access at the object level, only at the bucket level.
 
@@ -829,7 +829,7 @@ The body of the request must contain an XML block with the following schema:
 POST /apiary/queenbee?restore HTTP/1.1
 Authorization: {authorization-string}
 Content-Type: text/plain
-Content-MD5: rgRRGfd/OytcM7O5gIaQ== 
+Content-MD5: rgRRGfd/OytcM7O5gIaQ==
 Content-Length: 305
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```

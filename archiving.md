@@ -16,7 +16,7 @@ lastupdated: "2018-12-05"
 # Archiving data
 
 {{site.data.keyword.cos_full}} Archive is our [lowest cost ![External link icon](../../icons/launch-glyph.svg "External link icon")](
-https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage){:new_window} option for data that is rarely accessed. You can store data by transitioning from any of the storage tiers (Standard, Vault, Cold Vault and Flex) to long-term off-line archive or use the on-line Cold Vault option.
+https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage){:new_window} option for data that is rarely accessed. You can store data by transitioning from any of the storage tiers (Standard, Vault, Cold Vault and Flex) to long-term offline archive or use the online Cold Vault option.
 
 You can archive objects using the web console, REST API, and third-party tools that are integrated with {{site.data.keyword.cos_notm}}.
 
@@ -40,6 +40,6 @@ The restoration process can take up to 15 hours.
 
 The archived object sub-states are:
 
-* Archived - An object in the archived state has been moved from its online storage tier (Standard, Vault, Cold Vault and Flex) to the off-line archive tier based on the archive policy on the bucket.
-* Restoring - An object in the restoring state is in the process of generating a copy from the archived state to its original on-line storage tier.
-* Restored - An object in the restored state is a copy of the archived object that was restored to its original on-line storage tier for a specified amount of time. At the end of the period, the copy of the object is deleted, while maintaining the archived object.
+* Archived - An object in the archived state has been moved from its online storage tier (Standard, Vault, Cold Vault and Flex) to the offline archive tier based on the archive policy on the bucket.
+* Restoring - An object in the restoring state is in the process of generating a copy from the archived state to its original online storage tier.
+* Restored - An object in the restored state is a copy of the archived object that was restored to its original online storage tier for a specified amount of time. At the end of the period, the copy of the object is deleted, while maintaining the archived object.

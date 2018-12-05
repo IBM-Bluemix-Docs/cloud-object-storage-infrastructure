@@ -525,9 +525,9 @@ The following canned ACLs are supported by {{site.data.keyword.{{site.data.keywo
 
 | Canned ACL | Applies to | Notes |
 |------------|------------|-----------|
-| private | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
-| public-read | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
-| public-read-write | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
+| private | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
+| public-read | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
+| public-read-write | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
 
 `READ` access, including `public-read`, when granted on a bucket does not allow for the actual access of objects themselves, only the ability to list them.
 {:tip}

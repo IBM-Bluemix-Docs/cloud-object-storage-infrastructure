@@ -17,7 +17,7 @@ lastupdated: "2018-06-06"
 
 {{site.data.keyword.cos_full}} uses an innovative approach for cost-effectively storing large volumes of unstructured data while ensuring security, availability and reliability. This is accomplished by using Information Dispersal Algorithms (IDAs) to separate data into unrecognizable “slices” that are distributed across a network of data centers, making transmission and storage of data inherently private and secure. No complete copy of the data resides in any single storage node, and only a subset of nodes needs to be available in order to fully retrieve the data on the network.
 
-All data in {{site.data.keyword.cos_full_notm}} is encrypted at rest. This technology individually encrypts each object using per-object generated keys. These keys are secured and reliably stored using the same Information Dispersal Algorithms that protect object data using an All-or-Nothing Transform (AONT), which prevents key data from being disclosed if individual nodes or hard drives are compromised.
+All data in {{site.data.keyword.cos_full_notm}} is encrypted at rest. This technology individually encrypts each object using per-object generated keys. These keys are secured and reliably stored using the same Information Dispersal Algorithms that protect object data using an All-or-Nothing Transform (AONT), which prevents key data from being disclosed if individual nodes or hard dirk drives are compromised.
 
 If it is necessary for the user to control encryption keys, root keys can be provided on a [per-object basis using SSE-C](/docs/infrastructure/cloud-object-storage-infrastructure/objects.html#sse-c).
 

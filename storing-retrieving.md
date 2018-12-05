@@ -19,7 +19,7 @@ The user interface portal provides a high level view of a storage account.  It i
 
 ## Using buckets
 1. Click the Account Name in the above accounts list to open the details page for that account.
-2. The details page shows the following info on the top header bar:
+2. The details page shows the following information on the header bar.
    * Name of the account currently being viewed
    * The current region being viewed
    * The total capacity usage in the current billing cycle

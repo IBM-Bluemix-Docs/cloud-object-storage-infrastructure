@@ -28,11 +28,11 @@ aws_access_key_id = {Access Key ID}
 aws_secret_access_key = {Secret Access Key}
 ```
 
-The {{site.data.keyword.cos_notm}} endpoint must be sourced using the `--endpoint-url` option, and can not be set in the credentials file.
+The {{site.data.keyword.cos_notm}} endpoint must be sourced using the `--endpoint-url` option, and can't be set in the credentials file.
 
 Simple use cases can be accomplished using `aws --endpoint-url={endpoint} s3 <command>`. Objects are managed using familiar shell commands, such as `ls`, `mv`, `cp`, and `rm`.  Buckets can be deleted using `rb`.
 
- Buckets can not be created using this method. Instead, use the `s3api` method described below.
+ Buckets can't be created using this method. Instead, use the `s3api` method described below.
  {:tip}
 
 #### Basic operations
