@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-12-03"
 
 ---
 {:shortdesc: .shortdesc}
@@ -11,18 +11,19 @@ lastupdated: "2018-07-17"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:important: .important}
 
 
 # About the COS API
 
-IBM Cloud Object Storage provides two separate APIs for managing and using object storage:
+{{site.data.keyword.cos_full}} provides two separate APIs for managing and using object storage.
 
-* Account and credential administration uses the SoftLayer API
+* Account and credential administration uses the SL API
 * Interacting with buckets and objects uses an implementation of the S3 API
 
-More information on using the SoftLayer API to create or delete credentials, check capacity usage, retrieve a UUID, and other account functions can be found at the [SoftLayer Development Network](http://sldn.softlayer.com/reference/services/SoftLayer_Network_Storage_Hub_Cleversafe_Account).
+More information about how to use the SL API to create or delete credentials, check capacity usage, retrieve a UUID, and other account functions, see the [SLDN ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://sldn.softlayer.com/reference/services/SoftLayer_Network_Storage_Hub_Cleversafe_Account).
 
-The following tables describe the complete set of supported operations when using the S3 API to access IBM Cloud Object Storage.  For details on using the operations, including examples, see the API reference pages for [buckets](/docs/infrastructure/cloud-object-storage-infrastructure/buckets.html) and [objects](/docs/infrastructure/cloud-object-storage-infrastructure/objects.html).
+The following tables describe the complete set of supported operations you can use with the S3 API to access {{site.data.keyword.cos_notm}}. For more information, about how to use the operations, including examples, see the API reference pages for [buckets](buckets.html) and [objects](objects.html).
 
 ## Operations on the account
 
@@ -38,7 +39,8 @@ The only operation that is performed directly at the account level is to get a l
 
 These operations create, destroy, get information about, and control behavior of buckets.
 
-Note that the 'version 2' method of listing objects within a bucket is not supported, and the 'version 1' syntax is needed.
+The 'version 2' method of listing objects within a bucket is not supported. The 'version 1' syntax is needed.
+{:important}
 
 | Bucket operation | Note |
 |:----|:---|
@@ -82,4 +84,4 @@ These operations create, destroy, get information about, and control behavior of
 | List Parts | Returns a list of parts associated with an upload ID
 {:.opstable}
 
-Some additional operations, such as tagging and versioning, are supported in private cloud implementations of IBM COS, but not in the public cloud at this time. More information custom object storage solutions can be found at [ibm.com](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/).
+Some additional operations, such as tagging and versioning, are supported in private cloud implementations of {{site.data.keyword.cos_notm}}, but not in the public cloud. For more information about custom object storage solutions, see [{{site.data.keyword.objectstorageshort}} at ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/).
