@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -17,7 +17,7 @@ lastupdated: "2018-07-17"
 
 ## List buckets belonging to an account
 
-A `GET` issued to the endpoint root returns a list of buckets owned by the requesting account.  This operation does not make use of operation specific headers, query parameters, or payload elements.
+A `GET` that is issued to the endpoint root returns a list of buckets that are owned by the requesting account. This operation does not make use of operation specific headers, query parameters, or payload elements.
 
 **Syntax**
 
@@ -69,7 +69,7 @@ Authorization: {authorization-string}
 
 ## Create a new bucket
 
-A `PUT` issued to the endpoint root followed by a string will create a bucket using that string for a name.  Bucket names must be unique, and storage instances are limited to 100 buckets.  Bucket names are required to be DNS-compliant; names must be between 3 and 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number.  Bucket names resembling IP addresses are not allowed, although dot characters (`.`) are permitted. This operation does not make use of operation specific headers or query parameters.
+A `PUT` that is issued to the endpoint root followed by a string creates a bucket and uses that string for a name. Bucket names must be unique, and storage instances are limited to 100 buckets.  Bucket names are required to be DNS-compliant; names must be between 3 and 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number. Bucket names resembling IP addresses are not allowed, although dot characters (`.`) are permitted. This operation does not make use of operation specific headers or query parameters.
 
 Valid provisioning codes for `LocationConstraint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
@@ -97,7 +97,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Optional payload elements**
 
-If an XML block specifying a `LocationConstraint` is provided it must correspond with a valid provisioning code (e.g. `us-standard`).  If the request payload is left empty, the default provisioning code is used.
+If an XML block specifying a `LocationConstraint` is provided it must correspond with a valid provisioning code (e.g. `us-standard`). If the request payload is left empty, the default provisioning code is used.
 
 ```xml
 <CreateBucketConfiguration>
@@ -136,7 +136,7 @@ Content-Length: 0
 
 To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `us-vault` in the body of a `PUT` request to a bucket endpoint.
 
-Valid provisioning codes for `LocationCostraint` are: <br>
+Valid provisioning codes for `Location{{site.data.keyword.cos_notm}}traint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -162,7 +162,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of creating a new bucket called 'vault-images'.
+This is an example of creating a new bucket that is called 'vault-images'.
 
 ```http
 PUT /vault-images HTTP/1.1
@@ -195,9 +195,9 @@ Content-Length: 0
 
 ### Create a Cold Vault bucket
 
-To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `{code}-cold` in the body of a `PUT` request to a bucket endpoint.
+To create a Vault bucket, send an XML block that specifies a bucket configuration with a `LocationConstraint` of `{code}-cold` in the body of a `PUT` request to a bucket endpoint.
 
-Valid provisioning codes for `LocationCostraint` are: <br>
+Valid provisioning codes for `Location{{site.data.keyword.cos_notm}}traint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -224,7 +224,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of creating a new bucket called 'cold-vault-images'.
+This is an example of creating a new bucket that is called 'cold-vault-images'.
 
 ```http
 PUT /cold-vault-images HTTP/1.1
@@ -257,9 +257,9 @@ Content-Length: 0
 
 ### Create a Flex bucket
 
-To create a Flex bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `{code}-flex` in the body of a `PUT` request to a bucket endpoint.
+To create a Flex bucket, send an XML block that specifies a bucket configuration with a `LocationConstraint` of `{code}-flex` in the body of a `PUT` request to a bucket endpoint.
 
-Valid provisioning codes for `LocationCostraint` are: <br>
+Valid provisioning codes for `Location{{site.data.keyword.cos_notm}}traint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -319,7 +319,7 @@ Content-Length: 0
 
 ## Retrieve a bucket's headers
 
-A `HEAD` issued to a bucket resource will return the headers for that bucket. This operation does not make use of operation specific headers, query parameters, or payload elements.
+A `HEAD` that is issued to a bucket resource returns the headers for that bucket. This operation does not make use of operation specific headers, query parameters, or payload elements.
 
 **Syntax**
 
@@ -355,9 +355,9 @@ Content-Length: 0
 
 ----
 
-## List objects in a given bucket
+## List objects in a specific bucket
 
-A `GET` request addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in COS. This operation does not make use of operation specific headers or payload elements.
+A `GET` request that is addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in {{site.data.keyword.{{site.data.keyword.cos_notm}}_notm}}. This operation does not make use of operation specific headers or payload elements.
 
 **Syntax**
 
@@ -453,7 +453,7 @@ Content-Length: 909
 
 ## Delete a bucket
 
-A `DELETE` issued to an empty bucket deletes the bucket. After deleting a bucket the name will be held in reserve by the system for 10 minutes, after which it will be released for re-use.  *Only empty buckets can be deleted.* This operation does not make use of operation specific headers, query parameters, or payload elements.
+A `DELETE` that is issued to an empty bucket deletes the bucket. After deleting a bucket the name is held in reserve by the system for 10 minutes, after which it is released for re-use.  *Only empty buckets can be deleted.* This operation does not make use of operation specific headers, query parameters, or payload elements.
 
 **Syntax**
 
@@ -500,16 +500,16 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 
 ## Create an access control list for a bucket
 
-A `PUT` issued to a bucket with the necessary query parameter creates or replaces an access control list (ACL) for that bucket.  Access control lists allow for granting different sets of permissions to different storage accounts using the account's ID, or by using a pre-made ACL.
+A `PUT` that is issued to a bucket with the necessary query parameter creates or replaces an access control list (ACL) for that bucket. Access control lists allow for granting different sets of permissions to different storage accounts by using the account's ID, or by using a pre-made ACL.
 
-Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other COS storage account to access the resource, as well as the general public.
+Credentials are generated for each storage account, not for individual users. As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other {{site.data.keyword.cos_notm}} account to access the resource, as well as the general public.
 {:tip}
 
 ACLs can use pre-made permissions sets (or 'canned ACLs') or be customized in the body of the request. Pre-made ACLs are specified using the `x-amz-acl` header and custom ACLs are specified using XML in the request payload. Only one method (header or payload) can be used in a single request.
 
 This operation does not make use of additional operation specific query parameters.
 
-ACL grantees must be other COS storage instances, and their UUID can be found along with credentials in the web portal.
+ACL grantees must be other {{site.data.keyword.cos_notm}} instances, and their UUID can be found along with credentials in the web portal.
 
 The assigned permissions behave as follows:
 
@@ -521,7 +521,7 @@ The assigned permissions behave as follows:
 | WRITE_ACP | Default setting is FULL_CONTROL | Allows grantee to write ACL for applicable object |
 | FULL_CONTROL | Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket | Allows grantee READ, READ_ACP and WRITE_ACP permissions on object |
 
-The following canned ACLs are supported by IBM COS.  Values not listed below are not supported.
+The following canned ACLs are supported by {{site.data.keyword.{{site.data.keyword.cos_notm}}_notm}}.  Values not listed below are not supported.
 
 | Canned ACL | Applies to | Notes |
 |------------|------------|-----------|
@@ -566,7 +566,7 @@ Content-Length: 0
 
 **Sample Request** Custom ACL
 
-This is an example of specifying a custom ACL to allow for another user using their username to view the ACL for the "apiary" bucket, but not to list objects stored inside the bucket. A third account is given full access to the same bucket as another element of the same ACL.  All authenticated users of the system can list objects in the bucket.
+This is an example of specifying a custom ACL to allow for another user using their user name to view the ACL for the "apiary" bucket, but not to list objects stored inside the bucket. A third account is given full access to the same bucket as another element of the same ACL. All authenticated users of the system can list objects in the bucket.
 
 ```http
 PUT /apiary?acl= HTTP/1.1
@@ -672,7 +672,7 @@ Content-Length: 550
 
 ## Deleting multiple objects
 
-A `POST` given a path to an bucket and proper parameters will delete a specified set of objects.  This requires a `Content-MD5` header in addition to the `x-amz-content-sha256` header. This operation does not make use of operation specific query parameters, headers, or payload elements.
+A `POST` that is given a path to a bucket and proper parameters deletes a specified set of objects. This requires a `Content-MD5` header in addition to the `x-amz-content-sha256` header. This operation does not make use of operation specific query parameters, headers, or payload elements.
 
 **Syntax**
 
@@ -732,9 +732,9 @@ Content-Length: 207
 
 ----
 
-## List canceled/incomplete multipart uploads for a bucket
+## List canceled or incomplete multi-part uploads for a bucket
 
-A `GET` issued to a bucket with the proper parameters retrieves information about any canceled or incomplete multipart uploads for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
+A `GET` that is issued to a bucket with the proper parameters retrieves information about any canceled or incomplete multi-part uploads for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
 
 **Syntax**
 
@@ -823,7 +823,7 @@ Content-Length: 374
 
 ## List any cross-origin resource sharing configuration for a bucket
 
-A `GET` issued to a bucket with the proper parameters retrieves information about cross-origin resource sharing (CORS) configuration for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
+A `GET` that is issued to a bucket with the proper parameters retrieves information about cross-origin resource sharing (CORS) configuration for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
 
 **Syntax**
 
@@ -865,7 +865,7 @@ Content-Length: 123
 
 ## Create a cross-origin resource sharing configuration for a bucket
 
-A `PUT` issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket. Note that in addition to a SHA256 hash of the body, a `Content-MD5` header is required as well. This operation does not make use of operation specific headers or additional query parameters.
+A `PUT` that is issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket. Note that in addition to a SHA256 hash of the body, a `Content-MD5` header is required as well. This operation does not make use of operation specific headers or additional query parameters.
 
 **Syntax**
 
@@ -926,7 +926,7 @@ Content-Length: 0
 
 ## Delete any cross-origin resource sharing configuration for a bucket
 
-A `DELETE` issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket.
+A `DELETE` that is issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket.
 
 **Syntax**
 
@@ -963,7 +963,7 @@ PUT https://{bucket-name}.{endpoint}?lifecycle # virtual host style
 
 **Payload Elements**
 
-The body of the request must contain an XML block with the following schema:
+The body of the request must contain an XML block with the following schema.
 
 |Element|Type|Children|Ancestor|Constraint|
 |---|---|---|---|---|
@@ -1001,7 +1001,7 @@ Content-Type: text/plain
 Host: s3-api.us-geo.objectstorage.softlayer.net
 Authorization: {authorization-string}
 Content-Type: text/plain
-Content-MD5: M625BaNwd/OytcM7O5gIaQ== 
+Content-MD5: M625BaNwd/OytcM7O5gIaQ==
 Content-Length: 305
 ```
 
