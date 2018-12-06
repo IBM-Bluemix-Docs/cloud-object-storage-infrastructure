@@ -260,7 +260,7 @@ AmazonS3 cos = new AmazonS3Client(provider);
 
 **Create AWS shared credentials**
 
-Use `aws configure` to create an access credentials file with the default profile. For more information about using the AWS CLI, see the documentation on [using command line interfaces].
+Use `aws configure` to create an access credentials file with the default profile. For more information about using the AWS CLI, see the documentation on [using command-line interfaces].
 
 **Example: Command output of `aws configure`**
 

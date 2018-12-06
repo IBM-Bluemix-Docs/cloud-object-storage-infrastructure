@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-02-15"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -34,7 +34,7 @@ The user interface portal provides a high level view of a storage account.  It i
 
 ## Using objects
 1. The objects present within a bucket can be viewed, by clicking the bucket name on the buckets list.
-2. The header is updated to include the following info:
+2. The header is updated to include the following information
   * Name of the account currently being viewed
   * The current region being viewed
   * The name of the bucket whose objects are currently displayed

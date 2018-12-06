@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-02-15"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -60,13 +60,13 @@ AWS4-HMAC-SHA256
 Now we need to actually calculate the signature.
 
 1. First the signature key needs to be calculated from the account's secret access key, the current date, and the region and API type being used.
-2. The string `AWS4` is prepended to the secret access key, and then that new string is used as the key to hash the date.
-3. Then the resulting hash is used as the key to hash the region.
+2. The string `AWS4` is added before the secret access key, and then, that new string is used as the key to hash the date.
+3. The resulting hash is used as the key to hash the region.
 4. The process continues with the new hash being used as the key to hash the API type.
 5. Finally the newest hash is used as the key to hash the string `aws4_request` creating the signature key.
 6. The signature key is then used as the key to hash the string-to-sign generating the final signature.
 
-Now the only step remaining is actually assembling the `authorization` header as shown:
+Now the only step remaining is assembling the `authorization` header as shown.
 
 ```
 AWS4-HMAC-SHA256 Credential={access-key}/{date}/{region}/s3/aws4_request,SignedHeaders=host;x-amz-date;{other-required-headers},Signature={signature}

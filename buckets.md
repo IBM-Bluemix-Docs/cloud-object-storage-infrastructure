@@ -375,7 +375,7 @@ Name | Type | Description
 --- | ---- | ------------
 `prefix` | string | Constrains response to object names beginning with `prefix`.
 `delimiter` | string | Groups objects between the `prefix` and the `delimiter`.
-`encoding-type` | string | If unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
+`encoding-type` | string | If Unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
 `max-keys` | string | Restricts the number of objects to display in the response.  Default and maximum is 1,000.
 `marker` | string | Specifies the object from where the listing should begin, in UTF-8 binary order.
 
@@ -749,7 +749,7 @@ Name | Type | Description
 --- | ---- | ------------
 `prefix` | string | Constrains response to object names beginning with `{prefix}`.
 `delimiter` | string | Groups objects between the `prefix` and the `delimiter`.
-`encoding-type` | string | If unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
+`encoding-type` | string | If Unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
 `max-uploads` | integer | Restricts the number of objects to display in the response.  Default and maximum is 1,000.
 `key-marker` | string | Specifies from where the listing should begin.
 `upload-id-marker` | string | Ignored if `key-marker` is not specified, otherwise sets a point at which to begin listing parts above `upload-id-marker`.

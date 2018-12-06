@@ -19,7 +19,7 @@ GUI tools exists for accessing S3 API compatible {{site.data.keyword.cos_short}}
 
 ## Cyberduck
 
-Cyberduck is a popular, open-source, and easy to use FTP client that is also capable of calculating the correct authorization signatures that are needed to connect to {{site.data.keyword.cos_notm}}.  Cyberduck can be downloaded from [cyberduck.io/](https://cyberduck.io/).
+Cyberduck is a popular, open source, and easy to use FTP client that is also capable of calculating the correct authorization signatures that are needed to connect to {{site.data.keyword.cos_notm}}.  Cyberduck can be downloaded from [cyberduck.io/](https://cyberduck.io/).
 
 To use Cyberduck to create a connection to {{site.data.keyword.cos_notm}} and synchronize a folder of local files to a bucket, follow these steps.
 
@@ -44,7 +44,7 @@ To use Cyberduck to create a connection to {{site.data.keyword.cos_notm}} and sy
 
 ## Cloudberry
 
-Cloudberry is a flexible backup utility that allows users to back up some or all of a local filesystem to an S3 API compatible {{site.data.keyword.cos_short}} system. It can be configured to be run either manually or scheduled based on need, and can backup different directories to different buckets if needed.  Cloudberry can be downloaded from [cloudberrylab.com](http://www.cloudberrylab.com/).
+Cloudberry is a flexible backup utility that allows users to back up some or all of a local file system to an S3 API compatible {{site.data.keyword.cos_short}} system. It can be configured to be run either manually or scheduled based on need, and can backup different directories to different buckets if needed.  Cloudberry can be downloaded from [cloudberrylab.com](http://www.cloudberrylab.com/).
 
 When configuring Cloudberry, select 'S3 Compatible' from the list of options, not 'Amazon S3' or 'SoftLayer'.
 {:tip}
