@@ -359,7 +359,7 @@ A `GET` request that is addressed to a bucket returns a list of objects, limited
 
 **Syntax**
 
-Note that the `version 2` method of listing objects within a bucket is not supported, and the `version 1` syntax is needed.
+The`version 2` method of listing objects within a bucket is not supported. The `version 1` syntax is needed.
 {:tip}
 
 ```bash
@@ -863,7 +863,7 @@ Content-Length: 123
 
 ## Create a cross-origin resource-sharing configuration for a bucket
 
-A `PUT` that is issued to a bucket with the proper parameters creates or replaces a cross-origin resource-sharing (CORS) configuration for a bucket. Note that in addition to an SHA256 hash of the body, a `Content-MD5` header is required as well. This operation doesn't use operation-specific headers or extra query parameters.
+A `PUT` that is issued to a bucket with the proper parameters creates or replaces a cross-origin resource-sharing (CORS) configuration for a bucket. In addition to an SHA256 hash of the body, a `Content-MD5` header is required as well. This operation doesn't use operation-specific headers or extra query parameters.
 
 **Syntax**
 

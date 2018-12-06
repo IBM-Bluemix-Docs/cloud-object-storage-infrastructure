@@ -1,4 +1,4 @@
----
+Return the object if the the source object was not modified since the specified date.---
 
 copyright:
   years: 2017, 2018
@@ -17,7 +17,7 @@ lastupdated: "2018-12-05"
 
 ## Upload an object
 
-A `PUT` specific a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header. All objects are limited to 10 TB in size This operation doesn't use operation-specific query parameters, or payload elements.
+A `PUT` specific a path to an object uploads the request body as an object. An SHA256 hash of the object is a required header. All objects are limited to 10 TB in size. This operation doesn't use operation-specific query parameters, or payload elements.
 
 **Syntax**
 
@@ -28,7 +28,7 @@ PUT https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 
 **Specific headers for SSE-C**
 
-The following headers are available for buckets using Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------
@@ -69,7 +69,7 @@ ETag: "3ca744fa96cb95e92081708887f63de5"
 Content-Length: 0
 ```
 
-**Sample Request** using SSE-C
+**Sample Request** with SSE-C
 
 ```http
 PUT /example-bucket/queen-bee HTTP/1.1
@@ -132,7 +132,7 @@ Header | Type | Description
 
 **Specific headers for SSE-C**
 
-The following headers are available for buckets using Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that contain SSE-C headers must be sent by using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that contain SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------
@@ -186,12 +186,12 @@ Header | Type | Description
 `range` | `string` | Returns the bytes of an object within the specified range.
 `x-amz-copy-source-if-match` | `string` (`ETag`)| Return the object if the specified `ETag` matches the source object.
 `x-amz-copy-source-if-none-match` | `string` (`ETag`)| Return the object if the specified `ETag` is different from the source object.
-`x-amz-copy-source-if-unmodified-since` | `string (timestamp)`| Return the object if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
-`x-amz-copy-source-if-modified-since` | `string (timestamp)`| Return the object if the source object has been modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
+`x-amz-copy-source-if-unmodified-since` | `string (timestamp)`| Return the object if the the source object was not modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
+`x-amz-copy-source-if-modified-since` | `string (timestamp)`| Return the object if the the source object was modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
 
 **Specific headers for SSE-C**
 
-The following headers are available for buckets using Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------
@@ -288,9 +288,9 @@ Header | Type | Description
 
 **Specific headers for SSE-C**
 
-The following headers are available for objects being copied into buckets that have Server-side Encryption with Customer-Provided Keys (SSE-C). Any `PUT` request using SSE-C headers must be sent by using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
+The following headers are available for objects being copied into buckets that have Server-side Encryption with Customer-Provided Keys (SSE-C). Any `PUT` request with SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
-The specific SSE-C headers used to initially upload objects are required if the copy operation encrypts the copy of the data at the target destination. If the original source object was encrypted using SSE-C, the specific headers used for copying objects need to be present to decrypt the object source. Copies of objects do not need to be encrypted with the same key.
+The specific SSE-C headers used to initially upload objects are required if the copy operation encrypts the copy of the data at the target destination. If the original source object was encrypted by using SSE-C, the specific headers used for copying objects need to be present to decrypt the object source. Copies of objects do not need to be encrypted with the same key.
 
 Header | Type | Description
 --- | ---- | ------------
@@ -391,7 +391,7 @@ Content-Length: 550
 
 ## Create an ACL for an object
 
-A `PUT` issued to an object with the proper parameters creates an access control list (ACL) for that object.  Access control lists allow for granting different sets of permissions to different storage accounts using the account's ID, or by using a pre-made ACL.
+A `PUT` issued to an object with the proper parameters creates an access control list (ACL) for that object. Access control lists grant different sets of permissions to different storage accounts by using the account's ID, or by using a pre-made ACL.
 
 Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a specific user, only to a storage account. However, `public-read-write` allows any other storage account to access the resource, as well as the general public.
 
@@ -527,7 +527,7 @@ Content-Length: 0
 
 ## Check an object's CORS configuration
 
-An `OPTIONS` specific a path to an object along with an origin and request type checks to see if that object is accessible from that origin using that request type. Unlike all other requests, an OPTIONS request does not require the `authorization` or `x-amx-date` headers.
+An `OPTIONS` request that is given a path to an object along with an origin and request type checks to see if that object is accessible from that origin by using that request type. Unlike all other requests, an `OPTIONS` request does not require the `authorization` or `x-amx-date` headers.
 
 **Syntax**
 
@@ -595,7 +595,7 @@ POST https://{bucket-name}.{endpoint}/{object-name}?uploads= # virtual host styl
 
 **Specific headers for SSE-C**
 
-The following headers are available for buckets using Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided for each part of the multipart upload.*
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided for each part of the multipart upload.*
 
 Header | Type | Description
 --- | ---- | ------------
@@ -650,7 +650,7 @@ PUT https://{bucket-name}.{endpoint}/{object-name}?partNumber={sequential-intege
 **Specific headers for SSE-C**
 {: #sse-c}
 
-The following headers are available for buckets using Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided when the multipart operation was initiated.*
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided when the multipart operation was initiated.*
 
 Header | Type | Description
 --- | ---- | ------------
