@@ -59,11 +59,11 @@ aws s3api put-bucket-lifecycle-configuration --bucket <bucket name> --lifecycle-
 
 3.	Create a backup set and associate the backup set to the storage policy created in the previous step. The backup set overview can be found [![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=11666.htm)
 
-## Performing Backups
+## Performing backups
 
 You can initiate your backup to the bucket with the policy. and perform backups to {{site.data.keyword.cos_full_notm}}. More information on Simpana backups is available [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=11677.htm). Backup contents transition to the Archive tier based on the policy configured on the bucket.
 
-## Performing Restores
+## Performing restores
 
 You can restore backup contents from {{site.data.keyword.cos_full_notm}}. More information on Simpana restore can be found [![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=12867.htm).
 
