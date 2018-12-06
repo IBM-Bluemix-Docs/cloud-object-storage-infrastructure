@@ -16,7 +16,7 @@ lastupdated: "2018-12-05"
 # Managing access
 
 ## Using Access Contol Lists
-Credentials are generated for each storage instance, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage instance. However, `public-read-write` allows any other COS storage instance to access the resource, as well as the general public.
+Credentials are generated for each storage instance, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a specific user, only to a storage instance. However, `public-read-write` allows any other COS storage instance to access the resource, as well as the general public.
 
 ## Using pre-signed urls
 It is possible to create pre-signed URLs that can be set to expire for both `PUT` and `GET` requests via the API by using a CLI, SDK, or library.
@@ -24,27 +24,27 @@ It is possible to create pre-signed URLs that can be set to expire for both `PUT
 ## Authentication
 
 ### About the `authorization` header
-Each request made against {{site.data.keyword.cos_full_notm}} using the S3 API must be authenticated using an implementation of the AWS `authorization` header. {{site.data.keyword.cos_full_notm}} supports Signature Version 2 and Signature Version 4 authentication methods.  Signature Version 4 is considered more secure as it uses a derived signing key rather than the secret access key itself as part of the signature. Using a signature provides identity verification and in-transit data integrity, and because each signature is tied to the timestamp of the request it is not possible to reuse authorization headers. The header is composed of four components: an algorithm declaration, credential information, signed headers, and the calculated signature:
+Each request that is made against {{site.data.keyword.cos_full_notm}} using the S3 API must be authenticated using an implementation of the AWS `authorization` header. {{site.data.keyword.cos_full_notm}} supports Signature Version 2 and Signature Version 4 authentication methods.  Signature Version 4 is considered more secure as it uses a derived signing key rather than the secret access key itself as part of the signature. Using a signature provides identity verification and in-transit data integrity, and because each signature is tied to the timestamp of the request it is not possible to reuse authorization headers. The header is composed of four components: an algorithm declaration, credential information, signed headers, and the calculated signature:
 
 ```
 AWS4-HMAC-SHA256 Credential={access-key}/{date}/{region}/s3/aws4_request,SignedHeaders=host;x-amz-date;{other-required-headers},Signature={signature}
 ```
 
-The date is provided in `YYYYMMDD` format, and for COS Cross-Region the region should be `us-standard`. The `host` and `x-amz-date` headers are always required, and depending on the request other headers may be required as well (e.g. `x-amz-content-sha256` in the case of requests with payloads).  Due to the need to recalculate the signature for every individual request, many Developers prefer to use a tool or SDK that will produce the authorization header automatically.
+The date is provided in `YYYYMMDD` format, and for COS Cross-Region the region is `us-standard`. The `host` and `x-amz-date` headers are always required, and depending on the request other headers might be required as well (for example, `x-amz-content-sha256` for requests with payloads). Due to the need to recalculate the signature for every individual request, many Developers prefer to use a tool or SDK that produces the authorization header automatically.
 
 ### Creating an `authorization` header
 
-First we need to create a request in a standardized format.
+First, create a request in a standardized format.
 
-1. Declare which HTTP method we are using (e.g. `PUT`)
-2. Define the resource we are accessing in a standardized fashion.  This is the part of the address in between `http(s)://` and the query string.  For requests at the account level (i.e. listing buckets) this is simply `/`.
-3. If there are any request parameters they must be standardized by being percent-encoded (e.g. spaces should be represented as `%20`) and alphabetized.
+1. Declare which HTTP method we are using (for example, `PUT`)
+2. Define the resource that you are accessing in a standardized fashion. This definition is the part of the address in between `http(s)://` and the query string. For requests at the account level (such as listing buckets) this is simply `/`.
+3. If there are any request parameters they must be standardized by being percent-encoded (for example, spaces are represented as `%20`) and alphabetized.
 4. Headers need to be standardized by removing whitespace, converting to lowercase, and adding a newline to each, then they must be sorted in ASCII order.
-5. After being listed in a standard format, they must be 'signed'.  This is taking just the header names, not their values, and listing them in alphabetical order, separated by semicolons. `Host` and `x-amz-date` are required for all requests.
+5. After being listed in a standard format, they must be 'signed'. This action is taking just the header names, not their values, and listing them in alphabetical order, separated by semicolons. `Host` and `x-amz-date` are required for all requests.
 6. If the request has a body, such as when uploading an object or creating a new ACL, the request body must be hashed using the SHA-256 algorithm and represented as base-16 encoded lowercase characters.
 7. Combine the HTTP method, standardized resource, standardized parameters, standardized headers, signed headers, and hashed request body each separated by a newline to form a standardized request.
 
-Next we need to assemble a 'string-to-sign' which will be combined with the signature key to form the final signature. The string-to-sign takes the following form:
+Next, assemble a 'string-to-sign' which is combined with the signature key to form the final signature. The string-to-sign takes the following form.
 
 ```
 AWS4-HMAC-SHA256
@@ -53,11 +53,11 @@ AWS4-HMAC-SHA256
 {hashed-standardized-request}
 ```
 
-1. The time must be current UTC and formatted according to the ISO 8601 specification (e.g. `20161128T152924Z`).
+1. The time must be current UTC and formatted according to the ISO 8601 specification (for example, `20161128T152924Z`).
 2. The date is in `YYYYMMDD` format.
 3. The final line is the previously created standardized request hashed using the SHA-256 algorithm.
 
-Now we need to actually calculate the signature.
+Next, calculate the signature.
 
 1. First the signature key needs to be calculated from the account's secret access key, the current date, and the region and API type being used.
 2. The string `AWS4` is added before the secret access key, and then, that new string is used as the key to hash the date.
@@ -66,7 +66,7 @@ Now we need to actually calculate the signature.
 5. Finally the newest hash is used as the key to hash the string `aws4_request` creating the signature key.
 6. The signature key is then used as the key to hash the string-to-sign generating the final signature.
 
-Now the only step remaining is assembling the `authorization` header as shown.
+Next, assemble the `authorization` header.
 
 ```
 AWS4-HMAC-SHA256 Credential={access-key}/{date}/{region}/s3/aws4_request,SignedHeaders=host;x-amz-date;{other-required-headers},Signature={signature}
