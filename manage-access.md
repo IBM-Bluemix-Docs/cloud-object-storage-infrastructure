@@ -37,11 +37,11 @@ The date is provided in `YYYYMMDD` format, and for COS Cross-Region the region i
 First, create a request in a standardized format.
 
 1. Declare which HTTP method we are using (for example, `PUT`)
-2. Define the resource that you are accessing in a standardized fashion. This definition is the part of the address in between `http(s)://` and the query string. For requests at the account level (such as listing buckets) this is simply `/`.
+2. Define the resource that you are accessing in a standardized fashion. This definition is the part of the address in between `http(s)://` and the query string. For requests at the account level (such as listing buckets) this entry is simply `/`.
 3. If there are any request parameters they must be standardized by being percent-encoded (for example, spaces are represented as `%20`) and alphabetized.
 4. Headers need to be standardized by removing whitespace, converting to lowercase, and adding a newline to each, then they must be sorted in ASCII order.
-5. After being listed in a standard format, they must be 'signed'. This action is taking just the header names, not their values, and listing them in alphabetical order, separated by semicolons. `Host` and `x-amz-date` are required for all requests.
-6. If the request has a body, such as when uploading an object or creating a new ACL, the request body must be hashed using the SHA-256 algorithm and represented as base-16 encoded lowercase characters.
+5. After they are listed in a standard format, they must be 'signed'. This action is taking just the header names, not their values, and listing them in alphabetical order, and separated by semicolons. `Host` and `x-amz-date` are required for all requests.
+6. If the request has a body, such as when uploading an object or creating a new ACL, the request body must be hashed by using the SHA-256 algorithm and represented as base-16 encoded lowercase characters.
 7. Combine the HTTP method, standardized resource, standardized parameters, standardized headers, signed headers, and hashed request body each separated by a newline to form a standardized request.
 
 Next, assemble a 'string-to-sign' which is combined with the signature key to form the final signature. The string-to-sign takes the following form.
@@ -55,7 +55,7 @@ AWS4-HMAC-SHA256
 
 1. The time must be current UTC and formatted according to the ISO 8601 specification (for example, `20161128T152924Z`).
 2. The date is in `YYYYMMDD` format.
-3. The final line is the previously created standardized request hashed using the SHA-256 algorithm.
+3. The final line is the previously created standardized request hashed by using the SHA-256 algorithm.
 
 Next, calculate the signature.
 
