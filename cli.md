@@ -104,7 +104,7 @@ $ aws --endpoint-url=https://{endpoint} s3api list-buckets
 
 Creating a bucket
 
-Valid provisioning codes for `LocationCostraint` are as follows. <br>
+Valid provisioning codes for `LocationConstraint` are as follows. <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -118,7 +118,7 @@ Valid provisioning codes for `LocationCostraint` are as follows. <br>
 &emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
 ```bash
-$ aws --endpoint-url=https://{endpoint} s3api create-bucket --bucket {bucket-name} [--region provisioing-code]
+$ aws --endpoint-url=https://{endpoint} s3api create-bucket --bucket {bucket-name} [--region provisioning-code]
 ```
 
 Listing objects within a bucket
