@@ -15,7 +15,7 @@ lastupdated: "2018-12-05"
 
 # {{site.data.keyword.cos_short}} in the IBM Cloud
 
-{{site.data.keyword.cos_short}} is storage for the cloud.  Essentially a key-value store, files (or any binary data) are given an identifying key (or name) and stored as an 'object' in a uniquely named 'bucket' or 'container'. This allows for highly scalable storage where the only information you need to retrieve your data is the name of the object and the bucket where it is stored.
+{{site.data.keyword.cos_short}} is storage for the cloud. Essentially a key-value store, files (or any binary data) are given an identifying key (or name) and stored as an 'object' in a uniquely named 'bucket' or 'container'. This feature allows for highly scalable storage where the only information you need to retrieve your data is the name of the object and the bucket where it is stored.
 In addition to {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud_notm}} currently provides several {{site.data.keyword.cos_short}} offerings for different user needs, all of which are accessible through web-based portals and REST APIs.
 
 | Offering                                   | Interface | Defining advantage                             | IBM Docs |
