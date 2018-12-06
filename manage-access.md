@@ -24,7 +24,7 @@ It is possible to create pre-signed URLs that can be set to expire for both `PUT
 ## Authentication
 
 ### About the `authorization` header
-Each request made against IBM COS using the S3 API must be authenticated using an implementation of the AWS `authorization` header.  IBM COS supports Signature Version 2 and Signature Version 4 authentication methods.  Signature Version 4 is considered more secure as it uses a derived signing key rather than the secret access key itself as part of the signature. Using a signature provides identity verification and in-transit data integrity, and because each signature is tied to the timestamp of the request it is not possible to reuse authorization headers.  The header is composed of four components: an algorithm declaration, credential information, signed headers, and the calculated signature:
+Each request made against {{site.data.keyword.cos_full_notm}} using the S3 API must be authenticated using an implementation of the AWS `authorization` header. {{site.data.keyword.cos_full_notm}} supports Signature Version 2 and Signature Version 4 authentication methods.  Signature Version 4 is considered more secure as it uses a derived signing key rather than the secret access key itself as part of the signature. Using a signature provides identity verification and in-transit data integrity, and because each signature is tied to the timestamp of the request it is not possible to reuse authorization headers. The header is composed of four components: an algorithm declaration, credential information, signed headers, and the calculated signature:
 
 ```
 AWS4-HMAC-SHA256 Credential={access-key}/{date}/{region}/s3/aws4_request,SignedHeaders=host;x-amz-date;{other-required-headers},Signature={signature}
@@ -157,11 +157,11 @@ headers = {'x-amz-date': timestamp, 'Authorization': v4auth_header}
 # the 'requests' package autmatically adds the required 'host' header
 request_url = endpoint + standardized_resource + standardized_querystring
 
-print '\nSending `%s` request to IBM COS -----------------------' % http_method
+print '\nSending `%s` request to {{site.data.keyword.cos_full_notm}} -----------------------' % http_method
 print 'Request URL = ' + request_url
 request = requests.get(request_url, headers=headers)
 
-print '\nResponse from IBM COS ----------------------------------'
+print '\nResponse from {{site.data.keyword.cos_full_notm}} ----------------------------------'
 print 'Response code: %d\n' % request.status_code
 print request.text
 ```

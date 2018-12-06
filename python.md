@@ -27,7 +27,7 @@ aws_access_key_id = {Access Key ID}
 aws_secret_access_key = {Secret Access Key}
 ```
 
-The `boto3` library provides complete access to the S3 API and can source credentials from the `~/.aws/credentials` file referenced above.  The IBM COS endpoint must be specified when creating a service resource or low-level client as shown in the following basic examples.
+The `boto3` library provides complete access to the S3 API and can source credentials from the `~/.aws/credentials` file referenced above.  The {{site.data.keyword.cos_full_notm}} endpoint must be specified when creating a service resource or low-level client as shown in the following basic examples.
 
 Detailed documentation can be found at [boto3.readthedocs.io](https://boto3.readthedocs.io/en/latest/reference/services/s3.html).
 {:tip}

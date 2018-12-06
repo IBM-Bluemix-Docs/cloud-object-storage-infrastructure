@@ -17,6 +17,6 @@ lastupdated: "2018-02-15"
 
 For help with questions about {{site.data.keyword.cos_full_notm}} and it's capabilities, please visit [dW Answers](https://developer.ibm.com/answers/smartspace/cloudobjectstorage/) and tag questions with `objectstorage` and/or `standardcrossregion`.
 
-For technical questions about software integration with IBM COS, visit [StackOverflow](http://stackoverflow.com/questions/tagged/object-storage+ibm) and tag questions with `ibm` and `object-storage`.
+For technical questions about software integration with {{site.data.keyword.cos_full_notm}}, visit [StackOverflow](http://stackoverflow.com/questions/tagged/object-storage+ibm) and tag questions with `ibm` and `object-storage`.
 
 For issues with your account, open a ticket and follow its status directly in the [customer portal](https://control.softlayer.com/){: new_window}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -17,13 +17,13 @@ lastupdated: "2018-07-27"
 
 CommVault Simpana integrates with the Archive tier of {{site.data.keyword.cos_full_notm}}. For more information about Simpana, see: [CommVault Simpana documentation](https://documentation.commvault.com/commvault/)
 
-For more information about IBM COS Infrastructure Archive, see [How to: Archive Data](archiving.html#archive-data).
+For more information about {{site.data.keyword.cos_full_notm}} Infrastructure Archive, see [How to: Archive Data](archiving.html).
 
 ## Integration steps
 
-1.	From the Simpana console, create an Amazon S3 cloud storage library. 
+1.	From the Simpana console, create an Amazon S3 cloud storage library.
 
-2. Ensure that the Service Host points to the endpoint. Simpana provisions buckets at this step or it can consume provisioned buckets. 
+2. Ensure that the Service Host points to the endpoint. Simpana provisions buckets at this step or it can consume provisioned buckets.
 
 3.	Create a policy on the bucket. You can use the AWS CLI, SDKs or the web console to create the policy. An example of a policy follows:
 
