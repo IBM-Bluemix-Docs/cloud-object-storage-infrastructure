@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-02-15"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -210,7 +210,7 @@ AmazonS3 cos = new AmazonS3Client();
 
 Set the JVM system properties `aws.accessKeyId` to define the access key and `aws.secretKey` to define the secret key.
 
-These properties may be set on start up or programmatically and will be used by the `AmazonS3Client` when the default constructor is used.
+These properties may be set on start or programmatically and will be used by the `AmazonS3Client` when the default constructor is used.
 
 **Example: Set system properties then open an S3 connection using those properties**
 

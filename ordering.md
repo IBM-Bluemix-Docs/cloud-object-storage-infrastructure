@@ -26,7 +26,7 @@ Now these lines are dissolving as all offerings are integrated into [the {{site.
 
 Before ordering a new account, it is necessary to create a customer account first.
 
-1. Go to [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} and click on the **Create a Free Account** button.
+1. Go to [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} and click the **Create a Free Account** button.
 2. Complete the form, by providing your email address, name, region, and phone number. Choose a password.
 3. Follow the link provided by the confirmation email, and follow the links to log in to {{site.data.keyword.Bluemix}}.
 4. Before using {{site.data.keyword.Bluemix}}, you need to set up a basic development environment. Choose a region based on your geographic location, and choose a name for your organization. Don't worry about being perfect - you can change it or create new organizations later. Follow the **Create** link.
