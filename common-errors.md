@@ -31,9 +31,9 @@ lastupdated: "2018-12-05"
 | `InternalError` | We encountered an internal error. Try again. | 500 Internal Server Error |
 | `InvalidAccessKeyId` | The AWS access key ID you provided does not exist in our records. | 403 Forbidden |
 | `InvalidArgument` | Invalid Argument | 400 Bad Request |
-| `InvalidArgument` | Requests specifying Server-Side Encryption with Customer-Provided Keys must be made over a secure connection. | 400 Bad Request |
-| `InvalidArgument` | Requests specifying Server-Side Encryption with Customer-Provided Keys must provide an appropriate secret key. | 400 Bad Request |
-| `InvalidArgument` | Requests specifying Server-Side Encryption with Customer-Provided Keys must provide the client calculated MD5 of the secret key. | 400 Bad Request |
+| `InvalidArgument` | Requests that specify Server-Side Encryption with Customer-Provided Keys must be made over a secure connection. | 400 Bad Request |
+| `InvalidArgument` | Requests that specify Server-Side Encryption with Customer-Provided Keys must provide an appropriate secret key. | 400 Bad Request |
+| `InvalidArgument` | Requests that specify Server-Side Encryption with Customer-Provided Keys must provide the client calculated MD5 of the secret key. | 400 Bad Request |
 | `InvalidArgument` | The MD5 hash of the secret key was improperly encoded. The MD5 hash must be Base64 encoded.| 400 Bad Request |
 | `InvalidArgument` | The calculated MD5 hash of the key did not match the hash that was provided. | 400 Bad Request |
 | `InvalidBucketName` | The specified bucket is not valid. | 400 Bad Request |
@@ -46,16 +46,16 @@ lastupdated: "2018-12-05"
 | `InvalidPartOrder` | The list of parts was not in ascending order. Parts list must specified in order by part number. | 400 Bad Request |
 | `InvalidRange` | The requested range cannot be satisfied. | 416 Requested Range Not Satisfiable |
 | `InvalidRequest` | Please use AWS4-HMAC-SHA256. | 400 Bad Request |
-| `InvalidRequest` | The object was stored using a form of Server-Side Encryption. The correct parameters must be provided to retrieve the object. | 400 Bad Request |
+| `InvalidRequest` | The object was stored by using a form of Server-Side Encryption. The correct parameters must be provided to retrieve the object. | 400 Bad Request |
 | `InvalidRequest` | The encryption parameters are not applicable to this object. | 400 Bad Request |
-| `InvalidRequest` | The object was stored using a form of Server-Side Encryption. The correct parameters must be provided to retrieve the object. | 400 Bad Request |
+| `InvalidRequest` | The object was stored by using a form of Server-Side Encryption. The correct parameters must be provided to retrieve the object. | 400 Bad Request |
 | `InvalidSecurity` | The provided security credentials are not valid. | 403 Forbidden |
 | `InvalidURI` | Couldn't parse the specified URI. | 400 Bad Request |
 | `KeyTooLong` | Your key is too long. | 400 Bad Request |
 | `MalformedACLError` | The XML you provided was not well-formed or did not validate against our published schema. | 400 Bad Request |
 | `MalformedPOSTRequest` | The body of your POST request is not well-formed multipart/form-data. | 400 Bad Request |
 | `MalformedXML` | This happens when the user sends malformed xml (xml that doesn't conform to the published xsd) for the configuration. The error message is, "The XML you provided was not well-formed or did not validate against our published schema." | 400 Bad Request |
-| `MaxMessageLengthExceeded` | Your request was too big. | 400 Bad Request |
+| `MaxMessageLengthExceeded` | Your request was too large. | 400 Bad Request |
 | `MaxPostPreDataLengthExceededError` | Your POST request fields that preceded the upload file were too large. | 400 Bad Request |
 | `MetadataTooLarge` | Your metadata headers exceed the maximum allowed metadata size. | 400 Bad Request |
 | `MethodNotAllowed` | The specified method is not allowed against this resource. | 405 Method Not Allowed |
@@ -75,7 +75,7 @@ lastupdated: "2018-12-05"
 | `ServiceUnavailable` | Reduce your request rate. | 503 Service Unavailable |
 | `SlowDown` | Reduce your request rate. | 503 Slow Down |
 | `TemporaryRedirect` | You are being redirected to the bucket while DNS updates. | 307 Moved Temporarily |
-| `TooManyBuckets` | You have attempted to create more buckets than allowed. | 400 Bad Request |
+| `TooManyBuckets` | You attempted to create more buckets than allowed. | 400 Bad Request |
 | `UnexpectedContent` | This request does not support content. | 400 Bad Request |
 | `UnresolvableGrantByEmailAddress` | The email address you provided does not match any account on record. | 400 Bad Request |
 | `UserKeyMustBeSpecified` | The bucket POST must contain the specified field name. If it is specified, check the order of the fields. | 400 Bad Request |
