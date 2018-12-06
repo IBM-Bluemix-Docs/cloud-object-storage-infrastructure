@@ -17,9 +17,9 @@ lastupdated: "2018-02-15"
 
 ## API Questions
 
-**Are COS bucket names case sensitive?**
+**Are COS bucket names case-sensitive?**
 
-Bucket names are required to be DNS addressable, and thus not case sensitive.
+Bucket names are required to be DNS addressable, and thus not case-sensitive.
 
 **What is the maximum number of characters that can be used in an Object name?**
 
