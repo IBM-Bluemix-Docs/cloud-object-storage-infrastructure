@@ -21,18 +21,14 @@ GUI tools exist for accessing S3 API compatible {{site.data.keyword.cos_short}} 
 
 Cyberduck is a popular, open source, and easy to use FTP client that is also capable of calculating the correct authorization signatures that are needed to connect to {{site.data.keyword.cos_notm}}.  Cyberduck can be downloaded from [cyberduck.io/](https://cyberduck.io/).
 
-To use Cyberduck to create a connection to {{site.data.keyword.cos_short}} and synchronize a folder of local files to a bucket, follow these steps.
+To use Cyberduck to create a connection to {{site.data.keyword.cos_full_notm}} and synchronize a folder of local files to a bucket, follow these steps.
 
  1. Download, install, and start Cyberduck.
  2. The main window of the application opens, where you can create a connection to {{site.data.keyword.cos_notm}}. Click **Open Connection** to configure a connection to {{site.data.keyword.cos_notm}}.
- 3. A new window opens. From the menu, select **S3 storage**. Enter information into the following fields, and then click Connect.
- 
-   	* Server: enter the nearest endpoint of {{site.data.keyword.cos_full_notm}}. For more information, see [available regions and endpoints](endpoints.html).
-    * Access Key ID
-    * Secret Access Key
-
-    You can obtain your Access Key ID and Secret Access Key from the [IBM Cloud Console](https://control.bluemix.net/) through **Classic Infrastructure** > **Storage** > **Object Storage**. Click the account name. In the account details page, click **Access & Permissions** to see your credentials and access keys.
-    {:tip}
+ 3. A new window opens. From the menu, select **S3 storage**. Enter information into the following fields, and then click Connect:
+   	– Server: enter the nearest endpoint of {{site.data.keyword.cos_notm}}
+    – Access Key ID
+   	– Secret Access Key
 
  4. Cyberduck takes you to the root of the account where buckets can be created. Right-click within the main panel and select **New Folder**. (The application deals with many transfer protocols where Folder is the more common container construct). Enter the bucket name and then click **Create**.
  5. After the bucket is created, double-click the bucket to view it. Within the bucket you can perform various functions such as upload files to the bucket, list bucket contents, download objects from the bucket, synchronize local files to a bucket, synchronize objects to another bucket, or create an archive of a bucket.
