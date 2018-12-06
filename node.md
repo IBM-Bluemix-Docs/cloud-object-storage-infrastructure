@@ -17,23 +17,22 @@ lastupdated: "2018-12-05"
 
 ## Installing
 
-The preferred way to install the {{site.data.keyword.cos_full}} SDK for Node.js is to use the
-[npm](http://npmjs.org) package manager for Node.js. Simply type the following
-into a terminal window:
+The preferred way to install the {{site.data.keyword.cos_full}} SDK for Node.js is to use the [`npm` ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://npmjs.org) package manager for Node.js. Simply type the following into a terminal window:
 
 ```sh
 npm install ibm-cos-sdk
 ```
+{:pre}
 
-Source code is hosted on [GitHub](https://github.com/IBM/ibm-cos-sdk-js).
+Source code is hosted on [GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM/ibm-cos-sdk-js).
 
-For more information about individual methods and classes, see [the API documentation for the SDK](https://ibm.github.io/ibm-cos-sdk-js/).
+For more information about individual methods and classes, see [the API documentation for the SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.github.io/ibm-cos-sdk-js/).
 
 ## Getting Started
 
 ### Minimum requirements
 
-To run the SDK you  need **Node 4.x+**.
+To run the SDK, you  need **Node 4.x+**.
 
 ### Code example
 
@@ -122,18 +121,19 @@ s3.createBucket(params, function(err, data) {
 ```
 
 * Parameters (new fields only)
-`IBMSSEKPEncryptionAlgorithm` (string) – The encryption algorithm that is used for objects stored in the newly created bucket.  Default: `AES256`
-`IBMSSEKPCustomerRootKeyCrn` (string) – Container for describing the KMS-KP Key CRN.  The CRN includes version, `cname`, `ctype`, `servicename`, `location`, `scope`, `serviceinstance`, `resourcetype`, `resource`. We pass the CRN as-is.
+`IBMSSEKPEncryptionAlgorithm` (string) – The encryption algorithm that is used for objects stored in the newly created bucket. The default value is `AES256`.
+`IBMSSEKPCustomerRootKeyCrn` (string) – Container for describing the KMS-KP Key CRN. The CRN includes version, `cname`, `ctype`, `servicename`, `location`, `scope`, `serviceinstance`, `resourcetype`, `resource`. We pass the CRN as-is.
 
 Callback (callback)
+
 ```
 function(err, data) { ... }
 ```
 Called when a response from the service is returned. If a callback is not supplied, you must call `AWS.Request.send()` on the returned request object to initiate the request.
 
 Parameters:
-- `err (Error)` — the error object returned from the request. Set to null if the request is successful.
-- `data (Object)` — the de-serialized data returned from the request. Set to null if a request error occurs.
+- `err (Error)` - the error object returned from the request. Set to null if the request is successful.
+- `data (Object)` - the de-serialized data returned from the request. Set to null if a request error occurs.
 
 The data object has the following properties:
-- `Location` — (String)
+- `Location` - (String)
