@@ -16,7 +16,7 @@ lastupdated: "2018-12-05"
 
 Python support is provided through the `Boto 3` library. It can be installed from the Python Package Index via `pip install boto3`. The examples that are shown here were generated using version 1.4.0 of the `boto3` package.
 
-Existing applications that use the original Boto 2.x library might be compatible as well, although it is no longer being actively maintained and users are encouraged to migrate to Boto 3.
+Existing applications that use the original `Boto 2.`x` library might be compatible as well, although it is no longer being actively maintained and users are encouraged to migrate to `Boto 3`.
 {:tip}
 
 By default, access keys are sourced from `~/.aws/credentials`, but can also be set as environment variables. The minimum contents that are required `~/.aws/credentials` file are as follows.
@@ -27,7 +27,7 @@ aws_access_key_id = {Access Key ID}
 aws_secret_access_key = {Secret Access Key}
 ```
 
-The `boto3` library provides complete access to the S3 API and can source credentials from the `~/.aws/credentials` file. The {{site.data.keyword.cos_full_notm}} endpoint must be specified when creating a service resource or low-level client.
+The `boto3` library provides complete access to the S3 API and can source credentials from the `~/.aws/credentials` file. The {{site.data.keyword.cos_full_notm}} endpoint must be specified when you create a service resource or low-level client.
 
 Detailed documentation can be found at [boto3.readthedocs.io ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://boto3.readthedocs.io/en/latest/reference/services/s3.html).
 {:tip}
@@ -35,7 +35,7 @@ Detailed documentation can be found at [boto3.readthedocs.io ![External link ico
 
 ## Example service resource script
 
-Creating a service resource provides greater abstraction for higher level tasks. The following basic script fetches the list of buckets owned by an account, and lists the objects in each bucket.
+Creating a service resource provides greater abstraction for higher-level tasks. The following basic script fetches the list of buckets that are owned by an account, and lists the objects in each bucket.
 
 ```python
 import boto3
@@ -64,7 +64,7 @@ bucket-2
 
 ## Example low-level client script
 
-Creating a low-level client allows for considerably more detail and access to metadata. The following basic script fetches the list of buckets owned by an account, and lists objects in each bucket. As considerably more data is returned than in the previous example, the `pprintpp` package is used to increase the readability of the raw output.
+Creating a low-level client allows for considerably more detail and access to metadata. The following basic script fetches the list of buckets that are owned by an account, and lists objects in each bucket. As considerably more data is returned than in the previous example, the `pprintpp` package is used to increase the readability of the raw output.
 
 ```python
 import boto3
