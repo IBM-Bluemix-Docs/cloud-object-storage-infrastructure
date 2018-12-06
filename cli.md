@@ -28,6 +28,9 @@ aws_access_key_id = {Access Key ID}
 aws_secret_access_key = {Secret Access Key}
 ```
 
+You can obtain your Access Key ID and Secret Access Key from the [IBM Cloud Console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.bluemix.net/) through **Classic Infrastructure** > **Storage** > **Object Storage**. Click the account name. In the account details page, click **Access & Permissions** to see your credentials and access keys.
+{:tip}
+
 The {{site.data.keyword.cos_full_notm}} endpoint must be sourced by using the `--endpoint-url` option, and can't be set in the credentials file.
 
 Simple use cases can be accomplished by using `aws --endpoint-url={endpoint} s3 <command>`. Objects are managed with familiar shell commands, such as `ls`, `mv`, `cp`, and `rm`.  Buckets can be deleted by using `rb`.
@@ -36,6 +39,7 @@ Simple use cases can be accomplished by using `aws --endpoint-url={endpoint} s3 
  {:tip}
 
 #### Basic operations
+
 **Listing buckets**
 
 ```shell
@@ -100,7 +104,7 @@ $ aws --endpoint-url=https://{endpoint} s3api list-buckets
 
 Creating a bucket
 
-Valid provisioning codes for `LocationCostraint` are as follows. <br>
+Valid provisioning codes for `LocationConstraint` are as follows. <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -114,7 +118,7 @@ Valid provisioning codes for `LocationCostraint` are as follows. <br>
 &emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
 ```bash
-$ aws --endpoint-url=https://{endpoint} s3api create-bucket --bucket {bucket-name} [--region provisioing-code]
+$ aws --endpoint-url=https://{endpoint} s3api create-bucket --bucket {bucket-name} [--region provisioning-code]
 ```
 
 Listing objects within a bucket

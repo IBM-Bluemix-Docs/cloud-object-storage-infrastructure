@@ -48,9 +48,7 @@ Types of endpoint:
       <td>US Cross Region</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
-        </p>
+        <p>Private</p>
       </td>
       <td>
         <p>
@@ -65,8 +63,7 @@ Types of endpoint:
       <td>Dallas Access Point</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -82,8 +79,7 @@ Types of endpoint:
       <td>San Jose Access Point</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -99,8 +95,7 @@ Types of endpoint:
       <td>Washington, DC Access Point</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -132,9 +127,7 @@ Types of endpoint:
       <td>US South</td>
       <td>
         <p>Public</p>
-        <p>
-          <code class="highlighter-rouge">Private</span>
-        </p>
+        <p>Private</p>
       </td>
       <td>
         <p>
@@ -149,8 +142,7 @@ Types of endpoint:
       <td>US East</td>
       <td>
         <p>Public</p>
-        <p>
-          <code class="highlighter-rouge">Private</span>
+        <p>Private
         </p>
       </td>
       <td>
@@ -182,8 +174,7 @@ Types of endpoint:
       <td>EU Cross Region</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -199,8 +190,7 @@ Types of endpoint:
       <td>Amsterdam Access Point</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -216,8 +206,7 @@ Types of endpoint:
       <td>Frankfurt Access Point</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -233,8 +222,7 @@ Types of endpoint:
       <td>Milan Access Point</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -270,8 +258,7 @@ Types of endpoint:
       <td>EU United Kingdom</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -287,8 +274,7 @@ Types of endpoint:
       <td>EU Germany</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -324,8 +310,7 @@ Types of endpoint:
       <td>AP Cross Region</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -341,8 +326,7 @@ Types of endpoint:
       <td>Tokyo Access Point</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -358,8 +342,7 @@ Types of endpoint:
       <td>Seoul Access Point</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -375,8 +358,7 @@ Types of endpoint:
       <td>Hong Kong Access Point</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -444,8 +426,7 @@ Types of endpoint:
       <td>Amsterdam, Netherlands</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -461,8 +442,7 @@ Types of endpoint:
       <td>Chennai, India</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -478,8 +458,7 @@ Types of endpoint:
       <td>Melbourne, Australia</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -495,9 +474,7 @@ Types of endpoint:
       <td>Montréal, Canada</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
-        </p>
+        <p>Private</p>
       </td>
       <td>
         <p>
@@ -524,8 +501,7 @@ Types of endpoint:
       <td>São Paulo, Brazil</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -541,8 +517,7 @@ Types of endpoint:
       <td>Seoul, South Korea</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -558,8 +533,7 @@ Types of endpoint:
       <td>Toronto, Canada</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -593,8 +567,7 @@ Access to IBM Federal Data Centers (DCs) is only available for authorized US Gov
       <td>US South Federal</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
@@ -610,8 +583,7 @@ Access to IBM Federal Data Centers (DCs) is only available for authorized US Gov
       <td>US East Federal</td>
       <td>
         <p>Public</p>
-        <p>
-          Private
+        <p>Private
         </p>
       </td>
       <td>
