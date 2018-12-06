@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-02-15"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -27,13 +27,13 @@ npm install ibm-cos-sdk
 
 Source code is hosted on [GitHub](https://github.com/IBM/ibm-cos-sdk-js).
 
-More detail on individual methods and classes can be found in [the API documentation for the SDK](https://ibm.github.io/ibm-cos-sdk-js/).
+For more information about individual methods and classes, see [the API documentation for the SDK](https://ibm.github.io/ibm-cos-sdk-js/).
 
 ## Getting Started
 
-### Minimum requirements ####
+### Minimum requirements
 
-To run the SDK you will need **Node 4.x+**.
+To run the SDK you  need **Node 4.x+**.
 
 ### Code example
 
@@ -95,7 +95,7 @@ doCreateBucket()
         console.error('An error occurred:');
         console.error(util.inspect(err));
     });
-    ```
+```
 
 ## Using Key protect
 
@@ -121,14 +121,19 @@ s3.createBucket(params, function(err, data) {
 });
 ```
 
-Parameters (new fields only):
-`IBMSSEKPEncryptionAlgorithm` (string) – The encryption algorithm that will be used for objects stored in the newly created bucket.  Default: AES256
-`IBMSSEKPCustomerRootKeyCrn` (string) – Container for describing the KMS-KP Key CRN.  The crn includes version, cname, ctype, servicename, location, scope, serviceinstance, resourcetype, resource. We will pass the CRN as-is.
+* Parameters (new fields only)
+`IBMSSEKPEncryptionAlgorithm` (string) – The encryption algorithm that is used for objects stored in the newly created bucket.  Default: `AES256`
+`IBMSSEKPCustomerRootKeyCrn` (string) – Container for describing the KMS-KP Key CRN.  The CRN includes version, `cname`, `ctype`, `servicename`, `location`, `scope`, `serviceinstance`, `resourcetype`, `resource`. We pass the CRN as-is.
 
-Callback (callback):
+Callback (callback)
+```
 function(err, data) { ... }
-Called when a response from the service is returned. If a callback is not supplied, you must call AWS.Request.send() on the returned request object to initiate the request.
-Parameters:err (Error) —
-the error object returned from the request. Set to null if the request is successful.
-data (Object) — the de-serialized data returned from the request. Set to null if a request error occurs. The data object has the following properties:
-Location — (String)
+```
+Called when a response from the service is returned. If a callback is not supplied, you must call `AWS.Request.send()` on the returned request object to initiate the request.
+
+Parameters:
+- `err (Error)` — the error object returned from the request. Set to null if the request is successful.
+- `data (Object)` — the de-serialized data returned from the request. Set to null if a request error occurs.
+
+The data object has the following properties:
+- `Location` — (String)
