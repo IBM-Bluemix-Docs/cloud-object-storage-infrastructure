@@ -21,13 +21,13 @@ GUI tools exist for accessing S3 API compatible {{site.data.keyword.cos_short}} 
 
 Cyberduck is a popular, open source, and easy to use FTP client that is also capable of calculating the correct authorization signatures that are needed to connect to {{site.data.keyword.cos_notm}}.  Cyberduck can be downloaded from [cyberduck.io/](https://cyberduck.io/).
 
-To use Cyberduck to create a connection to {{site.data.keyword.cos_notm}} and synchronize a folder of local files to a bucket, follow these steps.
+To use Cyberduck to create a connection to {{site.data.keyword.cos_short}} and synchronize a folder of local files to a bucket, follow these steps.
 
  1. Download, install, and start Cyberduck.
  2. The main window of the application opens, where you can create a connection to {{site.data.keyword.cos_notm}}. Click **Open Connection** to configure a connection to {{site.data.keyword.cos_notm}}.
  3. A new window opens. From the menu, select **S3 storage**. Enter information into the following fields, and then click Connect.
  
-   	* Server: enter the nearest endpoint of {{site.data.keyword.cos_notm}}. For more information, see [available regions and endpoints](endpoints.html)
+   	* Server: enter the nearest endpoint of {{site.data.keyword.cos_full_notm}}. For more information, see [available regions and endpoints](endpoints.html)
     * Access Key ID
     
     * Secret Access Key
