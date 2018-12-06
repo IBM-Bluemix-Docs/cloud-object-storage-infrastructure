@@ -1,4 +1,4 @@
-for example,---
+---
 
 copyright:
   years: 2017, 2018
@@ -374,7 +374,7 @@ Name | Type | Description
 `prefix` | `string` | Constrains response to object names beginning with `prefix`.
 `delimiter` | `string` | Groups objects between the `prefix` and the `delimiter`.
 `encoding-type` | `string` | If Unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
-`max-keys` | `string` | Restricts the number of objects to display in the response.  Default and maximum is 1,000.
+`max-keys` | `string` | Restricts the number of objects to display in the response. Default and maximum values are 1,000.
 `marker` | `string` | Specifies the object from where the listing should begin, in UTF-8 binary order.
 
 **Sample Request**
@@ -539,7 +539,7 @@ PUT https://{bucket-name}.{endpoint}?acl= # virtual host style
 
 **Sample Request** Basic pre-made ACL
 
-Specify a pre-made ACL to allow for `public-read` access to the `apiary` bucket. This operations allows any storage account to view the bucket's contents and ACL details.
+Specify a pre-made ACL to allow for `public-read` access to the `apiary` bucket. This operation allows any storage account to view the bucket's contents and ACL details.
 
 ```http
 PUT /apiary?acl= HTTP/1.1
@@ -748,7 +748,7 @@ Name | Type | Description
 `prefix` | `string` | Constrains response to object names beginning with `{prefix}`.
 `delimiter` | `string` | Groups objects between the `prefix` and the `delimiter`.
 `encoding-type` | `string` | If Unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
-`max-uploads` | `integer` | Restricts the number of objects to display in the response.  Default and maximum is 1,000.
+`max-uploads` | `integer` | Restricts the number of objects to display in the response. Default and maximum values are 1,000.
 `key-marker` | `string` | Specifies from where the listing should begin.
 `upload-id-marker` | `string` | Ignored if `key-marker` is not specified, otherwise sets a point at which to begin listing parts above `upload-id-marker`.
 
@@ -874,7 +874,7 @@ PUT https://{bucket-name}.{endpoint}?cors= # virtual host style
 
 **Optional payload elements**
 
-The XML block that defines defining the key CORS elements (`AllowedOrigin` and `AllowedMethod`) contains two elements that can be optionally specified.
+The XML block that defines the key CORS elements (`AllowedOrigin` and `AllowedMethod`) contains two other elements that can be optionally specified.
 
 | Element | Description |
 | --- | --- |
