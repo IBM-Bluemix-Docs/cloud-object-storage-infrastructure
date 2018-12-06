@@ -27,9 +27,8 @@ To use Cyberduck to create a connection to {{site.data.keyword.cos_short}} and s
  2. The main window of the application opens, where you can create a connection to {{site.data.keyword.cos_notm}}. Click **Open Connection** to configure a connection to {{site.data.keyword.cos_notm}}.
  3. A new window opens. From the menu, select **S3 storage**. Enter information into the following fields, and then click Connect.
  
-   	* Server: enter the nearest endpoint of {{site.data.keyword.cos_full_notm}}. For more information, see [available regions and endpoints](endpoints.html)
+   	* Server: enter the nearest endpoint of {{site.data.keyword.cos_full_notm}}. For more information, see [available regions and endpoints](endpoints.html).
     * Access Key ID
-    
     * Secret Access Key
 
     You can obtain your Access Key ID and Secret Access Key from the [IBM Cloud Console](https://control.bluemix.net/) through **Classic Infrastructure** > **Storage** > **Object Storage**. Click the account name. In the account details page, click **Access & Permissions** to see your credentials and access keys.
