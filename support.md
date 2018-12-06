@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-02-15"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -15,8 +15,8 @@ lastupdated: "2018-02-15"
 
 # Getting support
 
-For help with questions about IBM Cloud Object Storage and it's capabilities, please visit [dW Answers](https://developer.ibm.com/answers/smartspace/cloudobjectstorage/) and tag questions with `objectstorage` and/or `standardcrossregion`.
+For help with questions about {{site.data.keyword.cos_full_notm}} and it's capabilities, visit [dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smartspace/cloudobjectstorage/) and tag questions with `objectstorage` and `standardcrossregion`.
 
-For technical questions about software integration with IBM COS, visit [StackOverflow](http://stackoverflow.com/questions/tagged/object-storage+ibm) and tag questions with `ibm` and `object-storage`.
+For technical questions about software integration with {{site.data.keyword.cos_full_notm}}, visit [StackOverflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/object-storage+ibm) and tag questions with `ibm` and `object-storage`.
 
-For issues with your account, open a ticket and follow its status directly in the [customer portal](https://control.softlayer.com/){: new_window}.
+For issues with your account, open a case and follow its status directly in the [{{site.data.keyword.slportal}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.softlayer.com/){:new_window}.

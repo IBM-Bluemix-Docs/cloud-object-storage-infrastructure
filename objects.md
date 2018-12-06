@@ -1,8 +1,8 @@
----
+Return the object if the the source object was not modified since the specified date.---
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -17,7 +17,7 @@ lastupdated: "2018-07-17"
 
 ## Upload an object
 
-A `PUT` given a path to an object uploads the request body as an object. A SHA256 hash of the object is a required header.  All objects are limited to 10TB in size (when using multiple parts, see below). This operation does not make use of operation specific query parameters, or payload elements.
+A `PUT` specific a path to an object uploads the request body as an object. An SHA256 hash of the object is a required header. All objects are limited to 10 TB in size. This operation doesn't use operation-specific query parameters, or payload elements.
 
 **Syntax**
 
@@ -28,13 +28,13 @@ PUT https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 
 **Specific headers for SSE-C**
 
-The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
-`x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
-`x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
+`x-amz-server-side-encryption-customer-algorithm` | `string` | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
+`x-amz-server-side-encryption-customer-key` | `string` | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server-side encryption process.
+`x-amz-server-side-encryption-customer-key-MD5` | `string` | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store uses this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
 **Sample Request**
 
@@ -69,7 +69,7 @@ ETag: "3ca744fa96cb95e92081708887f63de5"
 Content-Length: 0
 ```
 
-**Sample Request** using SSE-C
+**Sample Request** with SSE-C
 
 ```http
 PUT /example-bucket/queen-bee HTTP/1.1
@@ -111,7 +111,7 @@ Content-Length: 0
 
 ## Get an object's headers
 
-A `HEAD` given a path to an object retrieves that object's headers. This operation does not make use of operation specific query parameters or payload elements.
+A `HEAD` specific a path to an object retrieves that object's headers. This operation doesn't use operation-specific query parameters or payload elements.
 
 **Syntax**
 
@@ -124,21 +124,21 @@ HEAD https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 
 Header | Type | Description
 --- | ---- | ------------
-`range` | string | Returns the bytes of an object within the specified range.
-`x-amz-copy-source-if-match` | string (`ETag`)| Return the metadata if the specified `ETag` matches the source object.
-`x-amz-copy-source-if-none-match` | string (`ETag`)| Return the metadata if the specified `ETag` is different from the source object.
-`x-amz-copy-source-if-unmodified-since` | string (timestamp)| Return the metadata if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
-`x-amz-copy-source-if-modified-since` | string (timestamp)| Return the metadata if the source object has been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
+`range` | `string` | Returns the bytes of an object within the specified range.
+`x-amz-copy-source-if-match` | `string` (`ETag`)| Return the metadata if the specified `ETag` matches the source object.
+`x-amz-copy-source-if-none-match` | `string` (`ETag`)| Return the metadata if the specified `ETag` is different from the source object.
+`x-amz-copy-source-if-unmodified-since` | `string (timestamp)`| Return the metadata if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
+`x-amz-copy-source-if-modified-since` | `string (timestamp)`| Return the metadata if the source object has been modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
 
 **Specific headers for SSE-C**
 
-The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Anyrequest using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that contain SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
-`x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
-`x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
+`x-amz-server-side-encryption-customer-algorithm` | `string` | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
+`x-amz-server-side-encryption-customer-key` | `string` | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server-side encryption process.
+`x-amz-server-side-encryption-customer-key-MD5` | `string` | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store uses this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
 **Sample Request**
 
@@ -170,7 +170,7 @@ Content-Length: 11
 
 ## Download an object
 
-A `GET` given a path to an object downloads the object. This operation does not make use of operation specific query parameters or payload elements.
+A `GET` specific a path to an object downloads the object. This operation doesn't use operation-specific query parameters or payload elements.
 
 **Syntax**
 
@@ -183,21 +183,21 @@ GET https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 
 Header | Type | Description
 --- | ---- | ------------
-`range` | string | Returns the bytes of an object within the specified range.
-`x-amz-copy-source-if-match` | string (`ETag`)| Return the object if the specified `ETag` matches the source object.
-`x-amz-copy-source-if-none-match` | string (`ETag`)| Return the object if the specified `ETag` is different from the source object.
-`x-amz-copy-source-if-unmodified-since` | string (timestamp)| Return the object if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
-`x-amz-copy-source-if-modified-since` | string (timestamp)| Return the object if the source object has been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
+`range` | `string` | Returns the bytes of an object within the specified range.
+`x-amz-copy-source-if-match` | `string` (`ETag`)| Return the object if the specified `ETag` matches the source object.
+`x-amz-copy-source-if-none-match` | `string` (`ETag`)| Return the object if the specified `ETag` is different from the source object.
+`x-amz-copy-source-if-unmodified-since` | `string (timestamp)`| Return the object if the the source object was not modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
+`x-amz-copy-source-if-modified-since` | `string (timestamp)`| Return the object if the the source object was modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
 
 **Specific headers for SSE-C**
 
-The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
-`x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
-`x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
+`x-amz-server-side-encryption-customer-algorithm` | `string` | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
+`x-amz-server-side-encryption-customer-key` | `string` | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server-side encryption process.
+`x-amz-server-side-encryption-customer-key-MD5` | `string` | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store uses this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
 **Sample Request**
 
@@ -233,7 +233,7 @@ Content-Length: 467
 
 ## Delete an object
 
-A `DELETE` given a path to an object deletes an object. This operation does not make use of operation specific query parameters, headers, or payload elements.
+A `DELETE` specific a path to an object deletes an object. This operation doesn't use operation-specific query parameters, headers, or payload elements.
 
 **Syntax**
 
@@ -266,7 +266,7 @@ X-Clv-S3-Version: 2.5
 
 ## Copy an object
 
-A `PUT` given a path to a new object creates a new copy of another object specified by the `x-amz-copy-source` header. Unless otherwise altered the metadata remains the same, although any ACL is reset to `private` for the  account creating the copy. This operation does not make use of operation specific query parameters or payload elements.
+A `PUT` specific a path to a new object creates a new copy of another object specified by the `x-amz-copy-source` header. Unless otherwise altered the metadata remains the same, although any ACL is reset to `private` for the  account creating the copy. This operation doesn't use operation-specific query parameters or payload elements.
 
 
 **Syntax**
@@ -280,23 +280,23 @@ PUT https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-metadata-directive` | string (`COPY` or `REPLACE`) | `REPLACE` will overwrite original metadata with new metadata that is provided.
-`x-amz-copy-source-if-match` | string (`ETag`)| Creates a copy if the specified `ETag` matches the source object.
-`x-amz-copy-source-if-none-match` | string (`ETag`)| Creates a copy if the specified `ETag` is different from the source object.
-`x-amz-copy-source-if-unmodified-since` | string (timestamp)| Creates a copy if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
-`x-amz-copy-source-if-modified-since` | string (timestamp)| Creates a copy if the source object has been modified since the specified date.  Date must be a valid HTTP date (e.g. `Wed, 30 Nov 2016 20:21:38 GMT`).
+`x-amz-metadata-directive` | `string `(`COPY` or `REPLACE`) | `REPLACE` overwrites original metadata with new metadata that is provided.
+`x-amz-copy-source-if-match` | `string `(`ETag`)| Creates a copy if the specified `ETag` matches the source object.
+`x-amz-copy-source-if-none-match` | `string` (`ETag`)| Creates a copy if the specified `ETag` is different from the source object.
+`x-amz-copy-source-if-unmodified-since` | `string (timestamp)`| Creates a copy if the the source object has not been modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
+`x-amz-copy-source-if-modified-since` | `string (timestamp)`| Creates a copy if the source object has been modified since the specified date.  Date must be a valid HTTP date (for example,`Wed, 30 Nov 2016 20:21:38 GMT`).
 
 **Specific headers for SSE-C**
 
-The following headers are available for objects being copied into buckets that have Server Side Encryption with Customer-Provided Keys (SSE-C). Any `PUT` request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
+The following headers are available for objects being copied into buckets that have Server-side Encryption with Customer-Provided Keys (SSE-C). Any `PUT` request with SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
-The specific SSE-C headers used to initially upload objects are required if the copy operation will encrypt the copy of the data at the target destination. If the original/source object was encrypted using SSE-C, the spefic headers used for copying objects will need to be present to decrypt the object source. Copies of objects do not need to be encrypted with the same key.
+The specific SSE-C headers used to initially upload objects are required if the copy operation encrypts the copy of the data at the target destination. If the original source object was encrypted by using SSE-C, the specific headers used for copying objects need to be present to decrypt the object source. Copies of objects do not need to be encrypted with the same key.
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-copy-source-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-copy-source-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
-`x-amz-copy-source-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
-`x-amz-copy-source-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-copy-source-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
+`x-amz-copy-source-server-side-encryption-customer-algorithm` | `string` | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-copy-source-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
+`x-amz-copy-source-server-side-encryption-customer-key` | `string` | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server-side encryption process.
+`x-amz-copy-source-server-side-encryption-customer-key-MD5` | `string` | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store uses this value to validate the key passes in the `x-amz-copy-source-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
 **Sample Request**
 
@@ -336,7 +336,7 @@ Content-Length: 240
 
 ## Retrieve an object's ACL
 
-A `GET` given a path to an object given the parameter `?acl=` retrieves the access control list for the object. This operation does not make use of operation specific headers, additional query parameters  or payload elements.
+A `GET` specific a path to an object specific the parameter `?acl=` retrieves the access control list for the object. This operation doesn't use operation-specific headers, additional query parameters  or payload elements.
 
 
 **Syntax**
@@ -391,28 +391,28 @@ Content-Length: 550
 
 ## Create an ACL for an object
 
-A `PUT` issued to an object with the proper parameters creates an access control list (ACL) for that object.  Access control lists allow for granting different sets of permissions to different storage accounts using the account's ID, or by using a pre-made ACL.
+A `PUT` issued to an object with the proper parameters creates an access control list (ACL) for that object. Access control lists grant different sets of permissions to different storage accounts by using the account's ID, or by using a pre-made ACL.
 
-Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other storage account to access the resource, as well as the general public.
+Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a specific user, only to a storage account. However, `public-read-write` allows any other storage account to access the resource, as well as the general public.
 
 The assigned permissions behave as follows:
 
 | Permission | When granted on a bucket | When granted on an object |
 |------------|--------------------------|---------------------------|
-| READ | Allows grantee to list all objects in bucket | Allows grantee to read object data and metadata |
-| WRITE | Allows grantee to create, overwrite and delete new objects in bucket. Cannot be granted independently from READ permission. | N/A |
-| READ_ACP | This permission does not exist for buckets; default setting is FULL_CONTROL | Allows grantee to read object ACL |
-| WRITE_ACP | Default setting is FULL_CONTROL | Allows grantee to write ACL for applicable object |
-| FULL_CONTROL | Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket | Allows grantee READ, READ_ACP and WRITE_ACP permissions on object |
+| `READ `| Allows grantee to list all objects in bucket | Allows grantee to read object data and metadata |
+| `WRITE` | Allows grantee to create, overwrite and delete new objects in bucket. Cannot be granted independently from READ permission. | N/A |
+| `READ_ACP` | This permission does not exist for buckets; default setting is FULL_CONTROL | Allows grantee to read object ACL |
+| `WRITE_ACP` | Default setting is FULL_CONTROL | Allows grantee to write ACL for applicable object |
+| `FULL_CONTROL` | Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket | Allows grantee READ, READ_ACP and WRITE_ACP permissions on object |
 
 
-The following canned ACLs are supported by IBM COS.  Values not listed below are not supported.
+The following canned ACLs are supported by {{site.data.keyword.cos_short}}. Values not listed here are not supported.
 
 | Canned ACL | Applies to | Notes |
 |------------|------------|-----------|
-| private | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
-| public-read | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
-| public-read-write | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
+| Private | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
+| Public-read | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
+| Public-read-write | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
 
 It is not possible to grant granular `WRITE` access at the object level, only at the bucket level.
 
@@ -448,7 +448,7 @@ Content-Length: 0
 
 **Sample Request** (canned ACL in header)
 
-It is also possible to assign a canned ACL directly when uploading an object by passing the `x-amz-acl` header and a canned ACL value.  This example makes the `queen-bee` object publicly and anonymously accessible.
+It is also possible to assign a canned ACL directly when uploading an object by passing the `x-amz-acl` header and a canned ACL value. This example makes the `queen-bee` object publicly and anonymously accessible.
 
 ```http
 PUT /example-bucket/queen-bee HTTP/1.1
@@ -473,7 +473,7 @@ Content-Length: 0
 
 **Sample Request** (custom ACL)
 
-This is an example of specifying a custom ACL to allow for another account to view the ACL for the "queen-bee" object, but not to access object itself. Additionally, a third account is given full access to the same object as another element of the same ACL.
+This is an example of specifying a custom ACL to allow for another account to view the ACL for the "queen-bee" object, but not to access object itself. Additionally, a third account is specific full access to the same object as another element of the same ACL.
 
 ```http
 PUT /example-bucket/queen-bee?acl= HTTP/1.1
@@ -527,7 +527,7 @@ Content-Length: 0
 
 ## Check an object's CORS configuration
 
-An `OPTIONS` given a path to an object along with an origin and request type checks to see if that object is accessible from that origin using that request type.  Unlike all other requests, an OPTIONS request does not require the `authorization` or `x-amx-date` headers.
+An `OPTIONS` request that is given a path to an object along with an origin and request type checks to see if that object is accessible from that origin by using that request type. Unlike all other requests, an `OPTIONS` request does not require the `authorization` or `x-amx-date` headers.
 
 **Syntax**
 
@@ -568,11 +568,11 @@ Content-Length: 0
 
 ## Uploading objects in multiple parts
 
-When working with larger objects, multipart upload operations are recommended to write objects into IBM COS. An upload of a single object can be performed as a set of parts and these parts can be uploaded independently in any order and in parallel. Upon upload completion, IBM COS then presents all parts as a single object. This provides many benefits: network interruptions do not cause large uploads to fail, uploads can be paused and restarted over time, and objects can be uploaded as they are being created.
+When working with larger objects, multipart upload operations are recommended to write objects into {{site.data.keyword.cos_short}}. An upload of a single object can be performed as a set of parts and these parts can be uploaded independently in any order and in parallel. Upon upload completion, {{site.data.keyword.cos_short}} then presents all parts as a single object. This provides many benefits: network interruptions do not cause large uploads to fail, uploads can be paused and restarted over time, and objects can be uploaded as they are being created.
 
 Multipart uploads are only available for objects larger than 5MB. For objects smaller than 50GB, 500 parts sized 20MB to 100MB is recommended for optimum performance. For larger objects, part size can be increased without significant performance impact.  Multipart uploads are limited to no more than 10,000 parts of 5GB each and a maximum object size of 5TB.
 
-Due to the additional complexity involved, it is recommended that developers make use of S3 API libraries that provide multipart upload support.
+Due to the additional complexity involved, it is recommended that Developers make use of S3 API libraries that provide multipart upload support.
 
 Incomplete multipart uploads do persist until the object is deleted or the multipart upload is aborted with `AbortIncompleteMultipartUpload`. If an incomplete multipart upload is not aborted, the partial upload continues to use resources.  Interfaces should be designed with this point in mind, and clean up incomplete multipart uploads.
 
@@ -595,13 +595,13 @@ POST https://{bucket-name}.{endpoint}/{object-name}?uploads= # virtual host styl
 
 **Specific headers for SSE-C**
 
-The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided for each part of the multipart upload.*
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided for each part of the multipart upload.*
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
-`x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
-`x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
+`x-amz-server-side-encryption-customer-algorithm` | `string` | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
+`x-amz-server-side-encryption-customer-key` | `string` | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server-side encryption process.
+`x-amz-server-side-encryption-customer-key-MD5` | `string` | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store uses this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
 **Sample Request**
 
@@ -637,7 +637,7 @@ Content-Length: 276
 
 ### Upload a part
 
-A `PUT` request issued to an object with query parameters `partNumber` and `uploadId` will upload one part of an object.  The parts may be uploaded serially or in parallel, but must be numbered in order.
+A `PUT` request issued to an object with query parameters `partNumber` and `uploadId` uploads one part of an object.  The parts may be uploaded serially or in parallel, but must be numbered in order.
 
 **Syntax**
 
@@ -650,13 +650,13 @@ PUT https://{bucket-name}.{endpoint}/{object-name}?partNumber={sequential-intege
 **Specific headers for SSE-C**
 {: #sse-c}
 
-The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided when the multipart operation was initiated.*
+The following headers are available for buckets that use Server-side Encryption with Customer-Provided Keys (SSE-C). Any request that uses SSE-C headers must be sent by using SSL. The `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string. *These headers must be identical to those provided when the multipart operation was initiated.*
 
 Header | Type | Description
 --- | ---- | ------------
-`x-amz-server-side-encryption-customer-algorithm` | string | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
-`x-amz-server-side-encryption-customer-key` | string | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server side encryption process.
-`x-amz-server-side-encryption-customer-key-MD5` | string | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store will use this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
+`x-amz-server-side-encryption-customer-algorithm` | `string` | This header is used to specify the algorithm and key size to use with the encryption key stored in `x-amz-server-side-encryption-customer-key` header. This value must be set to the string `AES256`.
+`x-amz-server-side-encryption-customer-key` | `string` | This header is used to transport the base 64 encoded byte string representation of the AES 256 key used in the server-side encryption process.
+`x-amz-server-side-encryption-customer-key-MD5` | `string` | This header is used to transport the base64-encoded 128-bit MD5 digest of the encryption key according to RFC 1321. The object store uses this value to validate the key passes in the `x-amz-server-side-encryption-customer-key` has not been corrupted during transport and encoding process. The digest must be calculated on the key BEFORE the key is base 64 encoded.
 
 **Sample Request**
 
@@ -686,7 +686,7 @@ Content-Length: 0
 
 ### Complete a multipart upload
 
-A `POST` request issued to an object with query parameter `uploadId` and the appropriate XML block in the body will complete a multipart upload.
+A `POST` request that is issued to an object with query parameter `uploadId` and the appropriate XML block in the body completes a multipart upload.
 
 **Syntax**
 
@@ -755,7 +755,7 @@ Content-Length: 364
 
 ### Abort incomplete multipart uploads
 
-A `DELETE` request issued to an object with query parameter `uploadId` will delete all unfinished parts of a multipart upload.
+A `DELETE` request that is issued to an object with query parameter `uploadId` deletes all unfinished parts of a multipart upload.
 
 **Syntax**
 
@@ -790,9 +790,9 @@ X-Clv-S3-Version: 2.5
 
 A `POST` request issued to an object with query parameter `restore` to request temporary restoration of an archived object.  A `Content-MD5` header is required as an integrity check for the payload.
 
-An archived object must be restored before downloading or modifying the object.  The lifetime of the object must be specifed, after which the temporary copy of the object will be deleted.
+An archived object must be restored before downloading or modifying the object.  The lifetime of the object must be specified, after which the temporary copy of the object is deleted.
 
-There can be a delay of up to 15 hours before the restored copy is available for access. A HEAD request can check if the restored copy is available.
+There can be a delay of up to 15 hours before the restored copy is available for access. A `HEAD` request can check if the restored copy is available.
 
 To permanently restore the object, it must be copied to a bucket that does not have an active lifecycle configuration.
 
@@ -805,14 +805,14 @@ POST https://{bucket-name}.{endpoint}/{object-name}?restore # virtual host style
 
 **Payload Elements**
 
-The body of the request must contain an XML block with the following schema:
+The body of the request must contain an XML block with the following schema.
 
 |Element|Type|Children|Ancestor|Constraint|
 |---|---|---|---|---|
-|RestoreRequest|Container|Days, GlacierJobParameters|None|None|
-|Days|Integer|None|RestoreRequest|Specified the lifetime of the temporarily restored object. The minimum number of days that a restored copy of the object can exist is 1. After the restore period has elapsed, temporary copy of the object will be removed.|
-|GlacierJobParameters|String|Tier|RestoreRequest|None|
-|Tier|String|None|GlacierJobParameters|**Must** be set to `Bulk`.|
+|`RestoreRequest`|`Container`|`Days, GlacierJobParameters`|None|None|
+|`Days`|`Integer`|None|`RestoreRequest`|Specified the lifetime of the temporarily restored object. The minimum number of days that a restored copy of the object can exist is 1. After the restore period has elapsed, temporary copy of the object is removed.|
+|`GlacierJobParameters`|`String`|`Tier`|`RestoreRequest`|None|
+|`Tier`|`String`|None|`GlacierJobParameters`|**Must** be set to `Bulk`.|
 
 ```xml
 <RestoreRequest>
@@ -829,7 +829,7 @@ The body of the request must contain an XML block with the following schema:
 POST /apiary/queenbee?restore HTTP/1.1
 Authorization: {authorization-string}
 Content-Type: text/plain
-Content-MD5: rgRRGfd/OytcM7O5gIaQ== 
+Content-MD5: rgRRGfd/OytcM7O5gIaQ==
 Content-Length: 305
 Host: s3-api.us-geo.objectstorage.softlayer.net
 ```

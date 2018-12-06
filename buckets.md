@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"}_
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -17,7 +17,7 @@ lastupdated: "2018-07-17"
 
 ## List buckets belonging to an account
 
-A `GET` issued to the endpoint root returns a list of buckets owned by the requesting account.  This operation does not make use of operation specific headers, query parameters, or payload elements.
+A `GET` that is issued to the endpoint root returns a list of buckets that are owned by the requesting account. This operation doesn't use operation-specific headers, query parameters, or payload elements.
 
 **Syntax**
 
@@ -67,19 +67,25 @@ Authorization: {authorization-string}
 
 ----
 
-## Create a new bucket
+## Create a bucket
 
-A `PUT` issued to the endpoint root followed by a string will create a bucket using that string for a name.  Bucket names must be unique, and storage instances are limited to 100 buckets.  Bucket names are required to be DNS-compliant; names must be between 3 and 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number.  Bucket names resembling IP addresses are not allowed, although dot characters (`.`) are permitted. This operation does not make use of operation specific headers or query parameters.
+A `PUT` that is issued to the endpoint root and followed  by a string creates a bucket and uses that string for a name. Bucket names must be unique, and storage instances are limited to 100 buckets.  Bucket names are required to be DNS-compliant; names must be 3 - 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number. Bucket names that resemble IP addresses are not allowed, although dot characters (`.`) are permitted. This operation doesn't use operation-specific headers or query parameters.
 
-Valid provisioning codes for `LocationCostraint` are: <br>
+Valid provisioning codes for `LocationConstraint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
 &emsp;&emsp;  `eu-standard` / `eu-vault` / `eu-cold` / `eu-flex` <br>
 &emsp;&emsp;  `eu-gb-standard` / `eu-gb-vault` / `eu-gb-cold` / `eu-gb-flex` <br>
 &emsp;&emsp;  `ap-standard` / `ap-vault` / `ap-cold` / `ap-flex` <br>
+&emsp;&emsp;  `ap-tok-standard` / `ap-tok-vault` / `ap-tok-cold` / `ap-tok-flex` <br>
+&emsp;&emsp;  `ams03-standard` / `ams03-vault` / `ams03-cold` / `ams03-flex` <br>
 &emsp;&emsp;  `che01-standard` / `che01-vault` / `che01-cold` / `che01-flex` <br>
 &emsp;&emsp;  `mel01-standard` / `mel01-vault` / `mel01-cold` / `mel01-flex` <br>
+&emsp;&emsp;  `mon01-standard` / `mon01-vault` / `mon01-cold` / `mon01-flex` <br>
+&emsp;&emsp;  `osl01-standard` / `osl01-vault` / `osl01-cold` / `osl01-flex` <br>
+&emsp;&emsp;  `sao01-standard` / `sao01-vault` / `sao01-cold` / `sao01-flex` <br>
+&emsp;&emsp;  `seo01-standard` / `seo01-vault` / `seo01-cold` / `seo01-flex` <br>
 &emsp;&emsp;  `tor01-standard` / `tor01-vault` / `tor01-cold` / `tor01-flex` <br>
 
 **Syntax**
@@ -91,7 +97,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Optional payload elements**
 
-If an XML block specifying a `LocationConstraint` is provided it must correspond with a valid provisioning code (e.g. `us-standard`).  If the request payload is left empty, the default provisioning code is used.
+If an XML block specifies a `LocationConstraint` it must correspond with a valid provisioning code (for example, `us-standard`). If the request payload is left empty, the default provisioning code is used.
 
 ```xml
 <CreateBucketConfiguration>
@@ -100,8 +106,6 @@ If an XML block specifying a `LocationConstraint` is provided it must correspond
 ```
 
 **Sample Request**
-
-This is an example of creating a new bucket called 'images'.
 
 ```http
 PUT /images HTTP/1.1
@@ -130,7 +134,7 @@ Content-Length: 0
 
 To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `us-vault` in the body of a `PUT` request to a bucket endpoint.
 
-Valid provisioning codes for `LocationCostraint` are: <br>
+Valid provisioning codes for `Location{{site.data.keyword.cos_notm}}traint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -156,7 +160,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of creating a new bucket called 'vault-images'.
+Creating a new bucket that is called `images`.
 
 ```http
 PUT /vault-images HTTP/1.1
@@ -189,9 +193,9 @@ Content-Length: 0
 
 ### Create a Cold Vault bucket
 
-To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `{code}-cold` in the body of a `PUT` request to a bucket endpoint.
+To create a Vault bucket, send an XML block that specifies a bucket configuration with a `LocationConstraint` of `{code}-cold` in the body of a `PUT` request to a bucket endpoint.
 
-Valid provisioning codes for `LocationCostraint` are: <br>
+Valid provisioning codes for `Location{{site.data.keyword.cos_notm}}traint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -218,7 +222,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of creating a new bucket called 'cold-vault-images'.
+Create a bucket that is called `cold-vault-images`.
 
 ```http
 PUT /cold-vault-images HTTP/1.1
@@ -251,9 +255,9 @@ Content-Length: 0
 
 ### Create a Flex bucket
 
-To create a Flex bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `{code}-flex` in the body of a `PUT` request to a bucket endpoint.
+To create a Flex bucket, send an XML block that specifies a bucket configuration with a `LocationConstraint` of `{code}-flex` in the body of a `PUT` request to a bucket endpoint.
 
-Valid provisioning codes for `LocationCostraint` are: <br>
+Valid provisioning codes for `Location{{site.data.keyword.cos_notm}}traint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -279,7 +283,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of creating a new bucket called 'flex-images'.
+Create a bucket called `flex-images`.
 
 ```http
 PUT /flex-images HTTP/1.1
@@ -313,7 +317,7 @@ Content-Length: 0
 
 ## Retrieve a bucket's headers
 
-A `HEAD` issued to a bucket resource will return the headers for that bucket. This operation does not make use of operation specific headers, query parameters, or payload elements.
+A `HEAD` that is issued to a bucket resource returns the headers for that bucket. This operation doesn't use operation-specific headers, query parameters, or payload elements.
 
 **Syntax**
 
@@ -324,7 +328,7 @@ HEAD https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of fetching the headers for the 'images' bucket.
+Fetch the headers for the `images` bucket.
 
 ```http
 HEAD /images HTTP/1.1
@@ -349,13 +353,13 @@ Content-Length: 0
 
 ----
 
-## List objects in a given bucket
+## List objects in a specific bucket
 
-A `GET` request addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in COS. This operation does not make use of operation specific headers or payload elements.
+A `GET` request that is addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexicographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in {{site.data.keyword.{{site.data.keyword.cos_notm}}_notm}}. This operation doesn't use operation-specific headers or payload elements.
 
 **Syntax**
 
-Note that the 'version 2' method of listing objects within a bucket is not supported, and the 'version 1' syntax is needed.
+The`version 2` method of listing objects within a bucket is not supported. The `version 1` syntax is needed.
 {:tip}
 
 ```bash
@@ -367,15 +371,15 @@ GET https://{bucket-name}.{endpoint} # virtual host style
 
 Name | Type | Description
 --- | ---- | ------------
-`prefix` | string | Constrains response to object names beginning with `prefix`.
-`delimiter` | string | Groups objects between the `prefix` and the `delimiter`.
-`encoding-type` | string | If unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
-`max-keys` | string | Restricts the number of objects to display in the response.  Default and maximum is 1,000.
-`marker` | string | Specifies the object from where the listing should begin, in UTF-8 binary order.
+`prefix` | `string` | Constrains response to object names that begin with `prefix`.
+`delimiter` | `string` | Groups objects between the `prefix` and the `delimiter`.
+`encoding-type` | `string` | If Unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
+`max-keys` | `string` | Restricts the number of objects to display in the response. Default and maximum values are 1,000.
+`marker` | `string` | Specifies the object from where the listing should begin, in UTF-8 binary order.
 
 **Sample Request**
 
-This request lists the objects inside the "apiary" bucket.
+List the objects inside the `apiary` bucket.
 
 ```http
 GET /apiary HTTP/1.1
@@ -447,7 +451,7 @@ Content-Length: 909
 
 ## Delete a bucket
 
-A `DELETE` issued to an empty bucket deletes the bucket. After deleting a bucket the name will be held in reserve by the system for 10 minutes, after which it will be released for re-use.  *Only empty buckets can be deleted.* This operation does not make use of operation specific headers, query parameters, or payload elements.
+A `DELETE` that is issued to an empty bucket deletes the bucket. When the bucket is deleted, the name is held in reserve by the system for 10 minutes, after which it is released for re-use.  *Only empty buckets can be deleted.* This operation doesn't use operation-specific headers, query parameters, or payload elements.
 
 **Syntax**
 
@@ -494,34 +498,34 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 
 ## Create an access control list for a bucket
 
-A `PUT` issued to a bucket with the necessary query parameter creates or replaces an access control list (ACL) for that bucket.  Access control lists allow for granting different sets of permissions to different storage accounts using the account's ID, or by using a pre-made ACL.
+A `PUT` that is issued to a bucket with the necessary query parameter creates or replaces an access control list (ACL) for that bucket. Access control lists allow for granting different sets of permissions to different storage accounts by using the account's ID, or by using a pre-made ACL.
 
-Credentials are generated for each storage account, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other COS storage account to access the resource, as well as the general public.
+Credentials are generated for each storage account, not for individual users. As such, ACLs can't restrict or grant access to a specific user, only to a storage account. However, `public-read-write` allows any other {{site.data.keyword.cos_notm}} account to access the resource, as well as the general public.
 {:tip}
 
-ACLs can use pre-made permissions sets (or 'canned ACLs') or be customized in the body of the request. Pre-made ACLs are specified using the `x-amz-acl` header and custom ACLs are specified using XML in the request payload. Only one method (header or payload) can be used in a single request.
+ACLs can use pre-made permissions sets (or `canned ACLs`) or be customized in the body of the request. Pre-made ACLs are specified using the `x-amz-acl` header and custom ACLs are specified using XML in the request payload. Only one method (header or payload) can be used in a single request.
 
-This operation does not make use of additional operation specific query parameters.
+This operation doesn't use extra operation-specific query parameters.
 
-ACL grantees must be other COS storage instances, and their UUID can be found along with credentials in the web portal.
+ACL grantees must be other {{site.data.keyword.cos_notm}} instances, and their UUID can be found along with credentials in the web portal.
 
 The assigned permissions behave as follows:
 
 | Permission | When granted on a bucket | When granted on an object |
 |------------|--------------------------|---------------------------|
 | READ | Allows grantee to list all objects in bucket | Allows grantee to read object data and metadata |
-| WRITE | Allows grantee to create, overwrite and delete new objects in bucket. Cannot be granted independently from READ permission. | N/A |
+| WRITE | Allows grantee to create, overwrite, and delete objects in bucket. Cannot be granted independently from READ permission. | N/A |
 | READ_ACP | This permission does not exist for buckets; default setting is FULL_CONTROL | Allows grantee to read object ACL |
 | WRITE_ACP | Default setting is FULL_CONTROL | Allows grantee to write ACL for applicable object |
 | FULL_CONTROL | Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket | Allows grantee READ, READ_ACP and WRITE_ACP permissions on object |
 
-The following canned ACLs are supported by IBM COS.  Values not listed below are not supported.
+The following canned ACLs are supported by {{site.data.keyword.{{site.data.keyword.cos_notm}}_notm}}.  Values that are not listed here are not supported.
 
 | Canned ACL | Applies to | Notes |
 |------------|------------|-----------|
-| private | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
-| public-read | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
-| public-read-write | Bucket and object | When set on a bucket, the requestor is interpreted as the bucket owner. |
+| Private | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
+| Public-read | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
+| Public-read-write | Bucket and object | When set on a bucket, the requester is interpreted as the bucket owner. |
 
 `READ` access, including `public-read`, when granted on a bucket does not allow for the actual access of objects themselves, only the ability to list them.
 {:tip}
@@ -535,7 +539,7 @@ PUT https://{bucket-name}.{endpoint}?acl= # virtual host style
 
 **Sample Request** Basic pre-made ACL
 
-This is an example of specifying a pre-made ACL to allow for `public-read` access to the "apiary" bucket. This allows any storage account to view the bucket's contents and ACL details.
+Specify a pre-made ACL to allow for `public-read` access to the `apiary` bucket. This operation allows any storage account to view the bucket's contents and ACL details.
 
 ```http
 PUT /apiary?acl= HTTP/1.1
@@ -560,7 +564,7 @@ Content-Length: 0
 
 **Sample Request** Custom ACL
 
-This is an example of specifying a custom ACL to allow for another user using their username to view the ACL for the "apiary" bucket, but not to list objects stored inside the bucket. A third account is given full access to the same bucket as another element of the same ACL.  All authenticated users of the system can list objects in the bucket.
+Specify a custom ACL to allow for another user using their user name to view the ACL for the `apiary` bucket, but not to list objects stored inside the bucket. A third account is given full access to the same bucket as another element of the same ACL. All authenticated users of the system can list objects in the bucket.
 
 ```http
 PUT /apiary?acl= HTTP/1.1
@@ -610,7 +614,7 @@ x-amz-request-id: 73d3cd4a-ff1d-4ac9-b9bb-43529b11356a
 
 ## Retrieve the access control list for a bucket
 
-A `GET` issued to a bucket with the proper parameters retrieves the ACL for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
+A `GET` issued to a bucket with the proper parameters retrieves the ACL for a bucket. This operation doesn't use operation-specific headers, extra query parameters, or payload elements.
 
 **Syntax**
 
@@ -621,7 +625,7 @@ GET https://{bucket-name}.{endpoint}?acl= # virtual host style
 
 **Sample Request**
 
-This is an example of retrieving a bucket ACL.
+Retrieve a bucket ACL.
 
 ```http
 GET /apiary?acl= HTTP/1.1
@@ -666,7 +670,7 @@ Content-Length: 550
 
 ## Deleting multiple objects
 
-A `POST` given a path to an bucket and proper parameters will delete a specified set of objects.  This requires a `Content-MD5` header in addition to the `x-amz-content-sha256` header. This operation does not make use of operation specific query parameters, headers, or payload elements.
+A `POST` that is given a path to a bucket and proper parameters deletes a specified set of objects. This command requires a `Content-MD5` header in addition to the `x-amz-content-sha256` header. This operation doesn't use operation-specific query parameters, headers, or payload elements.
 
 **Syntax**
 
@@ -726,9 +730,9 @@ Content-Length: 207
 
 ----
 
-## List canceled/incomplete multipart uploads for a bucket
+## List the cancelled or incomplete multi-part uploads for a bucket
 
-A `GET` issued to a bucket with the proper parameters retrieves information about any canceled or incomplete multipart uploads for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
+A `GET` that is issued to a bucket with the proper parameters retrieves information about any cancelled or incomplete multi-part uploads for a bucket. This operation doesn't use operation-specific headers, extra query parameters, or payload elements.
 
 **Syntax**
 
@@ -741,16 +745,16 @@ GET https://{bucket-name}.{endpoint}?uploads= # virtual host style
 
 Name | Type | Description
 --- | ---- | ------------
-`prefix` | string | Constrains response to object names beginning with `{prefix}`.
-`delimiter` | string | Groups objects between the `prefix` and the `delimiter`.
-`encoding-type` | string | If unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
-`max-uploads` | integer | Restricts the number of objects to display in the response.  Default and maximum is 1,000.
-`key-marker` | string | Specifies from where the listing should begin.
-`upload-id-marker` | string | Ignored if `key-marker` is not specified, otherwise sets a point at which to begin listing parts above `upload-id-marker`.
+`prefix` | `string` | Constrains response to object names that begin with `{prefix}`.
+`delimiter` | `string` | Groups objects between the `prefix` and the `delimiter`.
+`encoding-type` | `string` | If Unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
+`max-uploads` | `integer` | Restricts the number of objects to display in the response. Default and maximum values are 1,000.
+`key-marker` | `string` | Specifies from where the listing begins.
+`upload-id-marker` | `string` | Ignored if `key-marker` is not specified, otherwise sets a point at which to begin listing parts before `upload-id-marker`.
 
 **Sample Request**
 
-This is an example of retrieving all current canceled and incomplete multipart uploads.
+Retrieve all current cancelled and incomplete multipart uploads.
 
 ```http
 GET /apiary?uploads= HTTP/1.1
@@ -815,9 +819,9 @@ Content-Length: 374
 
 ----
 
-## List any cross-origin resource sharing configuration for a bucket
+## List any cross-origin resource-sharing configuration for a bucket
 
-A `GET` issued to a bucket with the proper parameters retrieves information about cross-origin resource sharing (CORS) configuration for a bucket. This operation does not make use of operation specific headers, additional query parameters, or payload elements.
+A `GET` that is issued to a bucket with the proper parameters retrieves information about cross-origin resource-sharing (CORS) configuration for a bucket. This operation doesn't use operation-specific headers, extra query parameters, or payload elements.
 
 **Syntax**
 
@@ -828,7 +832,7 @@ GET https://{bucket-name}.{endpoint}?cors= # virtual host style
 
 **Sample Request**
 
-This is an example of listing a CORS configuration on the "apiary" bucket.
+List the CORS configuration on the `apiary` bucket.
 
 ```http
 GET /apiary?cors= HTTP/1.1
@@ -857,9 +861,9 @@ Content-Length: 123
 
 ----
 
-## Create a cross-origin resource sharing configuration for a bucket
+## Create a cross-origin resource-sharing configuration for a bucket
 
-A `PUT` issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket. Note that in addition to a SHA256 hash of the body, a `Content-MD5` header is required as well. This operation does not make use of operation specific headers or additional query parameters.
+A `PUT` that is issued to a bucket with the proper parameters creates or replaces a cross-origin resource-sharing (CORS) configuration for a bucket. In addition to an SHA256 hash of the body, a `Content-MD5` header is required as well. This operation doesn't use operation-specific headers or extra query parameters.
 
 **Syntax**
 
@@ -870,16 +874,16 @@ PUT https://{bucket-name}.{endpoint}?cors= # virtual host style
 
 **Optional payload elements**
 
-In the XML block defining the key CORS elements (`AllowedOrigin` and `AllowedMethod`) there are two optional elements that can be optionally specified.
+The XML block that defines the key CORS elements (`AllowedOrigin` and `AllowedMethod`) contains two other elements that can be optionally specified.
 
 | Element | Description |
 | --- | --- |
-| MaxAgeSeconds | Time in seconds that the browser will cache the response to the pre-flight OPTIONS request for the specified resource. |
-| ExposeHeader | Defines specific headers that will be exposed to external applications. |
+| `MaxAgeSeconds` | Time in seconds that the browser caches the response to the pre-flight OPTIONS request for the specified resource. |
+| `ExposeHeader` | Defines specific headers that are exposed to external applications. |
 
 **Sample Request**
 
-This is an example of adding a CORS configuration that allows requests from `www.ibm.com` to issue `GET`, `PUT`, and `POST` requests to the bucket.
+Add a CORS configuration that allows requests from `www.ibm.com` to issue `GET`, `PUT`, and `POST` requests to the bucket.
 
 ```http
 GET /apiary?cors= HTTP/1.1
@@ -918,9 +922,9 @@ Content-Length: 0
 
 ----
 
-## Delete any cross-origin resource sharing configuration for a bucket
+## Delete any cross-origin resource-sharing configuration for a bucket
 
-A `DELETE` issued to a bucket with the proper parameters creates or replaces a cross-origin resource sharing (CORS) configuration for a bucket.
+A `DELETE` that is issued to a bucket with the proper parameters creates or replaces a cross-origin resource-sharing (CORS) configuration for a bucket.
 
 **Syntax**
 
@@ -930,8 +934,6 @@ DELETE https://{bucket-name}.{endpoint}?cors= # virtual host style
 ```
 
 **Sample Request**
-
-This is an example of deleting a CORS configuration for a bucket.
 
 ```http
 GET /apiary?cors= HTTP/1.1
@@ -957,19 +959,19 @@ PUT https://{bucket-name}.{endpoint}?lifecycle # virtual host style
 
 **Payload Elements**
 
-The body of the request must contain an XML block with the following schema:
+The body of the request must contain an XML block with the following schema.
 
 |Element|Type|Children|Ancestor|Constraint|
 |---|---|---|---|---|
-|LifecycleConfiguration|Container|Rule|None|Limit 1|
-|Rule|Container|ID, Status, Filter, Transition|LifecycleConfiguration|Limit 1|
-|ID|String|None|Rule|**Must** consist of `(a-z,A- Z0-9)` and the following symbols:`` !`_ .*'()- ``|
-|Filter|String|Prefix|Rule|**Must** contain a `Prefix` element.|
-|Prefix|String|None|Filter|**Must** be set to <Prefix/>.|
-|Transition|Container|Days, StorageClass|Rule|Limit 1.|
-|Days|Non-negative integer|None|Transition|**Must** be a value greater than 0.|
-|Date|Date|None|Transition|**Must** be in ISO 8601 Format and the date must be in the future.|
-|StorageClass|String|None|Transition|**Must** be set to GLACIER.|
+|`LifecycleConfiguration`|`Container`|`Rule`|None|Limit 1|
+|`Rule`|`Container`|`ID`, `Status`, `Filter`, `Transition`|`LifecycleConfiguration`|Limit 1|
+|`ID`|`String`|None|`Rule`|**Must** consist of `(a-z,A- Z0-9)` and the following symbols:`` !`_ .*'()- ``|
+|`Filter`|`String`|`Prefix`|`Rule`|**Must** contain a `Prefix` element.|
+|`Prefix`|`String`|None|`Filter`|**Must** be set to <Prefix/>.|
+|`Transition`|`Container`|`Days`, `StorageClass`|Rule|Limit 1.|
+|`Days`|`Non-negative integer`|None|`Transition`|**Must** be a value greater than 0.|
+|`Date`|`Date`|None|`Transition`|**Must** be in ISO 8601 Format and the date must be in the future.|
+|`StorageClass`|`String`|None|`Transition`|**Must** be set to GLACIER.|
 
 ```xml
 <LifecycleConfiguration>
@@ -995,7 +997,7 @@ Content-Type: text/plain
 Host: s3-api.us-geo.objectstorage.softlayer.net
 Authorization: {authorization-string}
 Content-Type: text/plain
-Content-MD5: M625BaNwd/OytcM7O5gIaQ== 
+Content-MD5: M625BaNwd/OytcM7O5gIaQ==
 Content-Length: 305
 ```
 

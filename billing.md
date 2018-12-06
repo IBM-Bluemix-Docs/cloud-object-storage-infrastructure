@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-02-15"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -15,7 +15,7 @@ lastupdated: "2018-02-15"
 
 # Billing
 
-Information on pricing can be found at [IBM Cloud](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage#s3api).
+For more information about pricing, see the [IBM Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage#s3api).
 
 ## Invoices
 Account invoices can be found at **Account** > **Billing** > **Invoices** in the navigation menu.
@@ -25,16 +25,16 @@ Each account receives a single bill. If you need separate billing for different 
 
 ## How does IBM COS pricing work?
 
-Storage costs for IBM COS are determined by total volume of data stored, the amount of public outbound bandwidth consumed, and the total number of operational requests processed by the system.
+Storage costs for {{site.data.keyword.cos_full}} are determined by total volume of data stored, the amount of public outbound bandwidth consumed, and the total number of operational requests processed by the system.
 
-Bluemix infrastructure offerings are connected to a three-tiered network, segmenting public, private, and management traffic. Infrastructure on a customer's Bluemix account may transfer data between one another across the private network at no cost. Infrastructure offerings (such as bare metal servers, virtual servers, and cloud storage) connect to other applications and services in the Bluemix catalog (such as Watson services, containers, runtimes) across the public network, so data transfer between those two types of offerings is  metered and charged at standard public network bandwidth rates.
+{{site.data.keyword.Bluemix_short} offerings are connected to a three-tiered network, segmenting public, private, and management traffic. Infrastructure on a customer's {{site.data.keyword.Bluemix_short} account may transfer data between one another across the private network at no cost. Infrastructure offerings (such as bare metal servers, virtual servers, and cloud storage) connect to other applications and services in the {{site.data.keyword.Bluemix_short} catalog (such as Watson services, containers, runtimes) across the public network, so data transfer between those two types of offerings is metered and charged at standard public network bandwidth rates.
 {:tip}
 
 ## What is the difference between 'Class A' and 'Class B' requests?
 
-'Class A' requests are operations that involve modification or listing.  This includes creating buckets, uploading or copying objects, creating or changing configurations, listing buckets, and listing the contents of buckets.
+'Class A' requests are operations that involve modification or listing. This category includes creating buckets, uploading or copying objects, creating or changing configurations, listing buckets, and listing the contents of buckets.
 
-'Class B' requests are those related to retrieving objects or their associated metadata/configurations from the system.
+'Class B' requests are those related to retrieving objects or their associated metadata and configurations from the system.
 
 There is no charge for deleting buckets or objects from the system.
 
@@ -45,8 +45,8 @@ There is no charge for deleting buckets or objects from the system.
 
 ## What is the difference between the Standard, Vault, and Flex billing tiers?
 
-Vault billing is a way to control costs for infrequently accessed data, such as compliance or backup data. These objects incur lower storage costs but higher costs for operational requests. Unlike the Standard billing tier, additional costs are incurred on a per-GB basis for objects retrieved from the system.  Flex billing is intended for use when data access patterns are difficult to predict, and pricing is optimized based on frequency of access.
+Vault billing is a way to control costs for infrequently accessed data, such as compliance or backup data. These objects incur lower storage costs but higher costs for operational requests. Unlike the Standard billing tier, additional costs are incurred on a per-GB basis for objects retrieved from the system. Flex billing is intended for use when data access patterns are difficult to predict, and pricing is optimized based on frequency of access.
 
 ## Archiving Data
 
-Archive is our lowest cost option for data that is rarely accessed. For more info, see the [pricing page](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage).
+Archive is our lowest cost option for data that is rarely accessed. For more information, see the [pricing page](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage).
