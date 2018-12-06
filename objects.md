@@ -132,7 +132,7 @@ Header | Type | Description
 
 **Specific headers for SSE-C**
 
-The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Anyrequest using SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
+The following headers are available for buckets using Server Side Encryption with Customer-Provided Keys (SSE-C). Any request that contain SSE-C headers must be sent using SSL. Note that `ETag` values in response headers are *not* the MD5 hash of the object, but a randomly generated 32-byte hexadecimal string.
 
 Header | Type | Description
 --- | ---- | ------------

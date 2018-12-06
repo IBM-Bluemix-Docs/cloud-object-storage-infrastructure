@@ -880,8 +880,8 @@ In the XML block defining the key CORS elements (`AllowedOrigin` and `AllowedMet
 
 | Element | Description |
 | --- | --- |
-| MaxAgeSeconds | Time in seconds that the browser will cache the response to the pre-flight OPTIONS request for the specified resource. |
-| ExposeHeader | Defines specific headers that will be exposed to external applications. |
+| `MaxAgeSeconds` | Time in seconds that the browser will cache the response to the pre-flight OPTIONS request for the specified resource. |
+| `ExposeHeader` | Defines specific headers that will be exposed to external applications. |
 
 **Sample Request**
 
