@@ -49,7 +49,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -66,7 +66,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -83,7 +83,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -100,7 +100,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -183,7 +183,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -200,7 +200,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -217,7 +217,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -234,7 +234,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -271,7 +271,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -288,7 +288,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -325,7 +325,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -342,7 +342,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -359,7 +359,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -376,7 +376,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -445,7 +445,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -462,7 +462,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -479,7 +479,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -496,7 +496,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -525,7 +525,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -542,7 +542,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -559,7 +559,7 @@ Types of endpoint:
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -594,7 +594,7 @@ Access to IBM Federal Data Centers (DCs) is only available for authorized US Gov
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>
@@ -611,7 +611,7 @@ Access to IBM Federal Data Centers (DCs) is only available for authorized US Gov
       <td>
         <p>Public</p>
         <p>
-          <code class="highlighter-rouge">Private</code>
+          Private
         </p>
       </td>
       <td>

@@ -57,20 +57,20 @@ aws s3api put-bucket-lifecycle-configuration --bucket <bucket name> --lifecycle-
 
 2.	Create a storage policy with Simpana and associate the storage policy to the Cloud Storage library that you created in the first step. A storage policy governs the way Simpana interacts with COS for backup transfers. A policy overview can be found [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=13804.htm).
 
-3.	Create a backup set and associate the backup set to the storage policy created in the previous step. The backup set overview can be found [![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=11666.htm)
+3.	Create a backup set and associate the backup set to the storage policy created in the previous step. The backup set overview can be found [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=11666.htm)
 
 ## Performing backups
 
-You can initiate your backup to the bucket with the policy. and perform backups to {{site.data.keyword.cos_full_notm}}. More information on Simpana backups is available [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=11677.htm). Backup contents transition to the Archive tier based on the policy configured on the bucket.
+You can initiate your backup to the bucket with the policy and perform backups to {{site.data.keyword.cos_full_notm}}. For more information about Simpana backups, see [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=11677.htm). Backup contents transition to the Archive tier based on the policy configured on the bucket.
 
 ## Performing restores
 
-You can restore backup contents from {{site.data.keyword.cos_full_notm}}. More information on Simpana restore can be found [![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=12867.htm).
+You can restore backup contents from {{site.data.keyword.cos_full_notm}}. For more information about Simpana restores, see [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=12867.htm).
 
 ### Configure Simpana to automatically restore objects from the Archive tier
 
-1. Create a task that triggers {{site.data.keyword.cos_full_notm}} restore when you restore a backup from {{site.data.keyword.cos_short}}. See the [Simpana documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=features/cloud_storage/t_restoring_data_amazon_and_oracle.htm) to configure.
+1. Create a task that triggers {{site.data.keyword.cos_full_notm}} restore when you restore a backup from {{site.data.keyword.cos_short}}. For more information, see the [Simpana documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=features/cloud_storage/t_restoring_data_amazon_and_oracle.htm).
 
-2. Restore backed up contents from the Archive tier to its original tier through a cloud storage recall task. This task is executed once Simpana receives the return code from {{site.data.keyword.cos_full_notm}}. More information on Archive recall can be found [![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=9218.htm).
+2. Restore backed up contents from the Archive tier to its original tier through a cloud storage recall task. This task is executed once Simpana receives the return code from {{site.data.keyword.cos_full_notm}}. For more information about Archive recall, see [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=9218.htm).
 
 3. Once the restoration (from the Archive tier to its original tier) is complete, Simpana reads the contents and writes to its original or configured location.
