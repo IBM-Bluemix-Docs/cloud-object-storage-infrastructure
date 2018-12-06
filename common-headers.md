@@ -6,7 +6,7 @@ lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"}_
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -46,7 +46,7 @@ The following table describes common response headers.
 | `X-Clv-Request-Id`|  Unique identifier generated per request. |
 | `x-amz-restore`|Included if the object has been restored or if a restoration is in progress.|
 | `x-amz-storage-class`|Returns GLACIER if archived or temporarily restored.|
-| `x-ibm-archive-transition-time`Returns the date and time when the object is scheduled to transition to the archive tier.|
+| `x-ibm-archive-transition-time` | Returns the date and time when the object is scheduled to transition to the archive tier.|
 | `x-ibm-transition`|Included if the object has transition metadata and returns the tier and original time of transition.|
-| `x-ibm-restored-copy-storage-class`|Included if an object is in the RestoreInProgress or Restored states and returns the storage class of the bucket.|
+| `x-ibm-restored-copy-storage-class`|Included if an object is in the `RestoreInProgress` or `Restored` states and returns the storage class of the bucket.|
 {:.opstable}

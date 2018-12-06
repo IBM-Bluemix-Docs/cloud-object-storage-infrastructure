@@ -357,7 +357,7 @@ Content-Length: 0
 
 ## List objects in a specific bucket
 
-A `GET` request that is addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in {{site.data.keyword.{{site.data.keyword.cos_notm}}_notm}}. This operation does not make use of operation specific headers or payload elements.
+A `GET` request that is addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexicographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in {{site.data.keyword.{{site.data.keyword.cos_notm}}_notm}}. This operation does not make use of operation specific headers or payload elements.
 
 **Syntax**
 

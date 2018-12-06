@@ -37,7 +37,7 @@ Yes, 100 is the current bucket limit. Generally, prefixes are a better way to gr
 
 **If I want to store my data using {{site.data.keyword.cos_full_notm}} Vault or Cold Vault, do I need to create another account?**
 
-No, storage classes (and regions as well) are defined at the bucket level. Simply create a ucket that is set to the wanted storage class.
+No, storage classes (and regions as well) are defined at the bucket level. Simply create a bucket that is set to the wanted storage class.
 
 **When I create a bucket using the API, how do I set the storage class?**
 
