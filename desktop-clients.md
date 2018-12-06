@@ -36,11 +36,10 @@ To use Cyberduck to create a connection to {{site.data.keyword.cos_full_notm}} a
  4. Cyberduck takes you to the root of the account where buckets can be created. Right-click within the main panel and select **New Folder**. (The application deals with many transfer protocols where Folder is the more common container construct). Enter the bucket name and then click **Create**.
  5. After the bucket is created, double-click the bucket to view it. Within the bucket you can perform various functions such as upload files to the bucket, list bucket contents, download objects from the bucket, synchronize local files to a bucket, synchronize objects to another bucket, or create an archive of a bucket.
  6. Right-click within the bucket and select **Synchronize**. A pop-up panel opens where you can browse to the folder that you want to synchronize to the bucket. Select the folder and click Choose.
- 7. After you select the folder, a new pop-up panel opens. Here, a drop-down menu is available where you select the synchronization operation with the bucket. Three possible synchronize options are available from the menu:
-
- 	– Download - This option downloads changed and missing objects from the bucket.
- 	– Upload - This option uploads changed and missing files to the bucket.
- 	– Mirror - This option performs both download and upload operations, ensuring that all new and updated files and objects are synchronized between the local folder and the bucket.
+ 7. After you select the folder, a new pop-up panel opens. Here, a drop-down menu is available where you select the synchronization operation with the bucket. Three possible synchronize options are available from the menu.
+   * Download - This option downloads changed and missing objects from the bucket.
+   * Upload - This option uploads changed and missing files to the bucket.
+   * Mirror - This option performs both download and upload operations, ensuring that all new and updated files and objects are synchronized between the local folder and the bucket.
 
  8. Another window opens to show active and historical transfer requests. After the synchronization request is complete, the main window performs a list operation on the bucket to reflect updated content in the bucket.
 
