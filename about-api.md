@@ -23,7 +23,7 @@ lastupdated: "2018-12-03"
 
 More information about how to use the SL API to create or delete credentials, check capacity usage, retrieve a UUID, and other account functions, see the [SLDN ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://sldn.softlayer.com/reference/services/SoftLayer_Network_Storage_Hub_Cleversafe_Account).
 
-The following tables describe the complete set of supported operations you can use with the S3 API to access {{site.data.keyword.cos_notm}}. For more information, about how to use the operations, including examples, see the API reference pages for [buckets](buckets.html) and [objects](objects.html).
+The following tables describe the complete set of supported operations you can use with the S3 API to access {{site.data.keyword.cos_full_notm}}. For more information, about how to use the operations, including examples, see the API reference pages for [buckets](buckets.html) and [objects](objects.html).
 
 ## Operations on the account
 
