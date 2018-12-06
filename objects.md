@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"}_
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -809,10 +809,10 @@ The body of the request must contain an XML block with the following schema:
 
 |Element|Type|Children|Ancestor|Constraint|
 |---|---|---|---|---|
-|RestoreRequest|Container|Days, GlacierJobParameters|None|None|
-|Days|Integer|None|RestoreRequest|Specified the lifetime of the temporarily restored object. The minimum number of days that a restored copy of the object can exist is 1. After the restore period has elapsed, temporary copy of the object will be removed.|
-|GlacierJobParameters|String|Tier|RestoreRequest|None|
-|Tier|String|None|GlacierJobParameters|**Must** be set to `Bulk`.|
+|`RestoreRequest`|`Container`|`Days, GlacierJobParameters`|None|None|
+|`Days`|`Integer`|None|`RestoreRequest`|Specified the lifetime of the temporarily restored object. The minimum number of days that a restored copy of the object can exist is 1. After the restore period has elapsed, temporary copy of the object is removed.|
+|`GlacierJobParameters`|`String`|`Tier`|`RestoreRequest`|None|
+|`Tier`|`String`|None|`GlacierJobParameters`|**Must** be set to `Bulk`.|
 
 ```xml
 <RestoreRequest>
