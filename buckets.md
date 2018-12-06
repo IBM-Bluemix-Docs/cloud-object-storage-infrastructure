@@ -6,7 +6,7 @@ lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:new_window: target="_blank"}_
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -107,7 +107,7 @@ If an XML block specifying a `LocationConstraint` is provided it must correspond
 
 **Sample Request**
 
-This is an example of creating a new bucket called 'images'.
+This is an example of creating a new bucket called `images`.
 
 ```http
 PUT /images HTTP/1.1
@@ -162,7 +162,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of creating a new bucket that is called 'vault-images'.
+This is an example of creating a new bucket that is called `vault-images`.
 
 ```http
 PUT /vault-images HTTP/1.1
@@ -224,7 +224,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of creating a new bucket that is called 'cold-vault-images'.
+This is an example of creating a new bucket that is called `cold-vault-images`.
 
 ```http
 PUT /cold-vault-images HTTP/1.1
@@ -285,7 +285,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of creating a new bucket called 'flex-images'.
+This is an example of creating a new bucket called `flex-images`.
 
 ```http
 PUT /flex-images HTTP/1.1
@@ -330,7 +330,7 @@ HEAD https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-This is an example of fetching the headers for the 'images' bucket.
+This is an example of fetching the headers for the `images` bucket.
 
 ```http
 HEAD /images HTTP/1.1
@@ -361,7 +361,7 @@ A `GET` request that is addressed to a bucket returns a list of objects, limited
 
 **Syntax**
 
-Note that the 'version 2' method of listing objects within a bucket is not supported, and the 'version 1' syntax is needed.
+Note that the `version 2` method of listing objects within a bucket is not supported, and the `version 1` syntax is needed.
 {:tip}
 
 ```bash
@@ -505,7 +505,7 @@ A `PUT` that is issued to a bucket with the necessary query parameter creates or
 Credentials are generated for each storage account, not for individual users. As such, ACLs do not have the ability to restrict or grant access to a given user, only to a storage account. However, `public-read-write` allows any other {{site.data.keyword.cos_notm}} account to access the resource, as well as the general public.
 {:tip}
 
-ACLs can use pre-made permissions sets (or 'canned ACLs') or be customized in the body of the request. Pre-made ACLs are specified using the `x-amz-acl` header and custom ACLs are specified using XML in the request payload. Only one method (header or payload) can be used in a single request.
+ACLs can use pre-made permissions sets (or `canned ACLs`) or be customized in the body of the request. Pre-made ACLs are specified using the `x-amz-acl` header and custom ACLs are specified using XML in the request payload. Only one method (header or payload) can be used in a single request.
 
 This operation does not make use of additional operation specific query parameters.
 
@@ -967,15 +967,15 @@ The body of the request must contain an XML block with the following schema.
 
 |Element|Type|Children|Ancestor|Constraint|
 |---|---|---|---|---|
-|LifecycleConfiguration|Container|Rule|None|Limit 1|
-|Rule|Container|ID, Status, Filter, Transition|LifecycleConfiguration|Limit 1|
-|ID|String|None|Rule|**Must** consist of `(a-z,A- Z0-9)` and the following symbols:`` !`_ .*'()- ``|
-|Filter|String|Prefix|Rule|**Must** contain a `Prefix` element.|
-|Prefix|String|None|Filter|**Must** be set to <Prefix/>.|
-|Transition|Container|Days, StorageClass|Rule|Limit 1.|
-|Days|Non-negative integer|None|Transition|**Must** be a value greater than 0.|
-|Date|Date|None|Transition|**Must** be in ISO 8601 Format and the date must be in the future.|
-|StorageClass|String|None|Transition|**Must** be set to GLACIER.|
+|`LifecycleConfiguration`|`Container`|`Rule`|None|Limit 1|
+|`Rule`|Container|`ID`, `Status`, `Filter`, `Transition`|`LifecycleConfiguration`|Limit 1|
+|`ID`|String|None|`Rule`|**Must** consist of `(a-z,A- Z0-9)` and the following symbols:`` !`_ .*'()- ``|
+|`Filter`|String|`Prefix`|`Rule`|**Must** contain a `Prefix` element.|
+|`Prefix`|String|None|`Filter`|**Must** be set to <Prefix/>.|
+|`Transition`|Container|`Days`, `StorageClass`|Rule|Limit 1.|
+|`Days`|Non-negative integer|None|`Transition`|**Must** be a value greater than 0.|
+|`Date`|Date|None|`Transition`|**Must** be in ISO 8601 Format and the date must be in the future.|
+|`StorageClass`|String|`None`|`Transition`|**Must** be set to GLACIER.|
 
 ```xml
 <LifecycleConfiguration>

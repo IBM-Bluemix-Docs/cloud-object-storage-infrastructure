@@ -18,7 +18,7 @@ lastupdated: "2018-12-05"
 {{site.data.keyword.cos_short}} is storage for the cloud.  Essentially a key-value store, files (or any binary data) are given an identifying key (or name) and stored as an 'object' in a uniquely named 'bucket' or 'container'. This allows for highly scalable storage where the only information you need to retrieve your data is the name of the object and the bucket where it's stored.
 In addition to {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud_notm}} currently provides several {{site.data.keyword.cos_short}} offerings for different user needs, all of which are accessible through web-based portals and REST APIs.
 
-| Offering                                   | Interface | Defining advantage                             | IBM Cloud Docs |
+| Offering                                   | Interface | Defining advantage                             | IBM Docs |
 |--------------------------------------------|-----------|------------------------------------------------|------|
 | {{site.data.keyword.cos_full_notm}}        | COS API   | Ideal for cloud-native development and provides strong integration with IBM Cloud Services, including Data Science Experience. Most new projects should use this to make use of {{site.data.keyword.iamlong}}, {{site.data.keyword.keymanagementservicelong}}, and other new features as they become available. | [Link](../docs/services/cloud-object-storage/getting-started.html) |
 | {{site.data.keyword.cos_full_notm}} (infrastructure)  | COS API   | This version provides certain regulatory compliance only available when purchasing through IBM Cloud Infrastructure.  Does not support {{site.data.keyword.iamlong}} or  {{site.data.keyword.keymanagementservicelong}}. | [Link](quickstart.html) |
