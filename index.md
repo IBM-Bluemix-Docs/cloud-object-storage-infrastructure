@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-02-15"
+lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
@@ -20,7 +20,7 @@ In addition to {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud_no
 
 | Offering                                   | Interface | Defining advantage                             | Docs |
 |--------------------------------------------|-----------|------------------------------------------------|------|
-| {{site.data.keyword.cos_full_notm}}        | COS API   | Ideal for cloud-native development and provides strong integration with IBM Cloud Services, including Data Science Experience. Most new projects should use this to make use of IBM Cloud IAM, Key Protect, and other new features as they become available. | [Link](/docs/services/cloud-object-storage/getting-started.html) |
-| {{site.data.keyword.cos_full_notm}} (infrastructure)  | COS API   | This version provides certain regulatory compliance only available when purchasing through IBM Cloud Infrastructure (SoftLayer).  Does not support IBM Cloud IAM or Key Protect. | [Link](/docs/infrastructure/cloud-object-storage-infrastructure/quickstart.html) |
-| OpenStack Swift (infrastructure)           | Swift API | In addition to using the OpenStack Swift API, this version is available outside of the standard set of IBM Cloud regions. | [Link](/docs/infrastructure/objectstorage-swift/index.html) |
-| OpenStack Swift (Cloud Foundry)            | Swift API | This is the original OpenStack Swift {{site.data.keyword.cos_short}} that was provided through Bluemix as a Cloud Foundry service. | [Link](/docs/services/ObjectStorage/index.html) |
+| {{site.data.keyword.cos_full_notm}}        | COS API   | Ideal for cloud-native development and provides strong integration with IBM Cloud Services, including Data Science Experience. Most new projects should use this to make use of {{site.data.keyword.iamlong}}, {{site.data.keyword.keymanagementservicelong}}, and other new features as they become available. | [Link](../docs/services/cloud-object-storage/getting-started.html) |
+| {{site.data.keyword.cos_full_notm}} (infrastructure)  | COS API   | This version provides certain regulatory compliance only available when purchasing through IBM Cloud Infrastructure (SoftLayer).  Does not support {{site.data.keyword.iamlong}} or  {{site.data.keyword.keymanagementservicelong}}. | [Link](quickstart.html) |
+| OpenStack Swift (infrastructure)           | Swift API | In addition to using the OpenStack Swift API, this version is available outside of the standard set of IBM Cloud regions. | [Link](../docs/infrastructure/objectstorage-swift/index.html) |
+| OpenStack Swift (Cloud Foundry)            | Swift API | This is the original OpenStack Swift {{site.data.keyword.cos_short}} that was provided through Bluemix as a Cloud Foundry service. | [Link](../docs/services/ObjectStorage/index.html) |
