@@ -30,7 +30,7 @@ Each request made against IBM COS using the S3 API must be authenticated using a
 AWS4-HMAC-SHA256 Credential={access-key}/{date}/{region}/s3/aws4_request,SignedHeaders=host;x-amz-date;{other-required-headers},Signature={signature}
 ```
 
-The date is provided in `YYYYMMDD` format, and for COS Cross-Region the region should be `us-standard`. The `host` and `x-amz-date` headers are always required, and depending on the request other headers may be required as well (e.g. `x-amz-content-sha256` in the case of requests with payloads).  Due to the need to recalculate the signature for every individual request, many developers prefer to use a tool or SDK that will produce the authorization header automatically.
+The date is provided in `YYYYMMDD` format, and for COS Cross-Region the region should be `us-standard`. The `host` and `x-amz-date` headers are always required, and depending on the request other headers may be required as well (e.g. `x-amz-content-sha256` in the case of requests with payloads).  Due to the need to recalculate the signature for every individual request, many Developers prefer to use a tool or SDK that will produce the authorization header automatically.
 
 ### Creating an `authorization` header
 

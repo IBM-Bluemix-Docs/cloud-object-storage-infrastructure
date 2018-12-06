@@ -22,7 +22,7 @@ lastupdated: "2018-03-15"
 3.  [Create a bucket](/docs/infrastructure/cloud-object-storage-infrastructure/storing-retrieving.html) by clicking the **Add** button.
 4.  [Upload an object](/docs/infrastructure/cloud-object-storage-infrastructure/storing-retrieving.html) by clicking the **+** button at the right of the first row and selecting a file from your computer.
 
-Congratulations - that file is now encrypted and dispersed with no complete copy existing in any given data center. To learn more about COS and how to use it in your applications take a look through the developer documentation:
+Congratulations - that file is now encrypted and dispersed with no complete copy existing in any given data center. To learn more about COS and how to use it in your applications take a look through the Developer documentation:
 
 * [API overview](/docs/infrastructure/cloud-object-storage-infrastructure/about-api.html) and [detailed reference](/docs/infrastructure/cloud-object-storage-infrastructure/buckets.html)
 * [CLI options](/docs/infrastructure/cloud-object-storage-infrastructure/cli.html)

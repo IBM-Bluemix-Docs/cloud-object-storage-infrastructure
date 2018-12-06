@@ -37,7 +37,7 @@ Yes, 100 is the current bucket limit.  Generally, prefixes are a better way to g
 
 **If I want to store my data using IBM COS Vault or Cold Vault, do I need to create another account?**
 
-No, storage classes (and regions as well) are defined at the bucket level.  Simply create a new bucket that is set to the desired storage class.
+No, storage classes (and regions as well) are defined at the bucket level. Simply create a ucket that is set to the wanted storage class.
 
 **When I create a bucket using the API, how do I set the storage class?**
 
@@ -45,7 +45,7 @@ The storage class (eg `us-flex`) is assigned to the `LocationConstraint` configu
 
 **Can the storage class of a bucket be changed?  For example, if you have production data in 'standard', can we easily switch it to 'vault' for billing purposes if we are not using it frequently?**
 
-Today changing of storage class requires manually moving or copying the data from one bucket to another bucket with the desired storage class.
+Today changing of storage class requires manually moving or copying the data from one bucket to another bucket with the wanted storage class.
 
 
 ## Performance Questions

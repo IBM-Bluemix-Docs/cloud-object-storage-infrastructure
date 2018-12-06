@@ -572,7 +572,7 @@ When working with larger objects, multipart upload operations are recommended to
 
 Multipart uploads are only available for objects larger than 5MB. For objects smaller than 50GB, 500 parts sized 20MB to 100MB is recommended for optimum performance. For larger objects, part size can be increased without significant performance impact.  Multipart uploads are limited to no more than 10,000 parts of 5GB each and a maximum object size of 5TB.
 
-Due to the additional complexity involved, it is recommended that developers make use of S3 API libraries that provide multipart upload support.
+Due to the additional complexity involved, it is recommended that Developers make use of S3 API libraries that provide multipart upload support.
 
 Incomplete multipart uploads do persist until the object is deleted or the multipart upload is aborted with `AbortIncompleteMultipartUpload`. If an incomplete multipart upload is not aborted, the partial upload continues to use resources.  Interfaces should be designed with this point in mind, and clean up incomplete multipart uploads.
 
