@@ -67,7 +67,7 @@ Authorization: {authorization-string}
 
 ----
 
-## Create a new bucket
+## Create a bucket
 
 A `PUT` that is issued to the endpoint root and followed  by a string creates a bucket and uses that string for a name. Bucket names must be unique, and storage instances are limited to 100 buckets.  Bucket names are required to be DNS-compliant; names must be 3 - 63 characters long must be made of lowercase letters, numbers, and dashes. Bucket names must begin and end with a lowercase letter or number. Bucket names that resemble IP addresses are not allowed, although dot characters (`.`) are permitted. This operation doesn't use operation-specific headers or query parameters.
 
@@ -97,7 +97,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Optional payload elements**
 
-If an XML block specifying a `LocationConstraint` is provided it must correspond with a valid provisioning code (e.g. `us-standard`). If the request payload is left empty, the default provisioning code is used.
+If an XML block specifies a `LocationConstraint` it must correspond with a valid provisioning code (for example, `us-standard`). If the request payload is left empty, the default provisioning code is used.
 
 ```xml
 <CreateBucketConfiguration>
@@ -222,7 +222,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-Create a new bucket that is called `cold-vault-images`.
+Create a bucket that is called `cold-vault-images`.
 
 ```http
 PUT /cold-vault-images HTTP/1.1
@@ -283,7 +283,7 @@ PUT https://{bucket-name}.{endpoint} # virtual host style
 
 **Sample Request**
 
-Create a new bucket called `flex-images`.
+Create a bucket called `flex-images`.
 
 ```http
 PUT /flex-images HTTP/1.1
@@ -371,7 +371,7 @@ GET https://{bucket-name}.{endpoint} # virtual host style
 
 Name | Type | Description
 --- | ---- | ------------
-`prefix` | `string` | Constrains response to object names beginning with `prefix`.
+`prefix` | `string` | Constrains response to object names that begin with `prefix`.
 `delimiter` | `string` | Groups objects between the `prefix` and the `delimiter`.
 `encoding-type` | `string` | If Unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
 `max-keys` | `string` | Restricts the number of objects to display in the response. Default and maximum values are 1,000.
@@ -514,7 +514,7 @@ The assigned permissions behave as follows:
 | Permission | When granted on a bucket | When granted on an object |
 |------------|--------------------------|---------------------------|
 | READ | Allows grantee to list all objects in bucket | Allows grantee to read object data and metadata |
-| WRITE | Allows grantee to create, overwrite and delete new objects in bucket. Cannot be granted independently from READ permission. | N/A |
+| WRITE | Allows grantee to create, overwrite, and delete objects in bucket. Cannot be granted independently from READ permission. | N/A |
 | READ_ACP | This permission does not exist for buckets; default setting is FULL_CONTROL | Allows grantee to read object ACL |
 | WRITE_ACP | Default setting is FULL_CONTROL | Allows grantee to write ACL for applicable object |
 | FULL_CONTROL | Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket | Allows grantee READ, READ_ACP and WRITE_ACP permissions on object |
@@ -670,7 +670,7 @@ Content-Length: 550
 
 ## Deleting multiple objects
 
-A `POST` that is given a path to a bucket and proper parameters deletes a specified set of objects. This requires a `Content-MD5` header in addition to the `x-amz-content-sha256` header. This operation doesn't use operation-specific query parameters, headers, or payload elements.
+A `POST` that is given a path to a bucket and proper parameters deletes a specified set of objects. This command requires a `Content-MD5` header in addition to the `x-amz-content-sha256` header. This operation doesn't use operation-specific query parameters, headers, or payload elements.
 
 **Syntax**
 
@@ -745,12 +745,12 @@ GET https://{bucket-name}.{endpoint}?uploads= # virtual host style
 
 Name | Type | Description
 --- | ---- | ------------
-`prefix` | `string` | Constrains response to object names beginning with `{prefix}`.
+`prefix` | `string` | Constrains response to object names that begin with `{prefix}`.
 `delimiter` | `string` | Groups objects between the `prefix` and the `delimiter`.
 `encoding-type` | `string` | If Unicode characters that are not supported by XML are used in an object name, this parameter can be set to `url` to properly encode the response.
 `max-uploads` | `integer` | Restricts the number of objects to display in the response. Default and maximum values are 1,000.
-`key-marker` | `string` | Specifies from where the listing should begin.
-`upload-id-marker` | `string` | Ignored if `key-marker` is not specified, otherwise sets a point at which to begin listing parts above `upload-id-marker`.
+`key-marker` | `string` | Specifies from where the listing begins.
+`upload-id-marker` | `string` | Ignored if `key-marker` is not specified, otherwise sets a point at which to begin listing parts before `upload-id-marker`.
 
 **Sample Request**
 
