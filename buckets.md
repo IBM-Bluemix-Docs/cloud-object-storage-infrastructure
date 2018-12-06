@@ -6,7 +6,7 @@ lastupdated: "2018-12-05"
 
 ---
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}_
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
