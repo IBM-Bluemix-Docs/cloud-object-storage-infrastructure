@@ -31,4 +31,4 @@ After data is deleted various mechanisms exist which prevent recovery or reconst
 
 ## Tenant isolation
 
-{{site.data.keyword.cos_full_notm}} is a shared infrastructure, multi-tenant object storage solution. If your workload requires dedicated or isolated storage, visit [{{site.data.keyword.cloud}}](https://www.ibm.com/cloud-computing/products/storage/object-storage/flexible-deployment/) for more information.
+{{site.data.keyword.cos_full_notm}} is a shared infrastructure, multi-tenant {{site.data.keyword.cos_short}} solution. If your workload requires dedicated or isolated storage, visit [{{site.data.keyword.cloud}}](https://www.ibm.com/cloud-computing/products/storage/object-storage/flexible-deployment/) for more information.
