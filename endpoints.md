@@ -471,6 +471,22 @@ Types of endpoint:
       </td>
     </tr>
     <tr>
+      <td>Mexico City, Mexico</td>
+      <td>
+        <p>Public</p>
+        <p>Private
+        </p>
+      </td>
+      <td>
+        <p>
+          <code class="highlighter-rouge">s3.mex01.objectstorage.softlayer.net</code>
+        </p>
+        <p>
+          <code class="highlighter-rouge">s3.mex01.objectstorage.service.networklayer.com</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
       <td>Montréal, Canada</td>
       <td>
         <p>Public</p>
