@@ -34,7 +34,8 @@ Types of endpoint:
 * **Private endpoints** are available for requests originating from Kubernetes clusters, bare metal servers, virtual servers, and other cloud storage services. Private endpoints provide better performance and do not incur charges for any outgoing or incoming bandwidth even if the traffic is cross regions or across data centers. **Whenever possible, it is best to use a private endpoint.**
 * **Public endpoints** can accept requests from anywhere and charges are assessed on outgoing bandwidth. Incoming bandwidth is free. Public endpoints should be used for access not originating from an {{site.data.keyword.cloud_notm}} cloud computing resource.  **Note**: Cloud Foundry applications are unable to access the private network, so data transfer is metered and charged at standard public network bandwidth rates.
 
-As of December 2018, we have updated our endpoints. Legacy endpoints will continue to work until further notice. Please update your applications to use the new endpoints listed below.{:note}
+As of December 2018, we have updated our endpoints. Legacy endpoints will continue to work until further notice. Please update your applications to use the new endpoints listed below.
+{:note}
 
 ## New Endpoints
 
