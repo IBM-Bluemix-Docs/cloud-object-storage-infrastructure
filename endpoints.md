@@ -203,7 +203,7 @@ As of December 2018, we have updated our endpoints. Legacy endpoints will contin
           <code class="highlighter-rouge">s3.ams.eu.cloud-object-storage.appdomain.cloud</code>
         </p>
         <p>
-          <code class="highlighter-rouge">s3.private.ams.eu.cloud-object-storage.appdomain.cloud/code>
+          <code class="highlighter-rouge">s3.private.ams.eu.cloud-object-storage.appdomain.cloud</code>
         </p>
       </td>
     </tr>
@@ -287,7 +287,7 @@ As of December 2018, we have updated our endpoints. Legacy endpoints will contin
           <code class="highlighter-rouge">s3.eu-de.cloud-object-storage.appdomain.cloud</code>
         </p>
         <p>
-          <code class="highlighter-rouge">s3.private.eu-de.cloud-object-storage.appdomain.cloud/code>
+          <code class="highlighter-rouge">s3.private.eu-de.cloud-object-storage.appdomain.cloud</code>
         </p>
       </td>
     </tr>
