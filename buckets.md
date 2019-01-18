@@ -79,6 +79,7 @@ Valid provisioning codes for `LocationConstraint` are: <br>
 &emsp;&emsp;  `eu-gb-standard` / `eu-gb-vault` / `eu-gb-cold` / `eu-gb-flex` <br>
 &emsp;&emsp;  `ap-standard` / `ap-vault` / `ap-cold` / `ap-flex` <br>
 &emsp;&emsp;  `ap-tok-standard` / `ap-tok-vault` / `ap-tok-cold` / `ap-tok-flex` <br>
+&emsp;&emsp;  `au-syd-standard` / `au-syd-vault` / `au-syd-cold` / `au-syd-flex` <br>
 &emsp;&emsp;  `ams03-standard` / `ams03-vault` / `ams03-cold` / `ams03-flex` <br>
 &emsp;&emsp;  `che01-standard` / `che01-vault` / `che01-cold` / `che01-flex` <br>
 &emsp;&emsp;  `mel01-standard` / `mel01-vault` / `mel01-cold` / `mel01-flex` <br>
