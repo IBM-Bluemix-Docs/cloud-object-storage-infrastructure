@@ -84,4 +84,4 @@ These operations create, destroy, get information about, and control behavior of
 | List Parts | Returns a list of parts associated with an upload ID
 {:.opstable}
 
-Some additional operations, such as tagging and versioning, are supported in private cloud implementations of {{site.data.keyword.cos_notm}}, but not in the public cloud. For more information about custom {{site.data.keyword.objectstorageshort}} solutions, see [{{site.data.keyword.objectstorageshort}} at ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/).
+Some additional operations, such as tagging and versioning, are supported in private cloud implementations of {{site.data.keyword.cos_full_notm}}, but not in the public cloud. For more information about custom {{site.data.keyword.objectstorageshort}} solutions, see [{{site.data.keyword.objectstorageshort}} at ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/).
