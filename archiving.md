@@ -35,7 +35,7 @@ To immediately archive new objects that are uploaded to a bucket, enter 0 days o
 
 To access an archived object, you must restore it to the original storage tier. When you restore an object, you can specify the number of days you want the object to be available. At the end of the specified period, the restored copy is deleted.
 
-The restoration process can take up to 15 hours.
+The restoration process can take up to 12 hours.
 {:tip}
 
 The archived object sub-states are:
