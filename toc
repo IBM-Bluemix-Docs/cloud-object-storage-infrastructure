@@ -37,5 +37,5 @@ Cloud Object Storage (Classic)
     faq.md
     support.md
     billing.md
-    [Pricing](https://www.ibm.com/cloud-computing/products/storage/object-storage/public-service/#othertab2)
+    [Pricing](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage)
     {: .navgroup-end}
