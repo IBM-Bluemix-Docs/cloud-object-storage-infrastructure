@@ -1027,8 +1027,7 @@ As of December 2018, we have updated our endpoints. Legacy endpoints will contin
       <td>Chennai, India</td>
       <td>
         <p>Public</p>
-        <p>Private
-        </p>
+        <p>Private</p>
       </td>
       <td>
         <p>
@@ -1040,11 +1039,25 @@ As of December 2018, we have updated our endpoints. Legacy endpoints will contin
       </td>
     </tr>
     <tr>
+      <td>Hong Kong</td>
+      <td>
+        <p>Public</p>
+        <p>Private</p>
+      </td>
+      <td>
+        <p>
+          <code class="highlighter-rouge">s3.hkg02.objectstorage.softlayer.net</code>
+        </p>
+        <p>
+          <code class="highlighter-rouge">s3.hkg02.objectstorage.service.networklayer.com</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
       <td>Melbourne, Australia</td>
       <td>
         <p>Public</p>
-        <p>Private
-        </p>
+        <p>Private</p>
       </td>
       <td>
         <p>
@@ -1059,8 +1072,7 @@ As of December 2018, we have updated our endpoints. Legacy endpoints will contin
       <td>Mexico City, Mexico</td>
       <td>
         <p>Public</p>
-        <p>Private
-        </p>
+        <p>Private</p> 
       </td>
       <td>
         <p>
