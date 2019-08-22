@@ -1,8 +1,10 @@
-Return the object if the the source object was not modified since the specified date.---
+---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-05"
+  years: 2017, 2018, 2019
+lastupdated: "2018-08-22"
+
+subcollection: cloud-object-storage-infrastructure
 
 ---
 {:shortdesc: .shortdesc}
