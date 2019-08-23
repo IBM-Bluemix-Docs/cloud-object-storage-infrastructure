@@ -191,7 +191,7 @@ Set the environment variables `AWS_ACCESS_KEY_ID` to define the access key and `
 
 If these variables are defined when the `AmazonS3Client` is created, the default constructor can be used.
 
-Setting environment variables varies by operating system. For more information, see the [Knowledge Base Article ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.schrodinger.com/kb/1842 ).
+Setting environment variables varies by operating system. For more information, see the [Knowledge Base Article ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.schrodinger.com/kb/1842 ).
 {:tip}
 
 | Variable     |            Purpose
