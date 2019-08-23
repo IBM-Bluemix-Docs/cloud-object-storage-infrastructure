@@ -19,7 +19,7 @@ subcollection: cloud-object-storage-infrastructure
 
 Commvault Simpana integrates with the Archive tier of {{site.data.keyword.cos_full_notm}}. For more information about Simpana, see [Commvault Simpana documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/)
 
-For more information about {{site.data.keyword.cos_full_notm}} Infrastructure Archive, see [How to archive data](archiving.html).
+For more information about {{site.data.keyword.cos_full_notm}} Infrastructure Archive, see [How to archive data](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-archiving-data).
 
 ## Integration steps
 

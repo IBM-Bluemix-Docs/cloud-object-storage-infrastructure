@@ -19,7 +19,7 @@ subcollection: cloud-object-storage-infrastructure
 
 ## Common Request Headers
 
-The following table describes supported common request headers. {{site.data.keyword.objectstorageshort}} ignores any common headers that are not listed in the table, if they are sent in a request. Although, some requests might support other headers as defined in this documentation. For more information about creating the authorization header, see ["Authentication"](manage-access.html#authentication).
+The following table describes supported common request headers. {{site.data.keyword.objectstorageshort}} ignores any common headers that are not listed in the table, if they are sent in a request. Although, some requests might support other headers as defined in this documentation. For more information about creating the authorization header, see ["Authentication"](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-managing-access#authentication).
 
 
 | Header             | Note                               |
