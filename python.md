@@ -31,7 +31,7 @@ aws_secret_access_key = {Secret Access Key}
 
 The `boto3` library provides complete access to the S3 API and can source credentials from the `~/.aws/credentials` file. The {{site.data.keyword.cos_full_notm}} endpoint must be specified when you create a service resource or low-level client.
 
-Detailed documentation can be found at [boto3.readthedocs.io ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html).
+Detailed documentation can be found at [boto3.readthedocs.io ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://boto3.readthedocs.io/en/latest/reference/services/s3.html).
 {:tip}
 
 

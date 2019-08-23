@@ -77,7 +77,7 @@ Yes, {{site.data.keyword.cos_full_notm}} encrypts all data.
 
 **Does {{site.data.keyword.cos_full_notm}} have FIPS 140-2 compliance for the encryption algorithms?**
 
-Yes, {{site.data.keyword.cos_full_notm}} Federal offering is approved for FedRAMP Moderate Security controls, which require a validated FIPS configuration. {{site.data.keyword.cos_full_notm}} Federal is certified at FIPS 140-2 level 1. For more information about the Federal Offering, see [our Federal site ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/government).
+Yes, {{site.data.keyword.cos_full_notm}} Federal offering is approved for FedRAMP Moderate Security controls, which require a validated FIPS configuration. {{site.data.keyword.cos_full_notm}} Federal is certified at FIPS 140-2 level 1. For more information about the Federal Offering, see [our Federal site ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/federal#AlternateAction).
 
 ## General questions
 
