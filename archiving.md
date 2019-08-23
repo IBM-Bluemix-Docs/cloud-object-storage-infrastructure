@@ -20,7 +20,7 @@ subcollection: cloud-object-storage-infrastructure
 {{site.data.keyword.cos_full}} Archive is our [lowest cost ![External link icon](../../icons/launch-glyph.svg "External link icon")](
 https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage){:new_window} option for data that is rarely accessed. You can store data by transitioning from any of the storage tiers (Standard, Vault, Cold Vault and Flex) to long-term offline archive or use the online Cold Vault option.
 
-You can archive objects using the web console, REST API, and third-party tools that are integrated with {{site.data.keyword.cos_notm}}.
+You can archive objects using the web console, REST API, and third-party tools that are integrated with {{site.data.keyword.cos_full_notm}}.
 
 ## Adding or managing an archive policy on a bucket
 
