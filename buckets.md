@@ -138,7 +138,7 @@ Content-Length: 0
 
 To create a Vault bucket, send an XML block specifying a bucket configuration with a `LocationConstraint` of `us-vault` in the body of a `PUT` request to a bucket endpoint.
 
-Valid provisioning codes for `Location{{site.data.keyword.cos_notm}}traint` are: <br>
+Valid provisioning codes for `LocationConstraint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -199,7 +199,7 @@ Content-Length: 0
 
 To create a Vault bucket, send an XML block that specifies a bucket configuration with a `LocationConstraint` of `{code}-cold` in the body of a `PUT` request to a bucket endpoint.
 
-Valid provisioning codes for `Location{{site.data.keyword.cos_notm}}traint` are: <br>
+Valid provisioning codes for `LocationConstraint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -261,7 +261,7 @@ Content-Length: 0
 
 To create a Flex bucket, send an XML block that specifies a bucket configuration with a `LocationConstraint` of `{code}-flex` in the body of a `PUT` request to a bucket endpoint.
 
-Valid provisioning codes for `Location{{site.data.keyword.cos_notm}}traint` are: <br>
+Valid provisioning codes for `LocationConstraint` are: <br>
 &emsp;&emsp;  `us-standard` / `us-vault` / `us-cold` / `us-flex` <br>
 &emsp;&emsp;  `us-east-standard` / `us-east-vault`  / `us-east-cold` / `us-east-flex` <br>
 &emsp;&emsp;  `us-south-standard` / `us-south-vault`  / `us-south-cold` / `us-south-flex` <br>
@@ -359,7 +359,7 @@ Content-Length: 0
 
 ## List objects in a specific bucket
 
-A `GET` request that is addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexicographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in {{site.data.keyword.{{site.data.keyword.cos_notm}}_notm}}. This operation doesn't use operation-specific headers or payload elements.
+A `GET` request that is addressed to a bucket returns a list of objects, limited to 1,000 at a time and returned in non-lexicographical order. The `StorageClass` value that is returned in the response is a default value as storage class operations are not implemented in {{site.data.keyword.cos_full_notm}}. This operation doesn't use operation-specific headers or payload elements.
 
 **Syntax**
 
@@ -504,14 +504,14 @@ Host: s3-api.us-geo.objectstorage.softlayer.net
 
 A `PUT` that is issued to a bucket with the necessary query parameter creates or replaces an access control list (ACL) for that bucket. Access control lists allow for granting different sets of permissions to different storage accounts by using the account's ID, or by using a pre-made ACL.
 
-Credentials are generated for each storage account, not for individual users. As such, ACLs can't restrict or grant access to a specific user, only to a storage account. However, `public-read-write` allows any other {{site.data.keyword.cos_notm}} account to access the resource, as well as the general public.
+Credentials are generated for each storage account, not for individual users. As such, ACLs can't restrict or grant access to a specific user, only to a storage account. However, `public-read-write` allows any other {{site.data.keyword.cos_full_notm}} account to access the resource, as well as the general public.
 {:tip}
 
 ACLs can use pre-made permissions sets (or `canned ACLs`) or be customized in the body of the request. Pre-made ACLs are specified using the `x-amz-acl` header and custom ACLs are specified using XML in the request payload. Only one method (header or payload) can be used in a single request.
 
 This operation doesn't use extra operation-specific query parameters.
 
-ACL grantees must be other {{site.data.keyword.cos_notm}} instances, and their UUID can be found along with credentials in the web portal.
+ACL grantees must be other {{site.data.keyword.cos_full_notm}} instances, and their UUID can be found along with credentials in the web portal.
 
 The assigned permissions behave as follows:
 
@@ -523,7 +523,7 @@ The assigned permissions behave as follows:
 | WRITE_ACP | Default setting is FULL_CONTROL | Allows grantee to write ACL for applicable object |
 | FULL_CONTROL | Allows grantee READ, WRITE, READ_ACP and WRITE_ACP permissions on bucket | Allows grantee READ, READ_ACP and WRITE_ACP permissions on object |
 
-The following canned ACLs are supported by {{site.data.keyword.{{site.data.keyword.cos_notm}}_notm}}.  Values that are not listed here are not supported.
+The following canned ACLs are supported by {{site.data.keyword.cos_full_notm}}.  Values that are not listed here are not supported.
 
 | Canned ACL | Applies to | Notes |
 |------------|------------|-----------|
