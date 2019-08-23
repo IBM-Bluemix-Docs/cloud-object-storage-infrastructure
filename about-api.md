@@ -23,7 +23,7 @@ subcollection: cloud-object-storage-infrastructure
 * Account and credential administration uses the SL API
 * Interacting with buckets and objects uses an implementation of the S3 API
 
-More information about using the SL API to create or delete credentials, check capacity usage, retrieve a UUID, and other account functions, see the [SLDN ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://sldn.softlayer.com/reference/services/SoftLayer_Network_Storage_Hub_Cleversafe_Account).
+More information about how to use the SL API to create or delete credentials, check capacity usage, retrieve a UUID, and other account functions, see the [SLDN ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://sldn.softlayer.com/reference/services/SoftLayer_Network_Storage_Hub_Cleversafe_Account).
 
 The following tables describe the complete set of supported operations you can use with the S3 API to access {{site.data.keyword.cos_full_notm}}. For more information, about how to use the operations, including examples, see the API reference pages for [buckets](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-bucket-operations) and [objects](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-object-operations).
 

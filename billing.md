@@ -17,7 +17,7 @@ subcollection: cloud-object-storage-infrastructure
 
 # Billing
 
-For more information about pricing, see the [IBM Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage#s3api).
+For more information about pricing, see the [IBM Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/object-storage/pricing/).
 
 ## Invoices
 Account invoices can be found at **Account** > **Billing** > **Invoices** in the navigation menu.
@@ -51,4 +51,4 @@ Vault billing is a way to control costs for infrequently accessed data, such as 
 
 ## Archiving Data
 
-Archive is our lowest cost option for data that is rarely accessed. For more information, see the [pricing page](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage).
+Archive is our lowest cost option for data that is rarely accessed. For more information, see the [pricing page](https://www.ibm.com/cloud/object-storage/pricing/).

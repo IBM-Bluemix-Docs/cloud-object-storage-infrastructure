@@ -57,7 +57,7 @@ For more information about {{site.data.keyword.cos_full_notm}} Infrastructure Ar
 aws s3api put-bucket-lifecycle-configuration --bucket <bucket name> --lifecycle-configuration file://<saved policy file> --endpoint <end point>
 ```
 
-2.	Create a storage policy with Simpana and associate the storage policy to the Cloud Storage library that you created in the first step. A storage policy governs the way Simpana interacts with COS for backup transfers. A policy overview can be found [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=13804.htm).
+2.	Create a storage policy with Simpana and associate the storage policy to the Cloud Storage library that you created in the first step. A storage policy governs the way Simpana interacts with COS for backup transfers. A policy overview can be found [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://documentation.commvault.com/commvault/v11/article?p=13804.htm).
 
 3.	Create a backup set and associate the backup set to the storage policy created in the previous step. The backup set overview can be found [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=11666.htm)
 
