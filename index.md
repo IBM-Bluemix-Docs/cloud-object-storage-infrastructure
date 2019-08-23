@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-12-10"
+  years: 2017, 2018, 2019
+lastupdated: "2018-08-22"
+
+subcollection: cloud-object-storage-infrastructure
 
 ---
 {:shortdesc: .shortdesc}
@@ -20,4 +22,4 @@ lastupdated: "2018-12-10"
 | Offering                                   | Interface | Defining advantage                             | IBM Docs |
 |--------------------------------------------|-----------|------------------------------------------------|------|
 | {{site.data.keyword.cos_full_notm}}        | COS API   | Ideal for cloud-native development and provides strong integration with IBM Cloud Services, including Data Science Experience. Most new projects can benefit from using this offering with {{site.data.keyword.iamlong}}, {{site.data.keyword.keymanagementservicelong}}, and other new features as they become available. | [Link](../docs/services/cloud-object-storage/getting-started.html) |
-| {{site.data.keyword.cos_full_notm}} (Classic)  | COS API   | This version provides certain regulatory compliance only available when you purchase it through IBM Cloud Infrastructure.  Does not support {{site.data.keyword.iamlong}} or {{site.data.keyword.keymanagementservicelong}}. | [Link](quickstart.html) |
+| {{site.data.keyword.cos_full_notm}} (Classic)  | COS API   | This version provides certain regulatory compliance only available when you purchase it through IBM Cloud Infrastructure.  Does not support {{site.data.keyword.iamlong}} or {{site.data.keyword.keymanagementservicelong}}. | [Link](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-quickstart-guide) |

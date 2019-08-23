@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-03"
+  years: 2017, 2018, 2019
+lastupdated: "2018-08-22"
+
+subcollection: cloud-object-storage-infrastructure
 
 ---
 {:shortdesc: .shortdesc}
@@ -23,7 +25,7 @@ lastupdated: "2018-12-03"
 
 More information about using the SL API to create or delete credentials, check capacity usage, retrieve a UUID, and other account functions, see the [SLDN ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://sldn.softlayer.com/reference/services/SoftLayer_Network_Storage_Hub_Cleversafe_Account).
 
-The following tables describe the complete set of supported operations you can use with the S3 API to access {{site.data.keyword.cos_full_notm}}. For more information, about how to use the operations, including examples, see the API reference pages for [buckets](buckets.html) and [objects](objects.html).
+The following tables describe the complete set of supported operations you can use with the S3 API to access {{site.data.keyword.cos_full_notm}}. For more information, about how to use the operations, including examples, see the API reference pages for [buckets](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-bucket-operations) and [objects](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-object-operations).
 
 ## Operations on the account
 
@@ -84,4 +86,4 @@ These operations create, destroy, get information about, and control behavior of
 | List Parts | Returns a list of parts associated with an upload ID
 {:.opstable}
 
-Some additional operations, such as tagging and versioning, are supported in private cloud implementations of {{site.data.keyword.cos_full_notm}}, but not in the public cloud. For more information about custom {{site.data.keyword.objectstorageshort}} solutions, see [{{site.data.keyword.objectstorageshort}} at ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/products/storage/object-storage/cloud/).
+Some additional operations, such as tagging and versioning, are supported in private cloud implementations of {{site.data.keyword.cos_full_notm}}, but not in the public cloud. For more information about custom {{site.data.keyword.objectstorageshort}} solutions, see [{{site.data.keyword.objectstorageshort}} at ibm.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/it-infrastructure/storage/hybrid-cloud-storage).

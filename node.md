@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2018-12-05"
+  years: 2017, 2018, 2019
+lastupdated: "2018-08-22"
+
+subcollection: cloud-object-storage-infrastructure
 
 ---
 {:shortdesc: .shortdesc}
@@ -17,7 +19,7 @@ lastupdated: "2018-12-05"
 
 ## Installing
 
-The preferred way to install the {{site.data.keyword.cos_full}} SDK for Node.js is to use the [`npm` ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://npmjs.org) package manager for Node.js. Simply type the following into a terminal window:
+The preferred way to install the {{site.data.keyword.cos_full}} SDK for Node.js is to use the [`npm` ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com) package manager for Node.js. Simply type the following into a terminal window:
 
 ```sh
 npm install ibm-cos-sdk
