@@ -30,7 +30,7 @@ aws_access_key_id = {Access Key ID}
 aws_secret_access_key = {Secret Access Key}
 ```
 
-You can obtain your Access Key ID and Secret Access Key from the [IBM Cloud Console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.bluemix.net/) through **Classic Infrastructure** > **Storage** > **Object Storage**. Click the account name. In the account details page, click **Access & Permissions** to see your credentials and access keys.
+You can obtain your Access Key ID and Secret Access Key from the [IBM Cloud Console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com) through **Classic Infrastructure** > **Storage** > **Object Storage**. Click the account name. In the account details page, click **Access & Permissions** to see your credentials and access keys.
 {:tip}
 
 The {{site.data.keyword.cos_full_notm}} endpoint must be sourced by using the `--endpoint-url` option, and can't be set in the credentials file.

@@ -18,14 +18,14 @@ subcollection: cloud-object-storage-infrastructure
 
 # Quickstart Guide
 
-1.  Create an IBM Cloud account from the [catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/infrastructure/cloud_object_storage-infrastructure/){: new_window} by clicking on the **Create a Free Account** button, then head over to the catalog and follow the link for **Cloud {{site.data.keyword.cos_short}}**. Follow the **Upgrade** link.
-2.  [Order a storage instance](ordering.html) from the Infrastructure portal by clicking **Storage** > **{{site.data.keyword.cos_short}}** in the Navigation menu and selecting "IBM COS - S3 API" from the order form.
-3.  [Create a bucket](storing-retrieving.html) by clicking the **Add** button.
-4.  [Upload an object](storing-retrieving.html) by clicking the **+** button at the right of the first row and selecting a file from your computer.
+1.  Create an IBM Cloud account from the [catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://https://cloud.ibm.com/catalog){: new_window} by clicking on the **Create a Free Account** button, then head over to the catalog and follow the link for **Cloud {{site.data.keyword.cos_short}}**. Follow the **Upgrade** link.
+2.  [Order a storage instance](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-ordering-ibm-cloud-object-storage-classic-) from the Infrastructure portal by clicking **Storage** > **{{site.data.keyword.cos_short}}** in the Navigation menu and selecting "IBM COS - S3 API" from the order form.
+3.  [Create a bucket](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-storing-and-retrieving-data) by clicking the **Add** button.
+4.  [Upload an object](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-storing-and-retrieving-data) by clicking the **+** button at the right of the first row and selecting a file from your computer.
 
 That file is now encrypted and dispersed with no complete copy existing in any one data center. To learn more about COS and how to use it in your applications take a look through the Developer documentation:
 
-* [API overview](about-api.html) and [detailed reference](buckets.html)
-* [CLI options](cli.html)
-* [Python](python.html)
-* [Java](java.html)
+* [API overview](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-about-the-cos-api) and [detailed reference](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-bucket-operations)
+* [CLI options](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-a-cli)
+* [Python](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-python)
+* [Java](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-using-java)
