@@ -33,7 +33,7 @@ GET https://{endpoint}/
 ```http
 GET / HTTP/1.1
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 X-Amz-Date: 20160822T030815Z
 Authorization: {authorization-string}
 ```
@@ -115,7 +115,7 @@ If an XML block specifies a `LocationConstraint` it must correspond with a valid
 ```http
 PUT /images HTTP/1.1
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 X-Amz-Date: 20160821T052842Z
 Authorization:{authorization-string}
 ```
@@ -173,7 +173,7 @@ Authorization: {authorization-string}
 x-amz-date: 20170317T175217Z
 x-amz-content-sha256: {hashed-request-body}
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 Content-Length: 110
 ```
 ```xml
@@ -235,7 +235,7 @@ Authorization: {authorization-string}
 x-amz-date: 20170317T175217Z
 x-amz-content-sha256: {hashed-request-body}
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 Content-Length: 110
 ```
 ```xml
@@ -296,7 +296,7 @@ Authorization: {authorization-string}
 x-amz-date: 20170317T175217Z
 x-amz-content-sha256: {hashed-request-body}
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 Content-Length: 110
 ```
 
@@ -338,7 +338,7 @@ Fetch the headers for the `images` bucket.
 ```http
 HEAD /images HTTP/1.1
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 X-Amz-Date: 20160821T052842Z
 Authorization:{authorization-string}
 ```
@@ -389,7 +389,7 @@ List the objects inside the `apiary` bucket.
 ```http
 GET /apiary HTTP/1.1
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 X-Amz-Date: 20160822T225156Z
 Authorization: {authorization-string}
 ```
@@ -469,7 +469,7 @@ DELETE https://{bucket-name}.{endpoint} # virtual host style
 
 ```http
 DELETE /images HTTP/1.1
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 x-amz-date: 20160822T064812Z
 Authorization: {authorization-string}
 ```
@@ -484,7 +484,7 @@ If a non-empty bucket is requested for deletion, the server responds with `409 C
 DELETE /apiary HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20160825T174049Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response**
@@ -551,7 +551,7 @@ PUT /apiary?acl= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161011T190354Z
 x-amz-acl: public-read
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response**
@@ -575,7 +575,7 @@ Specify a custom ACL to allow for another user using their user name to view the
 PUT /apiary?acl= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161011T190354Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -636,7 +636,7 @@ Retrieve a bucket ACL.
 GET /apiary?acl= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161011T190354Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response**
@@ -689,7 +689,7 @@ POST https://{bucket-name}.{endpoint}/?delete= # virtual host style
 ```http
 POST /example?delete= HTTP/1.1
 Authorization: {authorization-string}
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 x-amz-date: 20161205T231624Z
 x-amz-content-sha256: 3ade096cd9471017539ede10c4d8aa05a1ecd015a16f4f090e9fcee92a816cf4
 Content-MD5: zhi+TmIAhD2U3GfoYayyTQ==
@@ -765,7 +765,7 @@ Retrieve all current cancelled and incomplete multipart uploads.
 GET /apiary?uploads= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161011T190354Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response** (no multipart uploads in progress)
@@ -843,7 +843,7 @@ List the CORS configuration on the `apiary` bucket.
 GET /apiary?cors= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161011T190354Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response** No CORS configuration set
@@ -897,7 +897,7 @@ x-amz-date: 20161011T190354Z
 x-amz-content-sha256: 2938f51643d63c864fdbea618fe71b13579570a86f39da2837c922bae68d72df
 Content-MD5: GQmpTNpruOyK6YrxHnpj7g==
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 Content-Length: 237
 ```
 
@@ -944,7 +944,7 @@ DELETE https://{bucket-name}.{endpoint}?cors= # virtual host style
 GET /apiary?cors= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161011T190354Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 The server responds with `204 No Content`.
@@ -999,7 +999,7 @@ The body of the request must contain an XML block with the following schema.
 ```http
 GET / HTTP/1.1
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 Authorization: {authorization-string}
 Content-Type: text/plain
 Content-MD5: M625BaNwd/OytcM7O5gIaQ==
@@ -1042,7 +1042,7 @@ GET https://{bucket-name}.{endpoint}?lifecycle # virtual host style
 ```http
 GET / HTTP/1.1
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 Authorization: {authorization-string}
 ```
 
@@ -1082,7 +1082,7 @@ DELETE https://{bucket-name}.{endpoint}?lifecycle # virtual host style
 ```http
 GET /apiary?lifecycle HTTP/1.1
 Authorization: {authorization-string}
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 The server responds with `204 No Content`.

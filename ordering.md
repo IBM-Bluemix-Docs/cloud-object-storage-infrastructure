@@ -21,9 +21,6 @@ subcollection: cloud-object-storage-infrastructure
 
 Until recently, IBM offered Platform-as-a-Service and Infrastructure-as-a-Service in two distinct environments. The {{site.data.keyword.cloud_notm}} Platform provided a robust application development platform with direct access to cutting edge IBM technologies and DevOps services. {{site.data.keyword.cloud_notm}} Infrastructure provided access to infrastructure services, such as bare metal or virtual servers, data storage, and networking.
 
-Now these lines are dissolving as all offerings are integrated into [the {{site.data.keyword.cloud_notm}} catalog of services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window}. Existing `SoftLayer` customers are encouraged to take advantage of [an IBMid for single-sign-on authentication](/docs/account?topic=account-signup){: new_window}, and it is possible to [link existing `SoftLayer` and {{site.data.keyword.cloud_notm}} accounts](/docs/account?topic=account-unifyingaccounts#link_accounts){: new_window}.
-
-
 ## Creating an {{site.data.keyword.cloud_notm}} account
 
 Before you can order a storage account, it is necessary to create a customer account first.
@@ -44,7 +41,7 @@ Before you can order a storage account, it is necessary to create a customer acc
 Accounts are limited to 100 {{site.data.keyword.cos_full}} accounts. If more storage accounts are needed, contact customer support.
 {:tip}
 
-1. Log in to [https://control.bluemix.net/ ![External link icon](../../icons/launch-glyph.svg "External link icon"))](https://cloud.ibm.com/){: new_window}.
+1. Log in to [https://cloud.ibm.com/classic/ ![External link icon](../../icons/launch-glyph.svg "External link icon"))](https://cloud.ibm.com/){: new_window}.
 2. Navigate to the {{site.data.keyword.objectstorageshort}} page, by clicking **Storage** > **{{site.data.keyword.objectstorageshort}}** in the Navigation menu.
 3. Click the **order {{site.data.keyword.objectstorageshort}}** link on the upper right to open the order menu.
 4. Select **{{site.data.keyword.cos_full_notm}}** in the **Storage Type** menu.

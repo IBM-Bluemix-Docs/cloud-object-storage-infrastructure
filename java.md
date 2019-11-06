@@ -23,7 +23,7 @@ The AWS SDK for Java is comprehensive, and has features and capabilities that ar
 ## Getting the SDK
 The easiest way to consume the AWS Java SDK is to use Maven to manage dependencies. If you aren't familiar with Maven, you get can get up and running by using the [Maven in 5 Minutes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) guide.
 
-Maven uses a file that is called `pom.xml` to specify the libraries (and their versions) needed for a Java project.  Here is an example `pom.xml` file for using the AWS S3 Java SDK to connect to {{site.data.keyword.cos_full_notm}} (it also includes the `SoftLayer` library for provisioning credentials and new accounts).
+Maven uses a file that is called `pom.xml` to specify the libraries (and their versions) needed for a Java project.  Here is an example `pom.xml` file for using the AWS S3 Java SDK to connect to {{site.data.keyword.cos_full_notm}}.
 
 
 ```xml
@@ -40,11 +40,6 @@ Maven uses a file that is called `pom.xml` to specify the libraries (and their v
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
             <version>1.11.5</version>
-        </dependency>
-        <dependency>
-            <groupId>com.softlayer.api</groupId>
-            <artifactId>softlayer-api-client</artifactId>
-            <version>0.2.3</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -91,14 +86,14 @@ The AWS Java SDK sends all requests to `s3.amazonaws.com` by default. To send re
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 ```
 
 ###### Example - Setting the endpoint to point to COS US Cross Region
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndPoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndPoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 ```
 
 The COS implementation of the S3 API supports both resource path and virtual host addressing.
@@ -109,7 +104,7 @@ This S3 implementation supports virtual host addressing of storage buckets. The 
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndPoint("http://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndPoint("http://s3.us.cloud-object-storage.appdomain.cloud");
 ```
 
 **Use resource path addressing**
@@ -182,7 +177,7 @@ final String secretKey = "bHp5DOjg0HHJrGK7h3ejEqRDnVmWZK03T4lstel6";
 
 BasicAWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey); // declare a new set of basic credentials that includes the Access Key ID and the Secret Access Key
 AmazonS3 cos = new AmazonS3Client(credentials); // create a constructor for the client by using the declared credentials.
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net"); // set the desired endpoint
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud"); // set the desired endpoint
 ```
 
 ### Credentials set as environment variables
@@ -244,7 +239,7 @@ secretKey=bHp5DOjg0HHJrGK7h3ejEqRDnVmWZK03T4lstel6
 ClasspathPropertiesFileCredentialsProvider provider = new ClasspathPropertiesFileCredentialsProvider(); // declare a new set of basic credentials that use the AWSCredentials.properties file
 
 AmazonS3 cos = new AmazonS3Client(provider); // create a constructor for an S3 compatible client by using the credentials from the AWSCredentials.properties file
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net"); // set the endpoint for the new S3 compatible client
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud"); // set the endpoint for the new S3 compatible client
 ```
 
 
@@ -339,7 +334,7 @@ The following examples assume the use of default credentials.
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 
 cos.createBucket("sample", "us-standard"); // the name of the bucket, and the storage class (LocationConstraint)
 ```
@@ -348,7 +343,7 @@ cos.createBucket("sample", "us-standard"); // the name of the bucket, and the st
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 
 cos.createBucket("sample", "us-vault"); // the name of the bucket, and the storage class (LocationConstraint)
 ```
@@ -357,7 +352,7 @@ cos.createBucket("sample", "us-vault"); // the name of the bucket, and the stora
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 
 cos.createBucket("sample", "us-cold"); // the name of the bucket, and the storage class (LocationConstraint)
 ```
@@ -369,7 +364,7 @@ This example assumes that the bucket 'sample' exists.
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 
 cos.putObject(
 "sample", // the name of the destination bucket
@@ -385,7 +380,7 @@ This example assumes that the bucket 'sample' exists.
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 String obj = "An example"; // the object to be stored
 ByteArrayOutputStream theBytes = new ByteArrayOutputStream(); // create a new output stream to store the object data
 ObjectOutputStream serializer = new ObjectOutputStream(theBytes); // set the object data to be serialized
@@ -411,7 +406,7 @@ This example assumes that the bucket 'sample' already exists.
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 
 GetObjectRequest request = new // create a new request to get an object
 GetObjectRequest( // request the new object by identifying
@@ -433,7 +428,7 @@ This example assumes that the bucket 'sample' already exists.
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 S3Object returned = CLIENT.getObject( // request the object by identifying
 "sample", // the name of the bucket
 "serialized-object" // the name of the serialized object
@@ -445,7 +440,7 @@ S3ObjectInputStream s3Input = s3Response.getObjectContent(); // set the object s
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 
 // copy an object within the same Bucket
 cos.copyObject( // copy the Object, passing…
@@ -458,7 +453,7 @@ cos.copyObject( // copy the Object, passing…
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 
 // copy an object between two Buckets
 cos.copyObject( // copy the Object, passing…
@@ -473,7 +468,7 @@ cos.copyObject( // copy the Object, passing…
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint(`https://s3-api.us-geo.objectstorage.softlayer.net`);
+cos.setEndpoint(`https://s3.us.cloud-object-storage.appdomain.cloud`);
 
 List<Bucket> Buckets = cos.listBuckets(); // get a list of buckets
 
@@ -486,7 +481,7 @@ for (Bucket b : Buckets) { // for each bucket...
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint(`https://s3-api.us-geo.objectstorage.softlayer.net`);
+cos.setEndpoint(`https://s3.us.cloud-object-storage.appdomain.cloud`);
 
 ObjectListing listing = cos.listObjects(`sample`); // get the list of objects in the 'sample' bucket
 List<S3ObjectSummary> summaries = listing.getObjectSummaries(); // create a list of object summaries
@@ -500,7 +495,7 @@ for (S3ObjectSummary obj : summaries){ // for each object...
 
 ```java
 AmazonS3 cos = new AmazonS3Client();
-cos.setEndpoint("https://s3-api.us-geo.objectstorage.softlayer.net");
+cos.setEndpoint("https://s3.us.cloud-object-storage.appdomain.cloud");
 
 cos.deleteObject( // delete the Object, passing…
 "sample", // the name of the Bucket that stores the Object,

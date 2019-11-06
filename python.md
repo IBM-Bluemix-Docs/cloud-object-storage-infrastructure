@@ -42,7 +42,7 @@ Creating a service resource provides greater abstraction for higher-level tasks.
 ```python
 import boto3
 
-endpoint = 'https://s3-api.us-geo.objectstorage.softlayer.net'
+endpoint = 'https://s3.us.cloud-object-storage.appdomain.cloud'
 
 cos = boto3.resource('s3', endpoint_url=endpoint)
 
@@ -72,7 +72,7 @@ Creating a low-level client allows for considerably more detail and access to me
 import boto3
 import pprint as pp
 
-endpoint = 'https://s3-api.us-geo.objectstorage.softlayer.net'
+endpoint = 'https://s3.us.cloud-object-storage.appdomain.cloud'
 
 cos = boto3.client('s3', endpoint_url=endpoint)
 

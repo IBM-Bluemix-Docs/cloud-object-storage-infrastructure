@@ -46,7 +46,7 @@ Authorization: {authorization-string}
 x-amz-date: 20160825T183001Z
 x-amz-content-sha256: 309721641329cf441f3fa16ef996cf24a2505f91be3e752ac9411688e3435429
 Content-Type: text/plain; charset=utf-8
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 
 Content-Length: 533
 
@@ -82,7 +82,7 @@ x-amz-server-side-encryption-customer-algorithm: AES256
 x-amz-server-side-encryption-customer-key: MjRCRTJCQTNDQjdFOTkyMzY0NjZEN0NBMDhGQTBGRUQwNzFBMjEwMkQyNjU4MjNEOEMyODU5MkQxQ0ZEMkQ1OQ==
 x-amz-server-side-encryption-customer-key-MD5: HBbrEt+ZH5iIfDNeBju03w==
 Content-Type: text/plain; charset=utf-8
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 
 Content-Length: 533
 
@@ -148,7 +148,7 @@ Header | Type | Description
 HEAD /example-bucket/soldier-bee HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20160825T183244Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 
 ```
 
@@ -207,7 +207,7 @@ Header | Type | Description
 GET /example-bucket/worker-bee HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20160825T183244Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 
 ```
 
@@ -249,7 +249,7 @@ DELETE https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 ```http
 DELETE /example-bucket/soldier-bee HTTP/1.1
 Authorization: {authorization-string}
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 
 ```
 
@@ -309,7 +309,7 @@ PUT /example-bucket/wild-bee HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161130T195251Z
 x-amz-copy-source: /garden/bee
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response**
@@ -354,7 +354,7 @@ GET https://{bucket-name}.{endpoint}/{object-name}?acl= # virtual host style
 GET /example-bucket/queen-bee?acl= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161207T155945Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response**
@@ -432,7 +432,7 @@ PUT /example-bucket/queen-bee?acl= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161207T162842Z
 x-amz-acl: public-read
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response**
@@ -457,7 +457,7 @@ PUT /example-bucket/queen-bee HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161207T162842Z
 x-amz-acl: public-read
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response**
@@ -482,7 +482,7 @@ PUT /example-bucket/queen-bee?acl= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20161207T163315Z
 Content-Type: text/plain
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 Content-Length: 564
 ```
 
@@ -544,7 +544,7 @@ OPTIONS https://{bucket-name}.{endpoint}/{object-name} # virtual host style
 OPTIONS /example-bucket/queen-bee HTTP/1.1
 Access-Control-Request-Method: PUT
 Origin: http://ibm.com
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 
 ```
 
@@ -611,7 +611,7 @@ Header | Type | Description
 POST /some-bucket/multipart-object-123?uploads= HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20170303T203411Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response**
@@ -667,7 +667,7 @@ PUT /some-bucket/multipart-object-123?partNumber=1&uploadId=0000015a-df89-51d0-2
 Authorization: {authorization-string}
 x-amz-date: 20170318T035641Z
 Content-Type: application/pdf
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 Content-Length: 13374550
 ```
 
@@ -713,7 +713,7 @@ POST /some-bucket/multipart-object-123?uploadId=0000015a-df89-51d0-2790-dee1ac99
 Authorization: {authorization-string}
 x-amz-date: 20170318T035641Z
 Content-Type: text/plain; charset=utf-8
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 Content-Length: 257
 ```
 
@@ -746,7 +746,7 @@ Content-Length: 364
 
 ```xml
 <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-  <Location>http://s3-api.us-geo.objectstorage.softlayer.net/example-bucket/multipart-object-123</Location>
+  <Location>http://s3.us.cloud-object-storage.appdomain.cloud/example-bucket/multipart-object-123</Location>
   <Bucket>some-bucket</Bucket>
   <Key>multipart-object-123</Key>
   <ETag>"765ba3df36cf24e49f67fc6f689dfc6e-2"</ETag>
@@ -772,7 +772,7 @@ DELETE https://{bucket-name}.{endpoint}/{object-name}?uploadId={uploadId}= # vir
 DELETE /some-bucket/multipart-object-123?uploadId=0000015a-df89-51d0-2790-dee1ac994053 HTTP/1.1
 Authorization: {authorization-string}
 x-amz-date: 20170318T035641Z
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 **Sample Response**
@@ -833,7 +833,7 @@ Authorization: {authorization-string}
 Content-Type: text/plain
 Content-MD5: rgRRGfd/OytcM7O5gIaQ==
 Content-Length: 305
-Host: s3-api.us-geo.objectstorage.softlayer.net
+Host: s3.us.cloud-object-storage.appdomain.cloud
 ```
 
 ```xml

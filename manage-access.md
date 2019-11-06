@@ -89,9 +89,9 @@ secret_key = os.environ.get('COS_S3_SECRET_ACCESS_KEY')
 
 # request elements
 http_method = 'GET'
-host = 's3-api.us-geo.objectstorage.softlayer.net'
+host = 's3.us.cloud-object-storage.appdomain.cloud'
 region = 'us-standard'
-endpoint = 'http://s3-api.us-geo.objectstorage.softlayer.net'
+endpoint = 'http://s3.us.cloud-object-storage.appdomain.cloud'
 bucket = '' # add a '/' before the bucket name to list buckets
 object_key = ''
 request_parameters = ''

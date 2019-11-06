@@ -49,7 +49,7 @@ To use Cyberduck to create a connection to {{site.data.keyword.cos_full_notm}} a
 
 Cloudberry is a flexible backup utility that allows users to back up some or all of a local file system to an S3 API compatible {{site.data.keyword.cos_short}} system. It can be configured to be run either manually or scheduled based on need, and can back up different directories to different buckets if needed. Cloudberry can be downloaded from [cloudberrylab.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.cloudberrylab.com/).
 
-When you configure Cloudberry, select `S3 Compatible` from the list of options, not `Amazon S3` or `SoftLayer`.
+When you configure Cloudberry, select `S3 Compatible` from the list of options.
 {:tip}
 
 The current release of the Cloudberry Client for Windows uses TLSv1.0 for establishing secure data transmission over the public Internet. IBM Cloud requires the more modern TLSv1.1 or TLSv1.2 to establish a secure connection. Connections from the Cloudberry Client for Windows fail unless the `Use SSL` box is left **unchecked** during configuration.
