@@ -16,7 +16,7 @@ subcollection: cloud-object-storage-infrastructure
 
 
 # Bucket operations using the REST API
-{: #bucket-operations-rest}
+{: #bucket-operations}
 
 ## List buckets belonging to an account
 
