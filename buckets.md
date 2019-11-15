@@ -15,8 +15,8 @@ subcollection: cloud-object-storage-infrastructure
 {:tip: .tip}
 
 
-# Bucket operations
-{: #bucket-operations}
+# Bucket operations using the REST API
+{: #bucket-operations-rest}
 
 ## List buckets belonging to an account
 
