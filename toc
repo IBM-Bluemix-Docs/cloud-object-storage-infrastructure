@@ -13,6 +13,7 @@ Cloud Object Storage (Classic)
 
     {: .navgroup id="howto"}
     endpoints.md
+    /cloud-object-storage/cloud-object-storage-classes
     manage-access.md
     desktop-clients.md
     archiving.md
@@ -36,6 +37,7 @@ Cloud Object Storage (Classic)
     guidance.md
     faq.md
     support.md
-    billing.md
+    /cloud-object-storage/cloud-object-storage-billing
     [Pricing](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage)
+    /cloud-object-storage/cloud-object-storage-flex-pricing
     {: .navgroup-end}
