@@ -18,10 +18,6 @@ subcollection: cloud-object-storage-infrastructure
 
 # About the COS API
 
-{{site.data.keyword.cos_full}} provides two separate APIs for managing and using {{site.data.keyword.objectstorageshort}}.
-
-* Account and credential administration uses the SL API
-* Interacting with buckets and objects uses an implementation of the S3 API
 
 The following tables describe the complete set of supported operations you can use with the S3 API to access {{site.data.keyword.cos_full_notm}}. For more information, about how to use the operations, including examples, see the API reference pages for [buckets](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-bucket-operations) and [objects](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-object-operations).
 
