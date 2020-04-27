@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018, 2019
-lastupdated: "2018-08-22"
+lastupdated: "2019-08-22"
 
 subcollection: cloud-object-storage-infrastructure
 
@@ -17,7 +17,6 @@ subcollection: cloud-object-storage-infrastructure
 
 
 # About the COS API
-
 
 The following tables describe the complete set of supported operations you can use with the S3 API to access {{site.data.keyword.cos_full_notm}}. For more information, about how to use the operations, including examples, see the API reference pages for [buckets](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-bucket-operations) and [objects](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-object-operations).
 
