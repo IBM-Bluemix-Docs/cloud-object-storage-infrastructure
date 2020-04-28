@@ -29,7 +29,7 @@ Each account receives a single bill. If you need separate billing for different 
 
 Storage costs for {{site.data.keyword.cos_full}} are determined by total volume of data stored, the amount of public outbound bandwidth consumed, and the total number of operational requests processed by the system.
 
-{{site.data.keyword.Bluemix_short} offerings are connected to a three-tiered network, segmenting public, private, and management traffic. Infrastructure on a customer's {{site.data.keyword.Bluemix_short} account may transfer data between one another across the private network at no cost. Infrastructure offerings (such as bare metal servers, virtual servers, and cloud storage) connect to other applications and services in the {{site.data.keyword.Bluemix_short} catalog (such as Watson services, containers, runtimes) across the public network, so data transfer between those two types of offerings is metered and charged at standard public network bandwidth rates.
+{{site.data.keyword.Bluemix_short}} offerings are connected to a three-tiered network, segmenting public, private, and management traffic. Infrastructure on a customer's {{site.data.keyword.Bluemix_short}} account may transfer data between one another across the private network at no cost. Infrastructure offerings (such as bare metal servers, virtual servers, and cloud storage) connect to other applications and services in the {{site.data.keyword.Bluemix_short}} catalog (such as Watson services, containers, runtimes) across the public network, so data transfer between those two types of offerings is metered and charged at standard public network bandwidth rates.
 {:tip}
 
 ## What is the difference between 'Class A' and 'Class B' requests?
