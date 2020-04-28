@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-object-storage-infrastructure" audience="infrastructure" arm="361" href="/docs/infrastructure/cloud-object-storage-infrastructure/about-cos.html" path="infrastructure/cloud-object-storage-infrastructure"}
+{: .toc subcollection="cloud-object-storage-infrastructure" category="storage" audience="infrastructure" href="/docs/cloud-object-storage-infrastructure/about-cos.html" path="cloud-object-storage-infrastructure"}
 Cloud Object Storage (Classic)
 
     {: .navgroup id="learn"}
