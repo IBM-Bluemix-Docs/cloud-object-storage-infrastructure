@@ -21,7 +21,7 @@ subcollection: cloud-object-storage-infrastructure
 
 All data in {{site.data.keyword.cos_full_notm}} is encrypted at rest. This technology individually encrypts each object using per-object generated keys. These keys are secured and reliably stored using the same Information Dispersal Algorithms that protect object data using an All-or-Nothing Transform (AONT), which prevents key data from being disclosed if individual nodes or hard dirk drives are compromised.
 
-If it is necessary for the user to control encryption keys, root keys can be provided on a [per-object basis using SSE-C](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-object-operations#sse-c).
+If it is necessary for the user to control encryption keys, root keys can be provided on a per-object basis using SSE-C.
 
 Storage can be accessed over HTTPS, and internally storage devices are certified and communicate with each other using TLS.
 
