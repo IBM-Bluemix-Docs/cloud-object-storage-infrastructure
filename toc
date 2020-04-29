@@ -1,12 +1,11 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="cloud-object-storage-infrastructure" audience="infrastructure" arm="361" href="/docs/infrastructure/cloud-object-storage-infrastructure/about-cos.html" path="infrastructure/cloud-object-storage-infrastructure"}
+{: .toc subcollection="cloud-object-storage-infrastructure" category="storage" audience="infrastructure" href="/docs/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-about-ibm-cloud-object-storage-classic-" path="cloud-object-storage-infrastructure"}
 Cloud Object Storage (Classic)
 
     {: .navgroup id="learn"}
     about-cos.md
-    quickstart.md
     ordering.md
     storing-retrieving.md
     {: .navgroup-end}
@@ -20,11 +19,10 @@ Cloud Object Storage (Classic)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    about-api.md
-    common-headers.md
-    common-errors.md
-    buckets.md
-    objects.md
+    /cloud-object-storage/cloud-object-storage-compatibility-api
+    /cloud-object-storage/cloud-object-storage-compatibility-common
+    /cloud-object-storage/compatibility-api-bucket-operations
+    /cloud-object-storage/cloud-object-storage-object-operations
     cli.md
     python.md
     java.md

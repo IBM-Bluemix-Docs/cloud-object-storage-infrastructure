@@ -47,5 +47,3 @@ Accounts are limited to 100 {{site.data.keyword.cos_full}} accounts. If more sto
 4. Select **{{site.data.keyword.cos_full_notm}}** in the **Storage Type** menu.
 5. Click **Continue** and accept the Master Service Agreement before you complete the order. The new {{site.data.keyword.objectstorageshort}} account is provisioned momentarily and shows ups in the objects list when it is done.
 
-You can archive rarely accessed data. Archive works with existing storage-class tiers, as a result, you can reduce storage costs even further by storing data offline with our lowest-priced storage. For more information, see [Archiving data](/docs/infrastructure/cloud-object-storage-infrastructure?topic=cloud-object-storage-infrastructure-archiving-data).
-{:tip}
