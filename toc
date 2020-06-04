@@ -11,7 +11,7 @@ Cloud Object Storage (Classic)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    endpoints.md
+    /cloud-object-storage/cloud-object-storage-endpoints
     /cloud-object-storage/cloud-object-storage-classes
     manage-access.md
     desktop-clients.md
