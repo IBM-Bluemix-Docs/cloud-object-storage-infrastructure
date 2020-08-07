@@ -11,6 +11,7 @@ Cloud Object Storage (Classic)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    manage-access.md
     /cloud-object-storage/cloud-object-storage-endpoints
     /cloud-object-storage/cloud-object-storage-classes
     manage-access.md
@@ -19,11 +20,11 @@ Cloud Object Storage (Classic)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    cli.md
     /cloud-object-storage/cloud-object-storage-compatibility-api
     /cloud-object-storage/cloud-object-storage-compatibility-common
     /cloud-object-storage/cloud-object-storage-compatibility-api-bucket-operations
     /cloud-object-storage/cloud-object-storage-object-operations
-    cli.md
     python.md
     java.md
     node.md
