@@ -16,6 +16,7 @@ subcollection: cloud-object-storage-infrastructure
 
 
 # Getting support
+{: #iaas-support}
 
 For help with questions about {{site.data.keyword.cos_full_notm}} and it's capabilities, visit [dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/smartspace/cloudobjectstorage/index.html) and tag questions with `objectstorage` and `standardcrossregion`.
 

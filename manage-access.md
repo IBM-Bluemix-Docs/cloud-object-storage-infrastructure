@@ -16,16 +16,22 @@ subcollection: cloud-object-storage-infrastructure
 
 
 # Managing access
-
+{: #access-iaas}
 ## Using Access Contol Lists
+{: #access-iaas-acl}
+
 Credentials are generated for each storage instance, not for individual users.  As such, ACLs do not have the ability to restrict or grant access to a specific user, only to a storage instance. However, `public-read-write` allows any other COS storage instance to access the resource, as well as the general public.
 
 ## Using pre-signed urls
+{: #access-iaas-urls}
+
 It is possible to create pre-signed URLs that can be set to expire for both `PUT` and `GET` requests via the API by using a CLI, SDK, or library.
 
 ## Authentication
-
+{: #access-iaas-auth}
 ### About the `authorization` header
+{: #access-iaas-auth-header}
+
 Each request that is made against {{site.data.keyword.cos_full_notm}} using the S3 API must be authenticated using an implementation of the AWS `authorization` header. {{site.data.keyword.cos_full_notm}} supports Signature Version 2 and Signature Version 4 authentication methods.  Signature Version 4 is considered more secure as it uses a derived signing key rather than the secret access key itself as part of the signature. Using a signature provides identity verification and in-transit data integrity, and because each signature is tied to the timestamp of the request it is not possible to reuse authorization headers. The header is composed of four components: an algorithm declaration, credential information, signed headers, and the calculated signature:
 
 ```
@@ -35,6 +41,7 @@ AWS4-HMAC-SHA256 Credential={access-key}/{date}/{region}/s3/aws4_request,SignedH
 The date is provided in `YYYYMMDD` format, and for COS Cross-Region the region is `us-standard`. The `host` and `x-amz-date` headers are always required, and depending on the request other headers might be required as well (for example, `x-amz-content-sha256` for requests with payloads). Due to the need to recalculate the signature for every individual request, many Developers prefer to use a tool or SDK that produces the authorization header automatically.
 
 ### Creating an `authorization` header
+{: #access-iaas-create-header}
 
 First, create a request in a standardized format.
 
@@ -75,6 +82,7 @@ AWS4-HMAC-SHA256 Credential={access-key}/{date}/{region}/s3/aws4_request,SignedH
 ```
 
 #### Example of generating an `authorization` header
+{: #access-iaas-example}
 
 ```python
 import os

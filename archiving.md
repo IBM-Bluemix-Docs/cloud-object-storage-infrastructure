@@ -16,13 +16,14 @@ subcollection: cloud-object-storage-infrastructure
 
 
 # Archiving data
-
+{: #archive-iaas}
 {{site.data.keyword.cos_full}} Archive is our [lowest cost ![External link icon](../../icons/launch-glyph.svg "External link icon")](
 https://www.ibm.com/cloud/object-storage/pricing/){:new_window} option for data that is rarely accessed. You can store data by transitioning from any of the storage tiers (Standard, Vault, Cold Vault and Flex) to long-term offline archive or use the online Cold Vault option.
 
 You can archive objects using the web console, REST API, and third-party tools that are integrated with {{site.data.keyword.cos_full_notm}}.
 
 ## Adding or managing an archive policy on a bucket
+{: #archive-iaas-add}
 
 When you create or modify an archive policy for a bucket, consider the following:
 
@@ -34,7 +35,7 @@ To immediately archive new objects that are uploaded to a bucket, enter 0 days o
 {:tip}
 
 ## Restore an archived object
-
+{: #archive-iaas-restore}
 To access an archived object, you must restore it to the original storage tier. When you restore an object, you can specify the number of days you want the object to be available. At the end of the specified period, the restored copy is deleted.
 
 The restoration process can take up to 12 hours.

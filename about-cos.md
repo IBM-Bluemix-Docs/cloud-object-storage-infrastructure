@@ -13,6 +13,7 @@ lastupdated: "2018-08-22"
 {:tip: .tip}
 
 # About {{site.data.keyword.cos_full_notm}} (Classic)
+{: #about-cos-iaas}
 
 Information stored with {{site.data.keyword.cos_full}} is encrypted and dispersed across multiple geographic locations, and accessed over HTTP using a REST API. This service uses distributed storage technologies that are provided by the {{site.data.keyword.cos_full_notm}} System (formerly Cleversafe).
 

@@ -16,10 +16,11 @@ subcollection: cloud-object-storage-infrastructure
 
 
 # Using Commvault Simpana with the Archive tier
-
+{: #iaas-simpana}
 Commvault Simpana integrates with the Archive tier of {{site.data.keyword.cos_full_notm}}. For more information about Simpana, see [Commvault Simpana documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/)
 
 ## Integration steps
+{: #iaas-simpana-integration}
 
 1.	From the Simpana console, create an Amazon S3 cloud storage library.
 
@@ -48,6 +49,7 @@ Commvault Simpana integrates with the Archive tier of {{site.data.keyword.cos_fu
 ```
 
 ### To associate the policy with the bucket
+{: #iaas-simpana-associate}
 
 1.  Execute the following CLI command:
 
@@ -60,14 +62,17 @@ aws s3api put-bucket-lifecycle-configuration --bucket <bucket name> --lifecycle-
 3.	Create a backup set and associate the backup set to the storage policy created in the previous step. The backup set overview can be found [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=11666.htm)
 
 ## Performing backups
+{: #iaas-simpana-backups}
 
 You can initiate your backup to the bucket with the policy and perform backups to {{site.data.keyword.cos_full_notm}}. For more information about Simpana backups, see [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=11677.htm). Backup contents transition to the Archive tier based on the policy configured on the bucket.
 
 ## Performing restores
+{: #iaas-simpana-restores}
 
 You can restore backup contents from {{site.data.keyword.cos_full_notm}}. For more information about Simpana restores, see [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=12867.htm).
 
 ### Configure Simpana to automatically restore objects from the Archive tier
+{: #iaas-simpana-auto}
 
 1. Create a task that triggers {{site.data.keyword.cos_full_notm}} restore when you restore a backup from {{site.data.keyword.cos_short}}. For more information, see the [Simpana documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://documentation.commvault.com/commvault/v11/article?p=features/cloud_storage/t_restoring_data_amazon_and_oracle.htm).
 

@@ -26,16 +26,11 @@ Cloud Object Storage (Classic)
     /cloud-object-storage/cloud-object-storage-compatibility-common
     /cloud-object-storage/cloud-object-storage-compatibility-api-bucket-operations
     /cloud-object-storage/cloud-object-storage-object-operations
-    python.md
-    java.md
-    node.md
     simpana.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     security.md
-    guidance.md
-    faq.md
     support.md
     /cloud-object-storage/cloud-object-storage-billing
     [Pricing](https://www.ibm.com/cloud-computing/bluemix/pricing-object-storage)
