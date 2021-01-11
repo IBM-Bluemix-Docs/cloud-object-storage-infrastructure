@@ -16,10 +16,13 @@ subcollection: cloud-object-storage-infrastructure
 
 
 # Storing and retrieving data
+{: #iaas-data}
 
 The user interface portal provides a high-level view of a storage account. It is possible to create buckets and upload objects through he portal, but typically most interaction with the object store is done through the API by a client application.
 
 ## Buckets
+{: #iaas-buckets}
+
 1. Click the Account Name in the accounts list to open the details page for that account.
 2. The details page shows the following information on the header bar.
    * Name of the account that is currently being viewed
@@ -40,6 +43,8 @@ The user interface portal provides a high-level view of a storage account. It is
 
 
 ## Objects
+{: #iaas-objects}
+
 1. The objects present within a bucket can be viewed, by clicking the bucket name on the buckets list.
 2. The header is updated to include the following information.
   * Name of the account that is currently being viewed

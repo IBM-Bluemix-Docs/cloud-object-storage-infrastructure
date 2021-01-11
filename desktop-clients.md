@@ -16,10 +16,12 @@ subcollection: cloud-object-storage-infrastructure
 
 
 # Using a desktop client
+{: #desktop-iaas}
 
 GUI tools exist for accessing S3 API compatible {{site.data.keyword.cos_short}} and for basic tasks, such as configuring routine backup or shared hosting for large files.
 
 ## Cyberduck
+{: #desktop-iaas-cyberduck}
 
 Cyberduck is a popular, open source, and easy to use FTP client that is also capable of calculating the correct authorization signatures that are needed to connect to {{site.data.keyword.cos_full_notm}}.  Cyberduck can be downloaded from [cyberduck.io ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cyberduck.io/).
 
@@ -46,6 +48,7 @@ To use Cyberduck to create a connection to {{site.data.keyword.cos_full_notm}} a
  8. Another window opens to show active and historical transfer requests. After the synchronization request is complete, the main window performs a list operation on the bucket to reflect updated content in the bucket.
 
 ## Cloudberry
+{: #desktop-iaas-cloudberry}
 
 Cloudberry is a flexible backup utility that allows users to back up some or all of a local file system to an S3 API compatible {{site.data.keyword.cos_short}} system. It can be configured to be run either manually or scheduled based on need, and can back up different directories to different buckets if needed. Cloudberry can be downloaded from [cloudberrylab.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.cloudberrylab.com/).
 

@@ -18,10 +18,12 @@ subcollection: cloud-object-storage-infrastructure
 
 
 # Ordering {{site.data.keyword.cos_full_notm}} (Classic)
+{: #order-iaas}
 
 Until recently, IBM offered Platform-as-a-Service and Infrastructure-as-a-Service in two distinct environments. The {{site.data.keyword.cloud_notm}} Platform provided a robust application development platform with direct access to cutting edge IBM technologies and DevOps services. {{site.data.keyword.cloud_notm}} Infrastructure provided access to infrastructure services, such as bare metal or virtual servers, data storage, and networking.
 
 ## Creating an {{site.data.keyword.cloud_notm}} account
+{: #order-iaas-create}
 
 Before you can order a storage account, it is necessary to create a customer account first.
 
@@ -37,6 +39,7 @@ Before you can order a storage account, it is necessary to create a customer acc
 10. Follow the **Done** link, and wait for an email that confirms your account upgrade.
 
 ## Creating an {{site.data.keyword.objectstorageshort}} account
+{: #access-iaas-instance}
 
 Accounts are limited to 100 {{site.data.keyword.cos_full}} accounts. If more storage accounts are needed, contact customer support.
 {:tip}
